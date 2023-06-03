@@ -601,6 +601,13 @@ $CU$的输入信号来源如下：
 
     4. 中断$INT$
 
+        1. $a\rightarrow MAR$：将$a$保存到$MAR$中。
+        2. $1\rightarrow W$：主存发出写命令。存储器空闲就可以。
+        3. $0\rightarrow EINT$：硬件关中断。安排在第一个周期就可以。
+        4. $(PC)\rightarrow MDR$：将当前程序计数器保存的位置暂存到$MDR$，等待后期恢复。内部数据通路空闲就可以。
+        5. $MDR\rightarrow M(MAR)$：将$MDR$的数据保存到$a$这个地址。在$4$之后。
+        6. 向量地址$\rightarrow PC$：将$PC$送到中断服务地址。只用$PC$改好就可以，在$4$之后。
+
 2. 选择$CPU$的控制方式：产生不同微操作命令序列所用的时序控制方式：
 
     1. 同步控制方式：
@@ -614,7 +621,7 @@ $CU$的输入信号来源如下：
     3. 联合控制方式：
         + 对各种不同的指令的微操作实行大部分采用同步控制、小部分采用异步控制的办法。
 
-3. 安排微操作时序：
+3. 安排微操作时序的原则：
 
     1. 微操作的先后顺序不得随意更改
     2. 被控对象不同的微操作尽量安排在一个节拍内完成
@@ -629,18 +636,29 @@ $CU$的输入信号来源如下：
 #### 指令类别
 
 1. 非访存指令：
+
     1. $CLA$（$clear$）：$ACC$清零。
     2. $COM$（$complement$）：$ACC$取反。
     3. $SHR$（$shift$）：算术右移。
     4. $CSL$（$cyclic\,shift$）：循环左移。
     5. $STP$（$stop$）：停机。
+
+    ![image-20230603211542126](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603211542126.png)
+
 2. 访存指令：
+
     1. $ADD$：加法指令，隐含$ACC$。
     2. $STA$：存数指令，隐含$ACC$。
     3. $LDA$：取数指令，隐含$ACC$。
+
+    ![image-20230603211648526](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603211648526.png)
+
 3. 转移指令：
+
     1. $JMP$（$jump$）：无条件转移。
     2. $BAN$（$branch\,ACC\,Negative$）：条件转移。
+
+    ![image-20230603211759854](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603211759854.png)
 
 #### 基本微操作时序
 
@@ -678,3 +696,25 @@ $CU$的输入信号来源如下：
 $1$、$2$、$3$都在$T0$，而$456$依次为$T1$、$T2$、$T3$。
 
 这些操作由中断隐指令完成。中断隐指令不是一条指令，而是指一条指令的中断周期由硬件完成的一系列操作
+
+#### 组合逻辑设计
+
+![image-20230603212124990](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603212124990.png)
+
+![image-20230603212157617](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603212157617.png)
+
+![image-20230603212308100](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603212308100.png)
+
+#### 硬布线控制器的特点
+
+指令越多，设计和实现就越复杂，因此一般用于$RISC$(精简指令集系统)
+
+如果扩充一条新的指令，则控制器的设计就需要大改，因此扩充指令较困难。
+
+由于使用纯硬件实现控制，因此执行速度很快。微操作控制信号由组合逻辑电路即时产生。
+
+
+
+
+
+### 微程序控制器

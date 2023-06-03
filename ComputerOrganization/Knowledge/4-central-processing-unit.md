@@ -993,12 +993,22 @@ $1$、$2$、$3$都在$T0$，而$456$依次为$T1$、$T2$、$T3$。
     + ![image-20230603222647289](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603222647289.png)
 2. 加速比：
     + 完成同样一批任务，不使用流水线所用的时间与使用流水线所用的时间之比。
-    + 设$T_0$表示不使用流水线时的执行时间，即顺序执行所用的时间；$T_k$表示使用流水线时的执行时间，则计算流水线加速比$S$的基本公式为$S=\dfrac{T_0}{T_k}$。
-    + 单独完成一个任务需要$k\Delta t$，则顺序完成时间$T_0=nk\Delta t$。又$T_k=(k+n-1)\Delta t$，所以$S=\dfrac{nk\Delta t}{(k+n-1)\Delta t}=\dfrac{kn}{k+n-1}$。
+    + 在最理想情况下:
+        + 设$T_0$表示不使用流水线时的执行时间，即顺序执行所用的时间；$T_k$表示使用流水线时的执行时间，则计算流水线加速比$S$的基本公式为$S=\dfrac{T_0}{T_k}$。
+        + 单独完成一个任务需要$k\Delta t$，则顺序完成时间$T_0=nk\Delta t$。又$T_k=(k+n-1)\Delta t$，所以$S=\dfrac{nk\Delta t}{(k+n-1)\Delta t}=\dfrac{kn}{k+n-1}$。
+            + 当连续输入的任务$n\to \infty$时，得最大加速比为$S_{max}=k$
+
+![image-20230603222919889](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603222919889.png)
+
 3. 效率：
+
     + 流水线的设备利用率称为流水线的效率。
+
     + 在时空图上，流水线的效率定义为完成$n$个任务占用的时空区有效面积与$n$个任务所用的时间与k个流水段所围成的时空区总面积之比。（时空图中用到的类平行四边形面积除以围成矩形的面积）。
+
     + 流水线效率$E$的基本公式为$E=\dfrac{T_0}{kT_k}=\dfrac{n}{k+n-1}$。
+        + 当连续输入的任务$n\to \infty$时，得最大效率为$E_{max}=1$
+    + ![image-20230603223135052](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603223135052.png)
 
 #### 指令集要求
 

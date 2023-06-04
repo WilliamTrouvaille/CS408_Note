@@ -563,7 +563,7 @@ $USB$属于设备总线，是设备和设备控制器之间的接口。
 
 即$Digital\,Visual\,Interface$，传输数字信号，但是在分辨率$1024\times768$以下时与$VGA$差别不大。
 
-#### HDML
+#### HDMI
 
  即$High\,Definition\,Multimedia\,Interface$，可以传输音讯，源于$DVI$技术，分为三种类型：
 

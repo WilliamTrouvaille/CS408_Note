@@ -193,7 +193,7 @@ $PC$(取指令)$\to$$IR$(分析指令)$\to$$CU$(执行指令)
     + 执行周期。
     + ![image-20230603113042749](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603113042749.png)
 + **指令周期**常常用若干机器周期来表示,机器周期又叫$CPU$周期。如取指令、取有效地址、执行指令这就是三个机器周期,是一个指令周期。
-+ 一个**机器周期**又包含若干**时钟周期**（也 称为节拍、$T$周期或$CPU$时钟周期,它是$CPU$操作的最基本单位）。
++ 一个**机器周期**又包含若干**时钟周期**（也称为节拍、$T$周期或$CPU$时钟周期,它是$CPU$操作的最基本单位）。
 
 ![image-20230603113447201](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230603113447201.png)
 

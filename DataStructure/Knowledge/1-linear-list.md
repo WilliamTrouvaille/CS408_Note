@@ -12,7 +12,7 @@
 
 ### 【知识导图】
 
-
+![1689255705t-20230713-2145-333.175](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689255705t-20230713-2145-333.175.png)
 
 ### 【复习提示】
 
@@ -69,6 +69,10 @@ $L=(a_1,a_2,\cdots,a_i,\cdots,a_n)$，其中$i$表示元素在线性表中的位
 + `Empty(L)`
     + 判空操作
     + 若`L`为空表，则返回`true`,否则返回`false`。
++ `DestroyList(&L)`
+    + 销毁操作
+    + 销毁线性表，并释放线性表L所占用的内存空间。
+
 
 
 

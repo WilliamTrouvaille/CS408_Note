@@ -334,8 +334,6 @@ typedef struct{
     <video src="https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689651198t-20230718-1118-.-b.mp4"/>
 </div>
 
-![1689650286t-20230718-1106-818.395-f](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689650286t-20230718-1106-818.395-f.png)
-
 代码实现
 
 ```cpp

@@ -1710,41 +1710,199 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
 + 事件$v_k$的最迟发生时间$vl(k)$：在不推迟整个工程完成的前提下，该事件最迟必须发生的时间。一个事件的最迟发生时间等于$\min${以该事件为尾的弧的活动的最迟开始时间，最迟结束时间与该活动的持续时间的差}。
 + 活动$a_i$的最迟开始时间$l(i)$：指该活动弧的终点所表示的事件的最迟发生时间与该活动所需时间之差。
 + 活动$a_i$的时间余量$d(i)=l(i)-e(i)$：在不增加完成整个工程所需总时间的情况下，活动可以拖延的时间。
-    + 
+    + 若一个活动的时间余量为零，则说明该活动必须要如期完成
+    + ==$d(i)=0$即$l(i)=e(i)$的活动$a_i$是关键活动==
+    + ==由关键活动组成的路径就是关键路径==
 
 
 求关键路径的步骤：
 
-1. 求所有事件的最早发生时间$ve$。根据拓扑排序序列，依次按照所有路径的最大值求出各个顶点的最早发生时间。
-2. 求所有事件的最迟发生时间$vl$。根据逆拓扑排序序列，回退依次将每个顶点按第一步计算的整个工程的时间减去本顶点需要处理的时间，得到每个活动都最晚应该发生的时间，交叉的顶点取最小值。
-3. 求所有活动的最早发生时间$e$。根据第二步可以得到每个活动发生的最早时间。
-4. 求所有活动的最迟发生时间$l$。根据$vl$求每个顶点不影响整个工程的情况下最晚可以什么时候开始。
-5. 求所有活动的时间余量$d$。将$l-e$得到$d$，余量为$0$的活动就是关键活动，表示如果该活动拖延就会影响整个工程的进度。
-    +   若一个活动的时间余量为零，则说明该活动必须要如期完成
-    +   $d(i)=0$即$l(i)=e(i)$的活动$a_i$是关键活动
-    +   ==由关键活动组成的路径就是关键路径==
+1. 求所有**事件**的最 早发生时间$ve$。根据拓扑排序序列，依次按照所有路径的最大值求出各个顶点的最早发生时间。
+
+    +   ![23July19-213640-1689773800-0f890294-e02b-467c-a47f-11f1527df79e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192136548.png)
+
+2. 求所有**事件**的最迟发生时间$vl$。根据逆拓扑排序序列，回退依次将每个顶点按第一步计算的整个工程的时间减去本顶点需要处理的时间，得到每个活动都最晚应该发生的时间，交叉的顶点取最小值。
+
+    ![23July19-213835-1689773915-2a7153e5-10e7-4855-b6e5-479f0b5c5739](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192139101.png)
+
+3. 求所有**活动**的最早发生时间$e$。根据第二步可以得到每个活动发生的最早时间。
+
+    ![23July19-213945-1689773985-8000a579-a951-4d23-8920-c7d8745a4dd8](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192139311.png)
+
+4. 求所有**活动**的最迟发生时间$l$。根据$vl$求每个顶点不影响整个工程的情况下最晚可以什么时候开始。
+
+    ![23July19-214405-1689774245-cdc90eab-a561-49e5-814c-e21f1aa1d2a9](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192144932.png)
+
+5. 求所有**活动**的时间余量$d$。将$l-e$得到余量$d$
+
+    ![image-20230719214512037](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192145204.png)
+
+6.   求关键活动和关键路径。余量为$0$的活动就是关键活动，表示如果该活动拖延就会影响整个工程的进度
+
+![23July19-214535-1689774335-994913f5-81be-404f-a777-7e34614418c6](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192145481.png)
 
 求关键路径的步骤
 
 + 关键活动时间增加，整个工程工期延长。
 + 关键活动时间减少，整个工程工期缩短。
-+ 关键活动时间减少，可能变为非关键活动。
-+ 若有多条关键路径，则必须提高所有关键路径关键活动才能缩短工期。
-+ 键路径是从源点到汇点路径长度量长的路径。
+    + 关键活动时间减少，可能变为非关键活动。
+    + 所以不是关键活动时间越少，整个工程工期越短
+
++ ==若有多条关键路径，则应加快包含所有关键路径上的关键活动才能缩短工期。==
++ 关键路径是从源点到汇点路径长度量长的路径。
 
 #### 环判定
 
-无向图回路的判断：
+##### 无向图回路的判断
 
 1. 在图的邻接表表示中，首先统计每个顶点的度，然后重复寻找一个度为$1$的顶点，将度为$1$和$0$的顶点从图中删除，并将与该顶点相关联的顶点的度减$1$，然后继续反复寻找度为$1$的。如果最后存在点没有被删除，即在寻找过程中若出现若干顶点的度都为$2$，则这些顶点组成了一个回路；否则，图中不存在回路。
 2. 利用深度优先搜索$DFS$，在搜索过程中判断是否会出现后向边（$DFS$中，连接顶点$u$到它的某一祖先顶点$v$的边），即在$DFS$对顶点进行着色过程中，若出现所指向的顶点已经着色，则此顶点是一个已经遍历过的顶点（祖先），出现了后向边，则图中有回路。
 3. 利用$BFS$，在遍历过程中，为每个结点标记一个深度$deep$，如果存在某个结点为$v$，除了其父结点$u$外，还存在与$v$相邻的结点$w$使得$deep[v]<=deep[w]$（可以通过相邻点上升返祖）的，那么该图一定存在回路。
 4. 用$BFS$或$DFS$遍历，最后判断对于每一个连通分量当中，如果边数$m>=$结点个数$n$成立，那么改图一定存在回路。因此在$DFS$或$BFS$中，我们可以统计每一个连通分量的顶点数目$n$和边数$m$两个直值，如果$m>=n$则返回假，直到访问完所有的结点才返回真。
 
-有向图回路的判断：
+判断无向图是否存在环路可以使用深度优先搜索（DFS）或广度优先搜索（BFS）来实现。其中，DFS是较为常用的方法，它通过遍历图的所有顶点，并检查是否存在后向边（Back Edge）。如果存在后向边，那么图中就包含环路。
+
+**代码实现：**
+
+使用DFS判断无向图是否存在环路
+
+```cpp
+#include <iostream>
+#include <vector>
+
+class Graph {
+private:
+    int numVertices;
+    std::vector<std::vector<int>> adjacencyList;
+
+public:
+    Graph(int n) {
+        numVertices = n;
+        adjacencyList.resize(n);
+    }
+
+    void AddEdge(int x, int y) {
+        adjacencyList[x].push_back(y); // 添加边到邻接表
+        adjacencyList[y].push_back(x); // 无向图需要同时设置两个方向的边
+    }
+
+    bool HasCycle() {
+        std::vector<bool> visited(numVertices, false); // 记录顶点是否已访问
+        for (int i = 0; i < numVertices; i++) {
+            if (!visited[i]) {
+                // 对每个未访问的顶点进行DFS
+                if (DFSHasCycle(i, -1, visited)) {
+                    return true; // 如果找到环路，返回true
+                }
+            }
+        }
+        return false; // 如果没有找到环路，返回false
+    }
+
+    bool DFSHasCycle(int vertex, int parent, std::vector<bool>& visited) {
+        visited[vertex] = true; // 将当前顶点标记为已访问
+
+        // 对当前顶点的邻接顶点进行DFS
+        for (int neighbor : adjacencyList[vertex]) {
+            if (!visited[neighbor]) {
+                // 邻接顶点未访问，递归进行DFS
+                if (DFSHasCycle(neighbor, vertex, visited)) {
+                    return true; // 如果找到环路，返回true
+                }
+            } else if (neighbor != parent) {
+                // 邻接顶点已访问，且不是当前顶点的父节点，说明存在后向边，即存在环路
+                return true;
+            }
+        }
+
+        return false; // 如果当前顶点及其邻接顶点没有形成环路，返回false
+    }
+};
+```
+
+##### 有向图回路的判断
 
 1. 与无向图类似，若在$DFS$中出现后向边，即存在某一顶点被第二次访问到，则有回路出现。
 2. 同样，利用拓扑排序的思想，通过这一步骤来执行拓扑排序，即重复寻找一个入度为$0$的顶点，将该顶点从图中删除，并将该顶点及其所有的出边从图中删除（即与该点相应的顶点的入度减$1$），最终若途中全为入度为$1$的点，则这些点至少组成一个回路。
+
+**代码实现：**
+
+使用拓扑排序判断有向图是否存在环路
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+
+class Graph {
+private:
+    int numVertices;
+    std::vector<std::vector<int>> adjacencyList;
+    std::vector<int> indegree; // 记录每个顶点的入度
+
+public:
+    Graph(int n) {
+        numVertices = n;
+        adjacencyList.resize(n);
+        indegree.resize(n, 0);
+    }
+
+    void AddEdge(int x, int y) {
+        adjacencyList[x].push_back(y);
+        indegree[y]++; // 更新目标顶点的入度
+    }
+
+    bool HasCycle() {
+        std::queue<int> q;
+        int visitedVertices = 0; // 记录访问过的顶点数
+
+        // 将入度为0的顶点加入队列作为初始顶点
+        for (int i = 0; i < numVertices; i++) {
+            if (indegree[i] == 0) {
+                q.push(i);
+            }
+        }
+
+        while (!q.empty()) {
+            int currentVertex = q.front();
+            q.pop();
+            visitedVertices++;
+
+            // 遍历当前顶点的邻接顶点
+            for (int neighbor : adjacencyList[currentVertex]) {
+                indegree[neighbor]--; // 邻接顶点的入度减1
+
+                // 如果邻接顶点的入度变为0，加入队列作为下一个访问顶点
+                if (indegree[neighbor] == 0) {
+                    q.push(neighbor);
+                }
+            }
+        }
+
+        // 如果访问过的顶点数小于总顶点数，说明存在环路
+        return visitedVertices != numVertices;
+    }
+};
+
+int main() {
+    Graph g(6);
+
+    g.AddEdge(0, 1);
+    g.AddEdge(0, 2);
+    g.AddEdge(1, 2);
+    g.AddEdge(2, 3);
+    g.AddEdge(3, 4);
+    g.AddEdge(4, 2); // 创建一个含有环路的有向图
+
+    if (g.HasCycle()) {
+        std::cout << "Graph contains a cycle." << std::endl;
+    } else {
+        std::cout << "Graph does not contain a cycle." << std::endl;
+    }
+
+    return 0;
+}
+```
 
 ## 附录/拓展
 

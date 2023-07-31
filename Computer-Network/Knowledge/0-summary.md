@@ -646,3 +646,5 @@ $TCP/IP$模型与$OSI$参考模型有许多相似之处
 ![image-20230725204211462](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252042548.png)
 
 ![image-20230725223533132](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252235294.png)
+
+![23July31-213458-1690810498-1ba23eeb-5227-4873-b012-efb0d89c90a9](C:/Users/willi/OneDrive/%E5%9B%BE%E7%89%87/ShareX/2023-07/23July31-213458-1690810498-1ba23eeb-5227-4873-b012-efb0d89c90a9.png)

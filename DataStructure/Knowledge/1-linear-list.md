@@ -166,11 +166,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* arr = new int[5];  // 在堆上分配内存并创建一个包含 5 个 int 对象的数组
->        
+>             
 >        for (int i = 0; i < 5; ++i) {
 >            arr[i] = i + 1;    // 对动态分配的对象数组进行操作
 >        }
->        
+>             
 >        delete[] arr;          // 释放内存空间（注意使用 delete[] 删除对象数组）
 >        ```
 >
@@ -180,11 +180,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* data = new int[10];   // 在堆上分配内存来存储 10 个 int 值
->        
+>             
 >        for (int i = 0; i < 10; ++i) {
 >            data[i] = i;   // 对动态分配的内存进行操作
 >        }
->        
+>             
 >        delete[] data;            // 释放内存空间（注意使用 delete[] 删除内存数组）
 >        ```
 >

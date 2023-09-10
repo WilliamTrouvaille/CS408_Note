@@ -58,6 +58,10 @@
 
 **逻辑结构独立于存储结构，存储结构依托于逻辑结构**。
 
+>   逻辑结构和物理结构
+>
+>   给出的一个结构，若能用**多种**（n>=2种)不同的方式存储，那就是逻辑结构；反之就是存储（物理）结构，已经采用了一种具体的存储方法。
+
 ## 算法
 
 程序$=$数据结构$+$算法。算法为了处理信息。
@@ -95,26 +99,26 @@
 
 + 假设输入数据大小为$n$，给定三个算法$A , B , C$ 。
 
-    + ```cpp
-        // 算法 A 时间复杂度：常数阶
-        void algorithm_A(int n) {
+    ```cpp
+    // 算法 A 时间复杂度：常数阶
+    void algorithm_A(int n) {
+        cout << 0 << endl;
+    }
+    
+    // 算法 B 时间复杂度：线性阶
+    void algorithm_B(int n) {
+        for (int i = 0; i < n; i++) {
             cout << 0 << endl;
         }
-        
-        // 算法 B 时间复杂度：线性阶
-        void algorithm_B(int n) {
-            for (int i = 0; i < n; i++) {
-                cout << 0 << endl;
-            }
+    }
+    
+    // 算法 C 时间复杂度：常数阶
+    void algorithm_C(int n) {
+        for (int i = 0; i < 1000000; i++) {
+            cout << 0 << endl;
         }
-        
-        // 算法 C 时间复杂度：常数阶
-        void algorithm_C(int n) {
-            for (int i = 0; i < 1000000; i++) {
-                cout << 0 << endl;
-            }
-        }
-        ```
+    }
+    ```
 
     + 算法$ A $只有$ 1$ 个打印操作，算法运行时间不随着$n$增大而增长
 
@@ -128,7 +132,7 @@
 
         + 因此$ C $的时间复杂度和$ A $相同，仍为「**常数阶**」。
 
-    + ![image-20230629094451922](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306290944980.png)
+        ![image-20230629094451922](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306290944980.png)
 
 + 相较于直接统计算法运行时间，时间复杂度分析有哪些优势和局限性呢？
 
@@ -173,9 +177,8 @@
         $$
         T(n)=O(f(n))
         $$
-
-    + ![image-20230629095816188](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306290958240.png)
-
+        ![image-20230629095816188](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306290958240.png)
+    
 + 从本质上讲，计算渐近上界就是寻找一个函数$f(n)$，使得当$n$趋向于无穷大时，$T(n)$和$f(n)$处于相同的增长级别，仅相差一个常数项$c $的倍数。
 
 #### 时间复杂度推算方法
@@ -198,14 +201,15 @@
 + 设输入数据大小为$ 𝑛 $，常见的时间复杂度类型包括（按照从低到高的顺序排列）：
 
     $$
-    O(1)<O(log_\cdot n)<O(n)<O(nlog_\cdot n)<O(n^2)<O(2^n)<O(n!)
+    O(1)<<O(log_\cdot n)<<O(n)<<O(nlog_\cdot n)<<O(n^2)<<O(2^n)<<O(n!)\\
+    常数阶< < 对数阶       < <  线性阶< < 线性对数阶  < < 平方阶  < < 指数阶  < < 阶乘阶
     $$
-    ​          														 常数阶$ < $对数阶       $ < $ 线性阶$ < $线性对数阶  $ < $平方阶  $ < $指数阶  $ < $阶乘阶
-    
 
 ![image-20230629101829062](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291018112.png)
 
-##### 常数阶 𝑂(1)
+>   复杂度高低可以参考高数的无穷大比阶
+
+##### 常数阶$ 𝑂(1)$
 
 + 常数阶的操作数量与输入数据大小$ 𝑛 $无关，即不随着$ 𝑛 $的变化而变化。
 + 对于以下算法，尽管操作数量` size `可能很大，但由于其与数据大小$ 𝑛 $无关，因此时间复杂度仍为$ 𝑂(1)$。
@@ -221,7 +225,7 @@ int constant(int n) {
 }
 ```
 
-##### 线性阶 𝑂(𝑛)
+##### 线性阶$ 𝑂(𝑛)$
 
 + 线性阶的操作数量相对于输入数据大小以线性级别增长
 + 线性阶通常出现在==单层循环==中
@@ -238,7 +242,7 @@ int linear(int n) {
 
 + 遍历数组和遍历链表等操作的时间复杂度均为$ 𝑂(𝑛) $，其中$ 𝑛 $为数组或链表的长度。
 + 如何确定输入数据大小 $𝑛 $？
-    + 数据大小 $n$ 需根据输入数据的类型来具体确定。例如，在上述示例中，我们直接将$n$视为输入数据大小
+    + 数据大小$n$需根据输入数据的类型来具体确定。例如，在上述示例中，我们直接将$n$视为输入数据大小
     + 在下面遍历数组的示例中，数据大小$n$为数组的长度。
 
 ```cpp
@@ -272,7 +276,7 @@ int quadratic(int n) {
 }
 ```
 
-+ ![image-20230629102509273](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291025324.png)
+![image-20230629102509273](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291025324.png)
 
 + 以「冒泡排序」为例，外层循环执行$ 𝑛 − 1 $次，内层循环执行$ 𝑛 − 1, 𝑛 − 2, ⋯ , 2, 1 $次，平均为 $𝑛^2$ 次，因此时间复杂度为$O(n^2)$ 
 
@@ -304,7 +308,7 @@ int bubbleSort(vector<int> &nums) {
 ##### 指数阶 $𝑂(2^𝑛)$
 
 + 指数阶增长非常迅速，在实际应用中通常是**不可接受**的
-+ 若一个问题使用「暴力枚举」求解的时间复杂度为$𝑂(2𝑛) $，那么通常需要使用「动态规划」或「贪心算法」等方法来解决。
++ 若一个问题使用「**暴力枚举**」求解的时间复杂度为$𝑂(2𝑛) $，那么通常需要使用「**动态规划**」或「贪心算法」等方法来解决。
 
 ```cpp
 /* 指数阶（循环实现） */
@@ -340,7 +344,7 @@ int expRecur(int n) {
 
 + 与指数阶相反，对数阶反映了“==每轮缩减到一半的情况==”
 + 对数阶仅次于常数阶，时间增长缓慢，**是理想的时间复杂度**。
-+ 对数阶常出现于「二分查找」和「分治算法」中，体现了“一分为多”和“化繁为简”的算法思想。
++ 对数阶常出现于「**二分查找**」和「**分治算法**」中，体现了“一分为多”和“化繁为简”的算法思想。
 + 设输入数据大小为$ 𝑛 $，由于每轮缩减到一半，因此循环次数是$ log_2𝑛$ ，即$ 2^𝑛 $的反函数。
 
 ```cpp
@@ -366,6 +370,8 @@ int logRecur(float n) {
 }
 ```
 
+>   统考真题中经常把 $𝑂(log_2 𝑛)$简写为 $𝑂(log \; 𝑛)$，此时默认底数为$2$
+
 ##### 线性对数阶 $𝑂(𝑛 \cdot log_\cdot 𝑛)$
 
 + 线性对数阶常出现于嵌套循环中，两层循环的时间复杂度分别为$ 𝑂(log_\cdot 𝑛) $和$ 𝑂(𝑛) $。
@@ -384,7 +390,7 @@ int linearLogRecur(float n) {
 }
 ```
 
-![image-20230629104548909](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291045973.png)
+<img src="https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291045973.png" alt="image-20230629104548909" style="zoom:150%;" />
 
 ##### 阶乘阶$ 𝑂(𝑛!)$
 
@@ -409,7 +415,7 @@ int factorialRecur(int n) {
 }
 ```
 
-+ ![image-20230629104807869](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291048940.png)
+![image-20230629104807869](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291048940.png)
 
 #### 最差、最佳、平均时间复杂度
 
@@ -533,7 +539,7 @@ void recur(int n) {
     + $𝑂(1) < 𝑂(log_\cdot 𝑛) < 𝑂(𝑛) < 𝑂(𝑛^2) < 𝑂(2^𝑛)$
     + 常数阶$ < $对数阶 $ < $线性阶$ < $平方阶$ < $指数阶
 
-+ ![image-20230629111915158](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291119243.png)
+    ![image-20230629111915158](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291119243.png)
 
 ##### 常数阶$ 𝑂(1)$
 
@@ -593,7 +599,7 @@ void linearRecur(int n) {
 }
 ```
 
-+ ![image-20230629112123648](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291121743.png)
+![image-20230629112123648](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306291121743.png)
 
 ##### 平方阶 $𝑂(𝑛^2)$
 
@@ -659,8 +665,6 @@ TreeNode *buildTree(int n) {
 + 理想情况下，我们希望算法的时间复杂度和空间复杂度都能达到最优。然而在实际情况中，同时优化时间复杂度和空间复杂度通常是非常困难的。
 + **降低时间复杂度通常需要以提升空间复杂度为代价，反之亦**然。我们将牺牲内存空间来提升算法运行速度的思路称为“以空间换时间”；反之，则称为“以时间换空间”。
 + 选择哪种思路取决于我们更看重哪个方面。在大多数情况下，时间比空间更宝贵，因此以空间换时间通常是更常用的策略。当然，在数据量很大的情况下，控制空间复杂度也是非常重要的。
-
-
 
 ## 小结
 

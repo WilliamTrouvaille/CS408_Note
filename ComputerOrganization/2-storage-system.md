@@ -199,7 +199,9 @@
 
 $n$位地址对应$2^n$个存储单元和译码器输出线
 
-当电流稳定下来后，译码器会根据$MAR$所给地址的字选线(此处为0号字选线)通上高压电流，$MDR$会在数据线(位线)处读出数据![image-20230531155714441](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230531155714441.png)
+当电流稳定下来后，译码器会根据$MAR$所给地址的字选线(此处为0号字选线)通上高压电流，$MDR$会在数据线(位线)处读出数据
+
+![image-20230531155714441](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230531155714441.png)
 
 存储体总容量=存储单元个数$\times$存储字长
 
@@ -241,6 +243,14 @@ $n$位地址对应$2^n$个存储单元和译码器输出线
 存储芯片通常描述：
 
 <img src="https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230531161352914.png" alt="image-20230531161352914" style="zoom:200%;" />
+
+>   若存储器容量为$64K\times 32$位
+>
+>   则前面的$64K$表示地址总数，后面的M表示每一个地址里面存放的数据的长度（字长）
+>
+>   前面的$32$位对应地址总线/字扩展法，后面的M对应数据总线/位扩展法
+>
+>   存储容量=存储单元个数$\times$存储字长，$64K = 2^{16}$，因此PC和MAR为16位，而MDR为 32位，其他寄存器的位数与MDR的相等。
 
 ### 随机存储器$RAM$
 
@@ -436,8 +446,9 @@ $SRAM(Static\;Random \;Access\;Memory)$：静态随机存储器(静态$RAM$)
 
         ![image-20230601095531755](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230601095531755.png)
 
-    + 若连续取$n$个存储字，每次访问需要$T$的时间，启动间隔为$\tau$，则耗时$T+(n-1)\tau$。
-        <!-- + 存储周期=总线周期×模块数。 -->
+    + 若连续取$n$个存储字，每次访问需要$T$的时间，启动间隔为$\tau$，则耗时$T+(n-1)\tau$
+        
+    + ==存储周期=总线周期×模块数==
 
 如高位交叉编址，体号+体内地址：
 
@@ -943,7 +954,7 @@ $SSD（Solid\; State \;Drive）$和机械硬盘在存储技术和性能方面有
 
 + 直接映射的关系可定义为
     $$
-    Cache\mathbb{行号=主存块号}  \mod Cache\mathbb{总行数}
+    Cache\mathbb{标记=主存块号}  \mod Cache\mathbb{总行数}
     $$
 
     +   假设Cache共有$2^c$行，主存有$2^m$块
@@ -1016,7 +1027,7 @@ $SSD（Solid\; State \;Drive）$和机械硬盘在存储技术和性能方面有
 
 组相联映射的关系可以定义为
 $$
-Cache组号=主存块号\mod Q
+Cache标记=Cache组号=主存块号\mod Q
 $$
 
 +   路数越大，即每组Cache行的数量越大，发生块冲突的概率越低，但相联比较电路也越复杂。 
@@ -1167,7 +1178,7 @@ Cache写命中时
     +   若修改位为1，则说明对应Cache行中的块==被修改过，替换时需要写回主存==
     +   若修改位为0，则说明对应Cache行中的块==未被修改过，替换时无须写回主存==
 
-#### 全写法$write-through$
+#### 全写法/直写策略$write-through$
 
 Cache写命中时
 

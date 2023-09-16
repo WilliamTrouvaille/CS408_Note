@@ -412,24 +412,39 @@ $MIPS$对不同机器进行性能比较是有缺陷的，因为不同机器的�
 
 #### **【总结】**
 
-+ $f=\dfrac{1}{T}$
++ 主频$f=\dfrac{1}{T}$
+    
     + $T$:	时钟周期
-    + $f$:主频
-+ $CPI=\dfrac{m}{IC}$
-    + $CPI(Clock\,cycle\,Per\,Instruction)$执行指令(平均)所需时钟周期数
++ 执行指令(平均)所需时钟周期数$CPI=\dfrac{m}{IC}$
+
+    + $CPI(Clock\,cycle\,Per\,Instruction)$
     + $IC$总指令条数
     + $m$执行所需时钟周期数
-+ $\mathrm{CPI}=\sum_{i=1}^{n}\left(\mathrm{CPI}_{i} \times P_{i}\right)=\sum_{i=1}^{n}\left(\mathrm{CPI}_{i} \times \frac{\mathrm{IC}_{i}}{\mathrm{IC}}\right)$
+
++ 执行指令(平均)所需时钟周期数
+    $$
+    \mathrm{CPI}=\sum_{i=1}^{n}\left(\mathrm{CPI}_{i} \times P_{i}\right)=\sum_{i=1}^{n}\left(\mathrm{CPI}_{i} \times \frac{\mathrm{IC}_{i}}{\mathrm{IC}}\right)
+    $$
+
     + $P_i$每类指令的使用频率
     + $CPI_i$每类指令的$CPI$
     + $IC_i$每类指令的条数
-+ $T_{\text {cpu}}=m \times T$     $T_{\text {cpu}}=\mathrm{CPI} \times \mathrm{IC} \times T=\dfrac{\mathrm{CPI} \times \mathrm{IC}}{f}$
-    +  $T_{\text {cpu}}$$CPU$时间,即执行程序一共需要多少时间
-+ $IPC=\dfrac{1}{CPI}$ 
-    + $IPC$每时钟周期执行指令条数
-+ $MIPS=\dfrac{IC}{T_{\text {cpu}}\times 10^{6}}$
-    + $MIPS(Million\,Instructions\,Per\,Second)$每秒执行多少百万条指令
-+ $MIPS=\dfrac{f}{CPI}$
+
++ $CPU$时间$T_{\text {cpu}}$：执行程序一共需要多少时间
+    $$
+    T_{\text {cpu}}=m \times T\\
+    T_{\text {cpu}}=\mathrm{CPI} \times \mathrm{IC} \times T=\dfrac{\mathrm{CPI} \times \mathrm{IC}}{f}
+    $$
+    
+
++ 每时钟周期执行指令条数$IPC=\dfrac{1}{CPI}$ 
+
++ $MIPS(Million\,Instructions\,Per\,Second)$​每秒执行多少百万条指令
+    $$
+    MIPS=\dfrac{IC}{T_{\text {cpu}}\times 10^{6}}\\
+    MIPS=\dfrac{f}{CPI}
+    $$
+
     + 此处计算省略了$f$的单位,所以只有在$f$单位是$MHz$时才可以直接用,不然要除以$M(10^6)$
 
 #### 系统整体的性能指标
@@ -446,8 +461,7 @@ $MIPS$对不同机器进行性能比较是有缺陷的，因为不同机器的�
 
 ##### 响应时间
 
-指从用户向计算机发送一个请求，到系统对该请求做出响应并获得它所需
-要的结果的等待时间。
+指从用户向计算机发送一个请求，到系统对该请求做出响应并获得它所需要的结果的等待时间。
 
 ### 几个专业术语
 

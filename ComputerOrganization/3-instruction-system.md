@@ -1372,7 +1372,9 @@ LoopStart:
 
 ### 过程调用的机器级表示
 
-上面提到的call/ret指令主要用于过程调用，它们都属于一种无条件转移指令。 
+![image-20230919214045952](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192140106.png)
+
+上面提到的`call/ret`指令主要用于过程调用，它们都属于一种无条件转移指令。 
 
 假定过程P （调用者）调用过程Q （被调用者），过程调用的执行步骤如下：
 

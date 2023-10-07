@@ -264,7 +264,7 @@ $$
 
     + 顶点全部要有，边尽可能的少，但要保持连通
 
-    + 若图的顶点为$n$，则其生成树包含$n-1$条边
+    + 若图的顶点为$\vert V\vert$，则其生成树包含$\vert V\vert-1$条边
 
     + 若去掉生成树的一条边则会变成非连通图，若加上一条边则会形成一个回路。
 
@@ -370,13 +370,13 @@ $$
 >     ```cpp
 >     #include <limits>
 >     #include <iostream>
->             
+>               
 >     int main() {
 >         //获取整数类型的最大值
 >         std::cout << "Max value of int: " 		<< std::numeric_limits<int>::max() << std::endl;
 >         std::cout << "Max value of long long: " << std::numeric_limits<long long>::max() << std::endl;
 >         // 其他整数类型的获取方式类似
->                 
+>                   
 >         //获取整数类型的最大值
 >         std::cout << "Max value of float: "  << std::numeric_limits<float>::max() << std::endl;
 >         std::cout << "Max value of double: " << std::numeric_limits<double>::max() << std::endl;

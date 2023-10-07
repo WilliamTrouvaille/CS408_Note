@@ -43,7 +43,7 @@
     + 主要关注如何使算法时、空复杂度更低，而时间复杂度一般是由比较和移动次数决定的。
 + 外部排序：待排序的记录数量很大，以致内存一次不能容纳全部记录，在排序过程中需要访问外存的排序过程称为外部排序。
     + 除了关注时空间复杂度外，还要关注如何使读/写磁盘次数更少
-+ 稳定的排序：比如一个序列是“$1,4,3,3*,2$”，按从小到大排序后变成“$1,2,3,3*,4$”，就叫做稳定排序，即3和3*相对顺序不变。如果相同关键字的顺序发生了改变，则是不稳定的排序
++ 稳定的排序：比如一个序列是“$1\;4\;3\;3*\;2$”，按从小到大排序后变成“$1\;2\;3\;3*\;4$”，就叫做稳定排序，即3和3*相对顺序不变。如果相同关键字的顺序发生了改变，则是不稳定的排序
     + 稳定性的需要看具体的应用场景。
     + 稳定的排序
         1.   基数排序
@@ -108,7 +108,7 @@
 
 ![image-20230724193746638](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241937705.png)
 
-要将元素`L(i)`插入已有序的子序列`L` ,需要执行以下操作（为避免混淆，下面用`L[]`表示一个表，而用`L()`表示一个元素）：
+要将元素`L(i)`插入已有序的子序列`L` \;需要执行以下操作（为避免混淆，下面用`L[]`表示一个表，而用`L()`表示一个元素）：
 
 1.   查找出`L(i)`在中的插入位置`k`。
 2.   将`L [k...i-l]`中的所有元素依次后移一个位置。
@@ -150,14 +150,14 @@
 
 >   注
 >
->   本笔记中所有使用代码框的代码均是**OI**（Olympiad in Informatics，信息学奥林匹克竞赛）比赛使用的算法,学有余力的朋友可以参考
+>   本笔记中所有使用代码框的代码均是**OI**（Olympiad in Informatics，信息学奥林匹克竞赛）比赛使用的算法\;学有余力的朋友可以参考
 >
 >   ==408数据结构写这些代码不保证得分==
 >
 >   ~~我目前连能不能用STL都不知道~~
 
 ```cpp
-void insertion_sort(int arr[], int len) {
+void insertion_sort(int arr[]\; int len) {
     // 函数开始，插入排序的函数定义，接受一个整数数组 arr 和数组长度 len 作为参数
 
     if (len < 2) return;
@@ -169,12 +169,12 @@ void insertion_sort(int arr[], int len) {
         arr[0] = arr[i];
         // 使用数组开头存储当前待插入的元素值，这个元素将被依次插入到前面已排序的子数组中
 
-        auto index = upper_bound(arr, arr + i, key) - arr;
+        auto index = upper_bound(arr\; arr + i\; key) - arr;
         // 使用二分查找的方式在已排序的子数组中找到插入位置，并返回插入位置的索引
 
         // 使用 memmove 移动元素，比使用 for 循环速度更快，时间复杂度仍为 O(n)
         // 将已排序的子数组中大于待插入元素 key 的元素都向后移动一位，为 key 腾出插入位置
-        memmove(arr + index + 1, arr + index, (i - index) * sizeof(int));
+        memmove(arr + index + 1\; arr + index\; (i - index) * sizeof(int));
 
         // 将待插入元素 key 插入到已排序的子数组中的正确位置
         arr[i] = key;
@@ -189,7 +189,7 @@ void insertion_sort(int arr[], int len) {
 >
 >   以下是 `memmove` 函数的详细信息：
 >
->   - 函数签名：`void* memmove(void* dest, const void* src, size_t count);`
+>   - 函数签名：`void* memmove(void* dest\; const void* src\; size_t count);`
 >   - 功能：在内存中移动数据。
 >   - 参数：
 >     - `dest`：指向目标内存区域的指针，表示数据将被复制到该内存区域。
@@ -207,12 +207,12 @@ void insertion_sort(int arr[], int len) {
 >   #include <iostream>
 >   
 >   int main() {
->       char source[] = "Hello, world!";
+>       char source[] = "Hello\; world!";
 >       char destination[20];
 >   
 >       // 在内存中移动数据（可以处理重叠的情况）
 >       std::cout << "Before memmove: " << destination << std::endl;
->       memmove(destination, source, strlen(source) + 1);
+>       memmove(destination\; source\; strlen(source) + 1);
 >       std::cout << "After memmove: " << destination << std::endl;
 >   
 >       return 0;
@@ -221,7 +221,7 @@ void insertion_sort(int arr[], int len) {
 >   输出：
 >   ```
 >   Before memmove: 
->   After memmove: Hello, world!
+>   After memmove: Hello\; world!
 >   ```
 >
 
@@ -271,7 +271,7 @@ void insertion_sort(int arr[], int len) {
 
 ```cpp
 template <typename T>
-void shell_sort(T array[], int length) {
+void shell_sort(T array[]\; int length) {
     // 希尔排序函数，接受一个模板类型 T 的数组 array 和数组长度 length 作为参数
 
     int h = 1;
@@ -292,7 +292,7 @@ void shell_sort(T array[], int length) {
                 // 对当前分组进行插入排序，将 array[j] 插入到正确的位置，每次移动的步长是 h
                 // 这里使用了类似插入排序的方式，不过步长是 h 而不是 1
 
-                std::swap(array[j], array[j - h]);
+                std::swap(array[j]\; array[j - h]);
                 // 交换 array[j] 和 array[j - h]，将较小的元素向前移动
             }
         }
@@ -385,7 +385,7 @@ void Bubble(int[] a) {
             if (a[i] > a[i + 1]) {
                 // 如果前一个元素大于后一个元素，进行交换操作
 
-                swap(a, i, i + 1);
+                swap(a\; i\; i + 1);
                 // 调用 swap 函数，交换 a[i] 和 a[i + 1] 的值
                 // swap 函数用于交换数组中两个位置的元素值
 
@@ -441,35 +441,78 @@ void Bubble(int[] a) {
 
 ---
 
-三路快速排序
+==代码（全数据结构最重要的代码，要背）==
 
 ```cpp
-// 模板的 T 参数表示元素的类型，此类型需要定义小于（<）运算
-template <typename T>
-// arr 为需要被排序的数组，len 为数组长度
-void quick_sort(T arr[], const int len) {
-  if (len <= 1) return;
-  // 随机选择基准（pivot）
-  const T pivot = arr[rand() % len];
-  // i：当前操作的元素下标
-  // arr[0, j)：存储小于 pivot 的元素
-  // arr[k, len)：存储大于 pivot 的元素
-  int i = 0, j = 0, k = len;
-  // 完成一趟三路快排，将序列分为：
-  // 小于 pivot 的元素 | 等于 pivot 的元素 | 大于 pivot 的元素
-  while (i < k) {
-    if (arr[i] < pivot)
-      swap(arr[i++], arr[j++]);
-    else if (pivot < arr[i])
-      swap(arr[i], arr[--k]);
-    else
-      i++;
-  }
-  // 递归完成对于两个子序列的快速排序
-  quick_sort(arr, j);
-  quick_sort(arr + k, len - k);
+#include <algorithm>
+#include <iostream>
+using namespace std;
+//取在待排序列中取一个元素pivot作为枢轴（或基准，通常为首元素）
+//把这个元素排到它该在的位置，即pivot前的元素都小于或等于它，pivot后的元素都大于或等于它，我们称这一步操作为一次划分
+int poration(int* A\; int low\; int high) {
+	int pivot = A[low];
+	while (low < high) {
+		while (low < high && A[high] >= pivot) high--; 
+		A[low] = A[high];
+		while (low < high && A[low] <= pivot) low++;
+		A[high] = A[low];
+	}
+	return low;
 }
+//经过一次划分后会得到pivot左边的子表和pivot右边的子表，我们对左右子表同样进行一次划分操作
+//最后我们会对只有一个元素的子表进行划分操作，整个序列就有序了
+void quicksort(int* A\; int low\; int high) {
+	if (low < high) {
+		int pivot = poration(A\; low\; high);
+		quicksort(A\; low\; pivot - 1);
+		quicksort(A\; pivot + 1\; high);
+	}
+}
+int main() {
+	int n;
+	cin >> n;
+	int a[n];
+	for (int i = 0; i < n; i++)
+		cin >> a[i];
+	quicksort(a\; 0\; n - 1);
+	for (int j = 0; j < n; j++)
+		cout << a[j] << " ";
+}
+
 ```
+
+---
+
+>   三路快速排序
+>
+>   ```cpp
+>   // 模板的 T 参数表示元素的类型，此类型需要定义小于（<）运算
+>   template <typename T>
+>   // arr 为需要被排序的数组，len 为数组长度
+>   void quick_sort(T arr[]\; const int len) {
+>     if (len <= 1) return;
+>     // 随机选择基准（pivot）
+>     const T pivot = arr[rand() % len];
+>     // i：当前操作的元素下标
+>     // arr[0\; j)：存储小于 pivot 的元素
+>     // arr[k\; len)：存储大于 pivot 的元素
+>     int i = 0\; j = 0\; k = len;
+>     // 完成一趟三路快排，将序列分为：
+>     // 小于 pivot 的元素 | 等于 pivot 的元素 | 大于 pivot 的元素
+>     while (i < k) {
+>       if (arr[i] < pivot)
+>         swap(arr[i++]\; arr[j++]);
+>       else if (pivot < arr[i])
+>         swap(arr[i]\; arr[--k]);
+>       else
+>         i++;
+>     }
+>     // 递归完成对于两个子序列的快速排序
+>     quick_sort(arr\; j);
+>     quick_sort(arr + k\; len - k);
+>   }
+>   ```
+>
 
 #### 单边循环快排
 
@@ -573,7 +616,7 @@ void quick_sort(T arr[], const int len) {
 即每一趟在待排序元素中选取关键字最小的元素加入有序序列。交换发生在选出最值后，在每趟的尾部。经过$n-1$趟就可以完成。
 
 ```cpp
-void selection_sort(int* a, int n) {
+void selection_sort(int* a\; int n) {
   for (int i = 1; i < n; ++i) {
     int min = i;
     for (int j = i + 1; j <= n; ++j) {
@@ -581,7 +624,7 @@ void selection_sort(int* a, int n) {
         min = j;
       }
     }
-    std::swap(a[i], a[min]);
+    std::swap(a[i]\; a[min]);
   }
 }
 
@@ -628,12 +671,12 @@ void selection_sort(int* a, int n) {
 
 若$n$个关键字序列$L$满足下面某一条性质，则就是堆：
 
-1. 若满足$L(i)\geqslant L(2i)$且$L(i)\geqslant L(2i+1)\,(1\leqslant i\leqslant\dfrac{n}{2})$则是大根堆或大顶堆。
+1. 若满足$L(i)\geqslant L(2i)$且$L(i)\geqslant L(2i+1)\\;(1\leqslant i\leqslant\dfrac{n}{2})$则是大根堆或大顶堆。
     +   即根结点存储值大于等于其左右孩子结点存储值
-2. 若满足$L(i)\leqslant L(2i)$且$L(i)\leqslant L(2i+1)\,(1\leqslant i\leqslant\dfrac{n}{2})$则是小根堆或小顶堆。
+2. 若满足$L(i)\leqslant L(2i)$且$L(i)\leqslant L(2i+1)\\;(1\leqslant i\leqslant\dfrac{n}{2})$则是小根堆或小顶堆。
     +   即根结点存储值小于等于其左右孩子结点存储值
 
->   对于堆(层序存储的完全二叉树)中编号为$i$的结点,编号为$2i$的结点是它的左孩子,编号为$2i+1$的结点是它的右孩子
+>   对于堆(层序存储的完全二叉树)中编号为$i$的结点\;编号为$2i$的结点是它的左孩子\;编号为$2i+1$的结点是它的右孩子
 
 所以堆就是用顺序存储的完全二叉树。
 
@@ -658,7 +701,7 @@ void selection_sort(int* a, int n) {
 4. 递归往上时父子结点不断交换位置。
 5. 如果元素互换破坏了调整好的下一级的堆，则使用同样的方法对下一层递归调整。
 
-如用堆排序对$(15,9,7,8,20,-1,7,4)$建立小根堆堆。首先将这组数据按层序初始化为无序堆，然后从最后向前开始调整：
+如用堆排序对$(15\;9\;7\;8\;20\;-1\;7\;4)$建立小根堆堆。首先将这组数据按层序初始化为无序堆，然后从最后向前开始调整：
 
 ![heapbuild](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222006644.png)
 
@@ -691,12 +734,10 @@ void selection_sort(int* a, int n) {
 
 ![23July22-223249-1690036369-8cd97f60-71e6-46ab-8e14-0c01a00c6c0d](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222233251.png)
 
-
-
-
+---
 
 ```cpp
-void sift_down(int arr[], int start, int end) {
+void sift_down(int arr[]\; int start\; int end) {
     // 计算父结点和子结点的下标
     int parent = start;
     int child = parent * 2 + 1;
@@ -707,20 +748,20 @@ void sift_down(int arr[], int start, int end) {
         if (arr[parent] >= arr[child])
             return;
         else {  // 否则交换父子内容，子结点再和孙结点比较
-            std::swap(arr[parent], arr[child]);
+            std::swap(arr[parent]\; arr[child]);
             parent = child;
             child = parent * 2 + 1;
         }
     }
 }
 
-void heap_sort(int arr[], int len) {
+void heap_sort(int arr[]\; int len) {
     // 从最后一个结点的父结点开始 sift down 以完成堆化 (heapify)
-    for (int i = (len - 1 - 1) / 2; i >= 0; i--) sift_down(arr, i, len - 1);
+    for (int i = (len - 1 - 1) / 2; i >= 0; i--) sift_down(arr\; i\; len - 1);
     // 先将第一个元素和已经排好的元素前一位做交换，再重新调整（刚调整的元素之前的元素），直到排序完毕
     for (int i = len - 1; i > 0; i--) {
-        std::swap(arr[0], arr[i]);
-        sift_down(arr, 0, i - 1);
+        std::swap(arr[0]\; arr[i]);
+        sift_down(arr\; 0\; i - 1);
     }
 }
 ```
@@ -806,15 +847,15 @@ via [堆排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/heap-sort/)
 >   上面的代码中，最后两个`while`循环只有一个会执行
 
 ```cpp
-void merge_sort(int *a, int l, int r) {
+void merge_sort(int *a\; int l\; int r) {
   if (r - l <= 1) return;
   // 分解
   int mid = l + ((r - l) >> 1);
-  merge_sort(a, l, mid), merge_sort(a, mid, r);
+  merge_sort(a\; l\; mid)\; merge_sort(a\; mid\; r);
   // 合并
   int tmp[1024] = {};  // 请结合实际情况设置 tmp 数组的长度（与 a 相同），或使用
                        // vector；先将合并的结果放在 tmp 里，再返回到数组 a
-  merge(a + l, a + mid, a + mid, a + r, tmp + l);  // pointer-style merge
+  merge(a + l\; a + mid\; a + mid\; a + r\; tmp + l);  // pointer-style merge
   for (int i = l; i < r; ++i) a[i] = tmp[i];
 }
 
@@ -829,7 +870,7 @@ via [归并排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/merge-sort/
 +   $n$个元素二路归并排序，归并一共要$\log_2n$趟，每次归并时间复杂度为$O(n)$，则算法时间复杂度为$O(n\log_2n)$
 +   归并排序是稳定的。
 
-+   一般而言，对于$N$个元素进行$k$路归并排序时，排序的趟数$m$满足$k^m = N$,从而$m =\log_kN$,又考虑到$m$为整数，所以$m=\lceil\log_kN\rceil$
++   一般而言，对于$N$个元素进行$k$路归并排序时，排序的趟数$m$满足$k^m = N$\;从而$m =\log_kN$\;又考虑到$m$为整数，所以$m=\lceil\log_kN\rceil$
 
 +   这和前面的$2$路归并是一致的。
 
@@ -846,7 +887,7 @@ via [归并排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/merge-sort/
 
 #### 基数的定义
 
-假设长度为$n$的线性表中每个结点$a_j$的关键字由$d$元组$(k_j^{d-1},k_j^{d-2},\cdots,k_j^1,k_j^0)$组成，其中$0\geqslant k_j^i\geqslant r-1\,(0\geqslant i\geqslant d-1)$，其中$r$就是基数。
+假设长度为$n$的线性表中每个结点$a_j$的关键字由$d$元组$(k_j^{d-1}\;k_j^{d-2}\;\cdots\;k_j^1\;k_j^0)$组成，其中$0\geqslant k_j^i\geqslant r-1\\(0\geqslant i\geqslant d-1)$，其中$r$就是基数。
 
 #### 基数排序过程
 
@@ -858,17 +899,17 @@ via [归并排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/merge-sort/
 
 若是要得到递减序列：
 
-1. 初始化：设置$r$个空辅助队列$Q_{r-1},Q_{r-2},\cdots,Q_0$。
+1. 初始化：设置$r$个空辅助队列$Q_{r-1}\;Q_{r-2}\;\cdots\;Q_0$。
 2. 按照每个关键字位**权重递增**的次序（个、十、百），对$d$个关键字位分别做分配和收集。
 3. 分配就是顺序扫描各个元素，若当前处理的关键字位为$x$，就将元素插入$Q_x$队尾。
-4. 收集就是把$Q_{r-1},Q_{r-2},\cdots,Q_0$各个队列的结点依次出队并链接在一起。
+4. 收集就是把$Q_{r-1}\;Q_{r-2}\;\cdots\;Q_0$各个队列的结点依次出队并链接在一起。
 
 ```cpp
 const int N = 100010;
 const int W = 100010;
 const int K = 100;
 
-int n, w[K], k, cnt[W];
+int n\; w[K]\; k\; cnt[W];
 
 struct Element {
   int key[K];
@@ -881,16 +922,16 @@ struct Element {
     }
     return false;
   }
-} a[N], b[N];
+} a[N]\; b[N];
 
 void counting_sort(int p) {
-  memset(cnt, 0, sizeof(cnt));
+  memset(cnt\; 0\; sizeof(cnt));
   for (int i = 1; i <= n; ++i) ++cnt[a[i].key[p]];
   for (int i = 1; i <= w[p]; ++i) cnt[i] += cnt[i - 1];
   // 为保证排序的稳定性，此处循环i应从n到1
   // 即当两元素关键字的值相同时，原先排在后面的元素在排序后仍应排在后面
   for (int i = n; i >= 1; --i) b[cnt[a[i].key[p]]--] = a[i];
-  memcpy(a, b, sizeof(a));
+  memcpy(a\; b\; sizeof(a));
 }
 
 void radix_sort() {
@@ -938,7 +979,7 @@ via [基数排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/radix-sort/
     +   从`C`中的第一个元素开始，每一项和前一项相加
 4. 反向填充目标数组：将每个元素i放在新数组的第`C(i)`项，每放一个元素就将`C(i)`减去$1$。
 
-当输入的元素是$n$个属于$[0,k]$的整数时，时间复杂度是$O(n+k)$，空间复杂度也是$O(n+k)$，其排序速度快于任何比较排序算法。
+当输入的元素是$n$个属于$[0\;k]$的整数时，时间复杂度是$O(n+k)$，空间复杂度也是$O(n+k)$，其排序速度快于任何比较排序算法。
 
 当$k$不是很大并且序列比较集中时，计数排序是一个很有效的排序算法。
 
@@ -960,7 +1001,7 @@ via [基数排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/radix-sort/
 ```cpp
 const int N = 100010;
 
-int n, w, a[N];
+int n\; w\; a[N];
 vector<int> bucket[N];
 
 void insertion_sort(vector<int>& A) {
@@ -1246,7 +1287,7 @@ $k$路平衡归并：
 
 此时输出的初始归并段可以超过$WA$，且初始归并段长度是不一定相等的。
 
-如$FI$：$17,21, 05, 44, 10, 12,56,32,29$，$WA$长度为$3$
+如$FI$：$17\;21\; 05\; 44\; 10\; 12\;56\;32\;29$，$WA$长度为$3$
 
 ![image-20230724233238257](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242332454.png)
 
@@ -1290,7 +1331,7 @@ $k$路平衡归并：
             +   对于树有结点数$=$总度数$+1$
     +   则$n_0=(k-1)n_k+1$
     +   所以$n_k=\dfrac{(n_0-1)}{(k-1)}$一定是可以整除的
-        +   即若(初始归并段数量$-1)MOD(k-1)=0$,说明刚好可以构成严格$k$叉树，此时不需要添加虚段
+        +   即若(初始归并段数量$-1)MOD(k-1)=0$\;说明刚好可以构成严格$k$叉树，此时不需要添加虚段
     +   如果不整除就要添加虚段。
         +   即若(初始归并段数量$-1)MOD(k-1)=u\ne 0$，说明需要补充$k-1-u$个虚段
 
@@ -1326,8 +1367,8 @@ $k$路平衡归并：
 以下是 `std::sort` 的使用方法和一些注意事项：
 
 1. `std::sort` 函数的基本用法：
-   - 函数签名：`template <class RandomAccessIterator> void sort(RandomAccessIterator first, RandomAccessIterator last);`
-   - 功能：对 `[first, last)` 范围内的元素进行升序排序。
+   - 函数签名：`template <class RandomAccessIterator> void sort(RandomAccessIterator first\; RandomAccessIterator last);`
+   - 功能：对 `[first\; last)` 范围内的元素进行升序排序。
    - 参数：`first` 是排序范围的起始迭代器，`last` 是排序范围的结束迭代器（不包含在排序范围内）。
    - 示例：
      ```cpp
@@ -1336,9 +1377,9 @@ $k$路平衡归并：
      #include <iostream>
      
      int main() {
-         std::vector<int> numbers = {5, 2, 9, 1, 5, 6};
+         std::vector<int> numbers = {5\; 2\; 9\; 1\; 5\; 6};
          
-         std::sort(numbers.begin(), numbers.end());
+         std::sort(numbers.begin()\; numbers.end());
          
          for (int num : numbers) {
              std::cout << num << " ";
@@ -1350,8 +1391,8 @@ $k$路平衡归并：
 
 2. 自定义排序方式：
    `std::sort` 还支持传入自定义的比较函数或 Lambda 表达式，以实现自定义排序规则。
-   - 函数签名：`template <class RandomAccessIterator, class Compare> void sort(RandomAccessIterator first, RandomAccessIterator last, Compare comp);`
-   - 功能：对 `[first, last)` 范围内的元素进行自定义排序。
+   - 函数签名：`template <class RandomAccessIterator\; class Compare> void sort(RandomAccessIterator first\; RandomAccessIterator last\; Compare comp);`
+   - 功能：对 `[first\; last)` 范围内的元素进行自定义排序。
    - 参数：`comp` 是一个比较函数或 Lambda 表达式，用于定义排序规则。
    - 示例：
      ```cpp
@@ -1360,9 +1401,9 @@ $k$路平衡归并：
      #include <iostream>
      
      int main() {
-         std::vector<int> numbers = {5, 2, 9, 1, 5, 6};
+         std::vector<int> numbers = {5\; 2\; 9\; 1\; 5\; 6};
          
-         std::sort(numbers.begin(), numbers.end(), [](int a, int b) {
+         std::sort(numbers.begin()\; numbers.end()\; [](int a\; int b) {
              return a > b;  // 降序排序
          });
          
@@ -1376,7 +1417,7 @@ $k$路平衡归并：
 
 3. 注意事项：
    - `std::sort` 对指定范围进行就地排序，即对原始容器进行修改，而不会创建新的容器。
-   - 排序范围是左闭右开区间 `[first, last)`，因此 `last` 不在排序范围内。
+   - 排序范围是左闭右开区间 `[first\; last)`，因此 `last` 不在排序范围内。
    - 使用 `std::sort` 前，请确保迭代器范围有效且可访问。对于数组，使用数组名和数组名+数组大小作为迭代器范围。对于容器（例如 `std::vector`、`std::list` 等），使用 `begin()` 和 `end()` 成员函数来获得迭代器范围。
    - 对于自定义类型，确保比较函数或 Lambda 表达式定义了严格的弱排序（Strict Weak Ordering）规则，以避免未定义的行为。
 
@@ -1386,16 +1427,16 @@ $k$路平衡归并：
 
 以下是 `std::nth_element` 的详细信息：
 
-- 函数签名：`template <class RandomAccessIterator> void nth_element(RandomAccessIterator first, RandomAccessIterator nth, RandomAccessIterator last);`
+- 函数签名：`template <class RandomAccessIterator> void nth_element(RandomAccessIterator first\; RandomAccessIterator nth\; RandomAccessIterator last);`
 
 - 函数用法
 
     ```cpp
-    std::nth_element(first, nth, last);
-    std::nth_element(first, nth, last, cmp);
+    std::nth_element(first\; nth\; last);
+    std::nth_element(first\; nth\; last\; cmp);
     ```
 
-- 功能：对 `[first, last)` 范围内的元素进行部分排序，使第 n 小（或大）的元素处于正确的位置。
+- 功能：对 `[first\; last)` 范围内的元素进行部分排序，使第 n 小（或大）的元素处于正确的位置。
 
 - 参数：
   - `first`：排序范围的起始迭代器。
@@ -1406,11 +1447,11 @@ $k$路平衡归并：
 
 注意事项：
 - 在使用 `std::nth_element` 之前，请确保迭代器范围有效且可访问。
-- `std::nth_element` 重排 `[first, last)` 中的元素，使得 `nth` 所指向的元素被更改为 `[first, last)` 排好序后该位置会出现的元素
+- `std::nth_element` 重排 `[first\; last)` 中的元素，使得 `nth` 所指向的元素被更改为 `[first\; last)` 排好序后该位置会出现的元素
     - 这个新的 `nth` 元素前的所有元素小于或等于新的 `nth` 元素后的所有元素。
 
 - 实现算法是未完成的内省排序。
-- 对于以上两种用法，$Cpp $标准要求它的平均时间复杂度为 O(n)，其中$ n $为 `std::distance(first, last)`。
+- 对于以上两种用法，$Cpp $标准要求它的平均时间复杂度为 O(n)，其中$ n $为 `std::distance(first\; last)`。
 - 常用于构建$ K-D\; Tree$。
 
 示例：
@@ -1420,10 +1461,10 @@ $k$路平衡归并：
 #include <vector>
 
 int main() {
-    std::vector<int> numbers = {5, 2, 9, 1, 5, 6, 3, 8};
+    std::vector<int> numbers = {5\; 2\; 9\; 1\; 5\; 6\; 3\; 8};
     int n = 4; // 找第4小的元素
 
-    std::nth_element(numbers.begin(), numbers.begin() + n, numbers.end());
+    std::nth_element(numbers.begin()\; numbers.begin() + n\; numbers.end());
 
     std::cout << "The " << n << "th smallest element: " << numbers[n] << std::endl;
 
@@ -1437,14 +1478,14 @@ int main() {
 
 以下是 `std::stable_sort` 的详细信息：
 
-- 函数签名：`template <class RandomAccessIterator> void stable_sort(RandomAccessIterator first, RandomAccessIterator last);`
+- 函数签名：`template <class RandomAccessIterator> void stable_sort(RandomAccessIterator first\; RandomAccessIterator last);`
 - 函数用法
 
     ```cpp
-    std::stable_sort(first, last);
-    std::stable_sort(first, last, cmp);
+    std::stable_sort(first\; last);
+    std::stable_sort(first\; last\; cmp);
     ```
-- 功能：对 `[first, last)` 范围内的元素进行稳定排序。
+- 功能：对 `[first\; last)` 范围内的元素进行稳定排序。
 
 - 参数：
   - `first`：排序范围的起始迭代器。
@@ -1462,9 +1503,9 @@ int main() {
 #include <vector>
 
 int main() {
-    std::vector<int> numbers = {5, 2, 9, 1, 5, 6, 3, 8};
+    std::vector<int> numbers = {5\; 2\; 9\; 1\; 5\; 6\; 3\; 8};
 
-    std::stable_sort(numbers.begin(), numbers.end());
+    std::stable_sort(numbers.begin()\; numbers.end());
 
     for (int num : numbers) {
         std::cout << num << " ";
@@ -1481,17 +1522,17 @@ int main() {
 
 以下是 `std::partial_sort` 的详细信息：
 
-- 函数签名：`template <class RandomAccessIterator> void partial_sort(RandomAccessIterator first, RandomAccessIterator middle, RandomAccessIterator last);`
+- 函数签名：`template <class RandomAccessIterator> void partial_sort(RandomAccessIterator first\; RandomAccessIterator middle\; RandomAccessIterator last);`
 - 函数用法
 
     ```cpp
     // mid = first + k
-    std::partial_sort(first, mid, last);
-    std::partial_sort(first, mid, last, cmp);
+    std::partial_sort(first\; mid\; last);
+    std::partial_sort(first\; mid\; last\; cmp);
     ```
 
     将序列中前 `k` 元素按 `cmp` 给定的顺序进行原地排序，后面的元素不保证顺序。未指定 `cmp` 函数时，默认按从小到大的顺序排序。
-- 功能：对 `[first, last)` 范围内的元素进行部分排序，将前 n 个最小（或最大）的元素放在 `[first, middle)` 范围内，并保持它们的相对顺序。
+- 功能：对 `[first\; last)` 范围内的元素进行部分排序，将前 n 个最小（或最大）的元素放在 `[first\; middle)` 范围内，并保持它们的相对顺序。
 
 - 参数：
   - `first`：排序范围的起始迭代器。
@@ -1500,11 +1541,11 @@ int main() {
 - 返回值：无。
 - 原理：
 
-    `std::partial_sort` 的思想是：对原始容器内区间为 `[first, mid)` 的元素执行 `make_heap()` 操作，构造一个大根堆，然后将 `[mid, last)` 中的每个元素和 `first` 进行比较，保证 `first` 内的元素为堆内的最大值。如果小于该最大值，则互换元素位置，并对 `[first, mid)` 内的元素进行调整，使其保持最大堆序。比较完之后，再对 `[first, mid)` 内的元素做一次堆排序 `sort_heap()` 操作，使其按增序排列。注意，堆序和增序是不同的。
+    `std::partial_sort` 的思想是：对原始容器内区间为 `[first\; mid)` 的元素执行 `make_heap()` 操作，构造一个大根堆，然后将 `[mid\; last)` 中的每个元素和 `first` 进行比较，保证 `first` 内的元素为堆内的最大值。如果小于该最大值，则互换元素位置，并对 `[first\; mid)` 内的元素进行调整，使其保持最大堆序。比较完之后，再对 `[first\; mid)` 内的元素做一次堆排序 `sort_heap()` 操作，使其按增序排列。注意，堆序和增序是不同的。
 
 注意事项：
 - 在使用 `std::partial_sort` 之前，请确保迭代器范围有效且可访问。
-- `std::partial_sort` 会将前 n 个最小（或最大）的元素放在 `[first, middle)` 范围内，并保持它们的相对顺序，但对于 `[middle, last)` 范围内的元素，它们的顺序是未定义的。
+- `std::partial_sort` 会将前 n 个最小（或最大）的元素放在 `[first\; middle)` 范围内，并保持它们的相对顺序，但对于 `[middle\; last)` 范围内的元素，它们的顺序是未定义的。
 
 示例：
 ```cpp
@@ -1513,10 +1554,10 @@ int main() {
 #include <vector>
 
 int main() {
-    std::vector<int> numbers = {5, 2, 9, 1, 5, 6, 3, 8};
+    std::vector<int> numbers = {5\; 2\; 9\; 1\; 5\; 6\; 3\; 8};
     int n = 4; // 找前4个最小的元素
 
-    std::partial_sort(numbers.begin(), numbers.begin() + n, numbers.end());
+    std::partial_sort(numbers.begin()\; numbers.begin() + n\; numbers.end());
 
     for (int i = 0; i < n; ++i) {
         std::cout << numbers[i] << " ";

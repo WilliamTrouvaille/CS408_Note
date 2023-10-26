@@ -28,7 +28,7 @@
 
 是具有**相同**数据类型的$n$个数据元素的**有限序列**。$n$表示表长。
 
-$L=(a_1,a_2,\cdots,a_i,\cdots,a_n)$，其中$i$表示元素在线性表中的位序，从一开始。
+$L=(a_1，a_2，\cdots，a_i，\cdots，a_n)$，其中$i$表示元素在线性表中的位序，从一开始。
 
 + 存在唯一的第一个元素。
 + 存在唯一的最后一个元素。
@@ -57,20 +57,20 @@ $L=(a_1,a_2,\cdots,a_i,\cdots,a_n)$，其中$i$表示元素在线性表中的位
 
 + `InitList(&L)`
     + 初始化表
-    + 构造一个空的线性表`L`,分配内存空间。
+    + 构造一个空的线性表`L`，分配内存空间。
 + `DestroyList(&L)`
     + 销毁操作
     + 销毁线性表，并释放线性表`L`所占用的内存空间。
-+ `ListInsert(&L,i,e)`
++ `ListInsert(&L，i，e)`
     + 插入操作
     + 在表`L`中的第`i`个位置上插入指定元素`e`。
-+ `ListDelete(&L,i,&e)`
++ `ListDelete(&L，i，&e)`
     + 删除操作
     + 删除表`L`中第`i`个位置的元素，并用`e`返回删除元素的值
-+ `LocateElem(L,e)`
++ `LocateElem(L，e)`
     + 按值查找操作
     + 在表`L`中查找具有给定关键字值的元素。
-+ `GetElem(L,i)`
++ `GetElem(L，i)`
     + 按位查我操作
     + 获取表`L`中第`i`个位置的元素的值。
 + `Length(L)`
@@ -81,7 +81,7 @@ $L=(a_1,a_2,\cdots,a_i,\cdots,a_n)$，其中$i$表示元素在线性表中的位
     + 按前后顺序输出线性表`L`的所有元素值。
 + `Empty(L)`
     + 判空操作
-    + 若`L`为空表，则返回`true`,否则返回`false`。
+    + 若`L`为空表，则返回`true`，否则返回`false`。
 + `DestroyList(&L)`
     + 销毁操作
     + 销毁线性表，并释放线性表L所占用的内存空间。
@@ -167,11 +167,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* arr = new int[5];  // 在堆上分配内存并创建一个包含 5 个 int 对象的数组
->                  
+>                       
 >        for (int i = 0; i < 5; ++i) {
 >            arr[i] = i + 1;    // 对动态分配的对象数组进行操作
 >        }
->                  
+>                       
 >        delete[] arr;          // 释放内存空间（注意使用 delete[] 删除对象数组）
 >        ```
 >
@@ -181,11 +181,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* data = new int[10];   // 在堆上分配内存来存储 10 个 int 值
->                  
+>                       
 >        for (int i = 0; i < 10; ++i) {
 >            data[i] = i;   // 对动态分配的内存进行操作
 >        }
->                  
+>                       
 >        delete[] data;            // 释放内存空间（注意使用 delete[] 删除内存数组）
 >        ```
 >
@@ -262,10 +262,8 @@ typedef char element_type;
 
 + 静态顺序表因为数组部分在创建时就已经设置好了，所以初始化就直接设置数据长度就可以了。
   
-    
+  ![image-20230704224205453](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042242503.png)
   
-    ![image-20230704224205453](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042242503.png)
-    
     ![image-20230704224301457](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042243497.png)
     
     + 顺序表的表长刚开始确定后就**无法更改**（存储空间是静态的）
@@ -301,12 +299,12 @@ typedef char element_type;
     + 最好时间复杂度O(1)$
 
         + 新元素插入到表尾，不需要移动元素
-        + `i=n+1`,循环$0$次
+        + `i=n+1`，循环$0$次
 
     + 最坏时间复杂度$O(n)$
 
         + 新元素插入到表头，需要将原有的个元素全都向后移动
-        + `i=1`,循环$n$次：
+        + `i=1`，循环$n$次：
 
     + 平均时间复杂度$O(n)$
 
@@ -345,12 +343,12 @@ typedef char element_type;
     + 最好时间复杂度$O(1)$
 
         + 删除表尾元素，不需要移动其他元素
-        + `i=n`,循环$0$次；
+        + `i=n`，循环$0$次；
 
     + 最坏时间复杂度$O(n)$
 
         + 删除表头元素，需要将后续的$n-1$个元素全都向前移动
-        + `i=1`,循环$n-1$次：
+        + `i=1`，循环$n-1$次：
 
     + 平均时间复杂度$O(n)$
 
@@ -370,20 +368,19 @@ typedef char element_type;
   
     ![image-20230704232910427](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042329466.png)
     
-    + “随机存取”特性
-        + 由于顺序表的各个数据元素在内存中连续存放，因此可以根据起始地址和数据元素大小立即找到第$i$个元素
+    + “随机存取”特性：由于顺序表的各个数据元素在内存中连续存放，因此可以根据起始地址和数据元素大小立即找到第$i$个元素
 + 按值查找时间复杂度为$T(n)=O(n)$
   
     ![image-20230704233030094](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042330135.png)
     
     + 一般都是找到第一个元素等于指定值的元素，返回其位序，如果没有找到就返回$-1$
     + 最好时间复杂度$O(1)$
-        + 目标元素在表头,循环$1$次
+        + 目标元素在表头，循环$1$次
     + 最坏时间复杂度$O(n)$
-        + 目标元素在表尾,循环$n$次：
+        + 目标元素在表尾，循环$n$次：
     + 平均时间复杂度$O(n)$
         + 假设目标元素出现在任何一个位置的概率相同，都是1
-            目标元素在第1位，循环1次；在第2位，循环2次；：在第n位，循环n次
+        + 目标元素在第1位，循环1次；在第2位，循环2次；...：在第n位，循环n次
 
 > 《数据结构》考研初试中，手写代码可以直接用$==$，无论$ElemType$是基本数据类型还是结构类型
 
@@ -407,7 +404,7 @@ typedef char element_type;
 >   引入头结点后，可以带来两个优点:
 >
 >   1.   由于第一个数据结点的位置被存放在头结点的指针域中，因此在链表的第一个位置上的操作和在表的其他位置上的操作一致，无须进行特殊处理
->   2.   无论链表是否为空，其头指针都是指向头结点的非空指针(空表中头结点的指针域为空),因此空表和非空表的处理也就得到了统一
+>   2.   无论链表是否为空，其头指针都是指向头结点的非空指针(空表中头结点的指针域为空)，因此空表和非空表的处理也就得到了统一
 
 ### 单链表特点
 
@@ -416,7 +413,7 @@ typedef char element_type;
 
 + 不可随机存取。
     + 查找某个特定的结点时，需要从表头开始遍历， 依次查找。
-    + 增删改都需要先查找结点,都需要$O(n)$的时间
+    + 增删改都需要先查找结点，都需要$O(n)$的时间
 
 + 要花费多余空间存放指针。
     + 单链表附加指针域，浪费存储空间
@@ -428,17 +425,17 @@ typedef char element_type;
 
 使用`LinkNode`表示一个单链表结点的结构体，而使用`LinkList`表示一个单链表，其实`LinkList`是一个指向`LinkNode`的指针变量。如定义`LinkList L`等价于`LinkNode* L`。
 
-如,以下两种写法等价
+如，以下两种写法等价
 
 ![image-20230705094138531](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307050941593.png)
 
 ![image-20230705094202690](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307050942735.png)
 
-要表示一个单链表时，只需声明一个**头指针**`L`,指向单链表的第一个结点
+要表示一个单链表时，只需声明一个**头指针**`L`，指向单链表的第一个结点
 
 ```c++
-LNode *L;//声明一个指向单链表第一个结点的指针,强调指向链表中某结点的指针
-LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链表中头结点的指针(强调这是一个单链表),一般不会变(不会再赋值)
+LNode *L;//声明一个指向单链表第一个结点的指针，强调指向链表中某结点的指针
+LinkList L;//声明一个指向单链表第一个结点的指针，强调指向链表中头结点的指针(强调这是一个单链表)，一般不会变(不会再赋值)
 ```
 
 ---
@@ -496,8 +493,8 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >
 >
 >```cpp
->MyStruct obj1{1, 2};
->MyStruct obj2{1, 2};
+>MyStruct obj1{1， 2};
+>MyStruct obj2{1， 2};
 >if (obj1 == obj2) {
 >   // 两个对象相等
 >}
@@ -514,7 +511,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >   int y;
 > };
 > 
->bool CompareStructs(const MyStruct& obj1, const MyStruct& obj2) {
+>bool CompareStructs(const MyStruct& obj1， const MyStruct& obj2) {
 >   return (obj1.x == obj2.x) && (obj1.y == obj2.y);
 >}
 > ```
@@ -522,9 +519,9 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >
 >
 >```cpp
->MyStruct obj1{1, 2};
->MyStruct obj2{1, 2};
->if (CompareStructs(obj1, obj2)) {
+>MyStruct obj1{1， 2};
+>MyStruct obj2{1， 2};
+>if (CompareStructs(obj1， obj2)) {
 >   // 两个对象相等
 >}
 > ```
@@ -547,7 +544,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 
 >注:**`nullptr`和`NULL`**
 >
->实际写代码时,建议使用`nullptr`代替`NULL`
+>实际写代码时，建议使用`nullptr`代替`NULL`
 >
 > `nullptr` 是C++11引入的空指针常量。它用于表示一个空指针值，可以被用作指针的初始值或进行指针比较。
 >
@@ -635,10 +632,10 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 
 ---
 
-> 注:删除指定结点时若使用上述方法且传入结点指针`*p`为最后一个结点(无直接后继结点)时,在执行`p->data=p->next->data;`时会报错,因为此时`p`所指向的内存为`NULL`,此时优先使用传入头指针删除的方法
+> 注:删除指定结点时若使用上述方法且传入结点指针`*p`为最后一个结点(无直接后继结点)时，在执行`p->data=p->next->data;`时会报错，因为此时`p`所指向的内存为`NULL`，此时优先使用传入头指针删除的方法
 >
 > ```cpp
-> void deleteNode(LinkList list, element_type value) {
+> void deleteNode(LinkList list， element_type value) {
 >     // 指向头结点的指针
 >     LinkListNode* head = list;
 > 
@@ -668,7 +665,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 
 ---
 
-> 再注: **关于`p` , `q` 指针变量的命名**
+> 再注: **关于`p` ， `q` 指针变量的命名**
 >
 > 在单链表中，通常使用 `p` 和 `q` 作为指针变量来代表不同的结点。
 >
@@ -688,7 +685,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 
 按位查找时间复杂度为$O(n)$。
 
-这样插入元素函数`InsertLinkListWithHead`只用`GetLinkListNode(list,i-1)`和`InsertNextLinkNode(p,elem)`两个函数完成。
+这样插入元素函数`InsertLinkListWithHead`只用`GetLinkListNode(list，i-1)`和`InsertNextLinkNode(p，elem)`两个函数完成。
 
 + 按位查找
 
@@ -712,16 +709,20 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 
 ##### 尾插法建立单链表
 
-+ 基本思想:使用**后插操作**从后面(**尾结点**)不断插入元素
++ 基本思想：使用**后插操作**从后面(**尾结点**)不断插入元素
 
     + 具体实现见上单链表插入处或见下
      ![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
 
 + 实现思路
 
-  ![image-20230705120836344](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051208397.png)
-     ![image-20230705120524978](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051205037.png)
-  
+
+
+
+![image-20230705120836344](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051208397.png)
+
+   ![image-20230705120524978](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051205037.png)
+
 + 注意事项
     + 需要定义一个尾指针`r`来记录最后一位
     + 生成的链表中结点数据与输入数据顺序**一致**。
@@ -730,13 +731,17 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 ##### 头插法建立单链表：
 
 + 基本思想:实际上也是使用**后插操作**，不过每一次后插的元素都是**头结点**，也不用使用尾指针
-     ![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
+
+![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
+
 + 实现思路
-     ![image-20230705121024656](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051210713.png)
-     ![image-20230705121211148](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051212216.png)
+
+
+![image-20230705121024656](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051210713.png)
+![image-20230705121211148](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051212216.png)
 
 + 注意事项
-    + 头插法可以实现链表的**逆置**,实现了输入数据的就地逆置。
+    + 头插法可以实现链表的**逆置**，实现了输入数据的就地逆置。
         + 即头插法会导致生成的链表中结点数据与输入数据顺序**相反**。
     + 每个结点的插入时间为$O(1)$，设单链表长为$n$，则总时间复杂度为$O(n)$。
 
@@ -801,11 +806,11 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 > 
 > int main() {
 >     // 创建一个示例链表 1 -> 2 -> 3 -> 4 -> 5
->     ListNode* head = new ListNode{1, nullptr};
->     ListNode* second = new ListNode{2, nullptr};
->     ListNode* third = new ListNode{3, nullptr};
->     ListNode* fourth = new ListNode{4, nullptr};
->     ListNode* fifth = new ListNode{5, nullptr};
+>     ListNode* head = new ListNode{1， nullptr};
+>     ListNode* second = new ListNode{2， nullptr};
+>     ListNode* third = new ListNode{3， nullptr};
+>     ListNode* fourth = new ListNode{4， nullptr};
+>     ListNode* fifth = new ListNode{5， nullptr};
 > 
 >     head->next = second;
 >     second->next = third;
@@ -958,7 +963,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 1. 增删改不需要移动大量数据元素。
 2. 不能随机存取，只能从头结点开始。
 3. 容量固定保持不变。
-4. 由于使用了数组,需要分配连续的较大空间
+4. 由于使用了数组，需要分配连续的较大空间
 
 适用场景：
 
@@ -974,20 +979,20 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >
 > ![image-20230626233424662](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306262334718.png)
 >
-> + 操作系统把用于链接文件各物理块的指针显式地存放在一张表中.即文件分配表（$FAT$,$File\,Allocation\,Table$）
+> + 操作系统把用于链接文件各物理块的指针显式地存放在一张表中.即文件分配表（$FAT$，$File\;Allocation\;Table$）
 >     + $FAT$包含物理块号和下一块指针两项.
 > + $FCB$目录中只需记录文件的起始块号.
-> + 一个**磁盘**仅设置一张$FAT$.开机时,将$FAT$读入内存,并常驻内存.所以地址转换不需要读取内存,从而效率更高.
-> + $FAT$的各个表项在物理上连续存储,且每一个表项长度相同,因此“物理块号”字段可以是隐含的.
+> + 一个**磁盘**仅设置一张$FAT$.开机时，将$FAT$读入内存，并常驻内存.所以地址转换不需要读取内存，从而效率更高.
+> + $FAT$的各个表项在物理上连续存储，且每一个表项长度相同，因此“物理块号”字段可以是隐含的.
 > + 地址转换
->     + 目录项中找到起始块号,若$i>0$,则查询内存中的文件分配表$FAT$,往后找到$i$号逻辑块对应的物理块号
+>     + 目录项中找到起始块号，若$i>0$，则查询内存中的文件分配表$FAT$，往后找到$i$号逻辑块对应的物理块号
 >     + 逻辑块号转换成物理块号的过程不需要**读磁盘**操作.
 > + 优点：
 >     + 很方便文件拓展.
->     + 不会有外部碎片问题,外存利用率高.
+>     + 不会有外部碎片问题，外存利用率高.
 >     + 支持顺序访问也支持随机访问.
 >         + 访问$i$号数据块时并不需要访问之前的$0\sim i-1$号数据块
->     + 相比于隐式链接来说,地址转换时不需要访问磁盘,因此文件的访问效率更高.
+>     + 相比于隐式链接来说，地址转换时不需要访问磁盘，因此文件的访问效率更高.
 > + 缺点：文件分配表的需要占用一定的存储空间.
 
 ### 静态链表定义
@@ -1021,7 +1026,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >
 >
 > ```cpp
-> void* memset(void* ptr, int value, size_t num);
+> void* memset(void* ptr， int value， size_t num);
 > ```
 > 函数参数的含义如下：
 >
@@ -1040,7 +1045,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 >     int arr[5];
 > 
 >     // 将整个数组设置为零
->     memset(arr, 0, sizeof(arr));
+>     memset(arr， 0， sizeof(arr));
 > 
 >     // 输出数组元素
 >     for (int i = 0; i < 5; ++i) {
@@ -1068,7 +1073,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针,强调指向链
 + 从存储结构来看
     + 顺序表
         + 优点:可以**随机存取**，存储数据密度高
-        + 缺点:大片连续空间分配不方便,改变容量不方便
+        + 缺点:大片连续空间分配不方便，改变容量不方便
     + 链表
         + 优点:空间离散，改变容量方便
         + 缺点:**不可随机存储**，存储数据密度低。

@@ -72,8 +72,6 @@
 
 ![image-20230807211554564](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308072115817.png)
 
-
-
 #### 顺序栈定义
 
 设置栈顶指针可以为$0$（代表栈顶元素的下一个存储单元）也可以为$-1$（代表栈顶元素当前未知）。
@@ -88,9 +86,9 @@
 
 ---
 
->   注:初值为$-1$时,栈顶指针指向当前元素
+>   注:初值为$-1$时，栈顶指针指向当前元素
 >
->   初值为$0$时,栈顶指针指的是当前元素的下一个位置
+>   初值为$0$时，栈顶指针指的是当前元素的下一个位置
 
 #### 顺序栈操作
 
@@ -130,11 +128,11 @@
 
 共享栈是为了更有效地利用存储空间，两个栈的空间相互调节，只有在整个存储空间被占满时才发生上溢
 
-存取数据时间复杂度为$O(1)$,对存取效率没有什么影响
+存取数据时间复杂度为$O(1)$，对存取效率没有什么影响
 
 栈满的条件：`top0+1==top1`
 
-链栈
+### 链栈
 
 +   通常采用单链表实现并==规定所有操作都是在单链表的表头进行==的
 
@@ -147,7 +145,7 @@
 
 ![GeePlayer_UkWQihlnkg](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/2023/07/12%3A1689162412%3AWjQdKrziL0tv93cX0cW6.png)
 
-采用链式存储，便宇结点的插入号删除。链栈的操作与链表类似，入栈和出栈的操作都在链表的表头进行。需要注意的是，对于带头结点和不带头结点的链栈，具体的实现会有所不同。
+采用链式存储，便于结点的插入号删除。链栈的操作与链表类似，入栈和出栈的操作都在链表的表头进行。需要注意的是，对于带头结点和不带头结点的链栈，具体的实现会有所不同。
 
 ### 栈的应用
 
@@ -172,7 +170,7 @@
 #include <stack>
 #include <string>
 
-bool isMatchingPair(char opening, char closing) {
+bool isMatchingPair(char opening， char closing) {
     return (opening == '(' && closing == ')') ||
            (opening == '[' && closing == ']') ||
            (opening == '{' && closing == '}');
@@ -187,7 +185,7 @@ bool isBalancedParentheses(const std::string& expression) {
             parenthesesStack.push(c);
         } else if (c == ')' || c == ']' || c == '}') {
             // 遇到右括号，检查栈顶元素是否匹配
-            if (parenthesesStack.empty() || !isMatchingPair(parenthesesStack.top(), c)) {
+            if (parenthesesStack.empty() || !isMatchingPair(parenthesesStack.top()， c)) {
                 return false; // 括号不匹配
             }
             parenthesesStack.pop(); // 括号匹配，将栈顶元素出栈
@@ -201,7 +199,7 @@ int main() {
     std::string expression;
 
     std::cout << "Enter an expression with parentheses: ";
-    std::getline(std::cin, expression);
+    std::getline(std::cin， expression);
 
     if (isBalancedParentheses(expression)) {
         std::cout << "Parentheses are balanced." << std::endl;
@@ -213,8 +211,6 @@ int main() {
 }
 
 ```
-
-
 
 #### 表达式求值
 
@@ -263,13 +259,13 @@ int main() {
 2. 若扫描到操作数则压入栈，并回到$1$，若扫描到运算符则执行$3$。
 3. 扫描到运算符则弹出两个栈顶元素，执行相应操作，运算结果压入栈，回到步骤一。
     +   先出栈的是“右操作数”
-    +   其实就是左边的数是左操作数,右边的数是右操作数
+    +   其实就是左边的数是左操作数，右边的数是右操作数
 4. 先出栈的是右操作数，后出栈的是左操作数。
 
 ###### 后缀表达式转换的程序实现：
 
 1. 初始化一个栈，用于==保存暂时不能确定运算顺序的运算符==。
-2. 从左到右处理每个元素,可能遇到以下三种情况( • ̀ω•́ )✧
+2. 从左到右处理每个元素，可能遇到以下三种情况( • ̀ω•́ )✧
     1. 如果遇到==操作数==，直接加入后缀表达式。
     2. 如果遇到==界限符==，如果遇到左括号`'('`直接入栈，如果遇到右括号`')'`依次弹出栈内运算符并加入到后缀表达式中，直到遇到新的左括号为止。
         +   左括号`'('`不加入后缀表达式
@@ -286,7 +282,7 @@ int main() {
         +   若当前运算符优先级大于栈顶运算符，则进栈
             +   若当前运算符为`+ -`栈顶运算符为`* /`则`+ -`直接进栈
         +   若优先级==小于等于==栈顶运算符，将栈里面优先级大于或等于当前操作符的操作符出栈，再将当前操作符入栈
-            +   若当前运算符为`* /`栈顶运算符为`+ -`则先将栈顶部分所有的`* /`出栈直到遇到`+ -`或左括号`(`,然后再把当前运算符`+ -+`
+            +   若当前运算符为`* /`栈顶运算符为`+ -`则先将栈顶部分所有的`* /`出栈直到遇到`+ -`或左括号`(`，然后再把当前运算符`+ -+`
             +   入栈
     3. 若当前字符为“`(`”，进栈。
         +   `(`不会影响其他非)符号的入栈出栈，在`(`前的符号不会因为`(`入栈而弹出，在`)`后的符号也不用判断是否弹出，直接入栈。
@@ -305,9 +301,9 @@ bool isOperator(char c) {
 }
 
 int getPrecedence(char c) {
-    static const std::unordered_map<char, int> precedence = {
-        {'+', 1}, {'-', 1},
-        {'*', 2}, {'/', 2}
+    static const std::unordered_map<char， int> precedence = {
+        {'+'， 1}， {'-'， 1}，
+        {'*'， 2}， {'/'， 2}
     };
 
     auto it = precedence.find(c);
@@ -359,7 +355,7 @@ int main() {
     std::string infixExpression;
 
     std::cout << "Enter an infix expression: ";
-    std::getline(std::cin, infixExpression);
+    std::getline(std::cin， infixExpression);
 
     std::string postfixExpression = infixToPostfix(infixExpression);
 
@@ -379,7 +375,7 @@ int main() {
 3. 依次读入表达式中每个字符
     1. 若是操作数则进==操作数栈==
     2. 若是运算符则和==运算符栈==栈顶元素比较优先级
-        +   若栈顶元素优先级高于即将入栈的元素，则栈顶元素出栈运算符入栈,否则栈顶元素不动运算符入栈
+        +   若栈顶元素优先级高于即将入栈的元素，则栈顶元素出栈运算符入栈，否则栈顶元素不动运算符入栈
             +   优先级高的先出栈，再把优先级低的放进来
             +   四则运算中`*` `/` 的优先度比`+` `-`高
         +   操作数栈弹出两个操作数和运算符一起进行运算，将运算后的结果放入操作数栈，直至整个表达式求值完毕
@@ -397,9 +393,9 @@ bool isOperator(char c) {
 }
 
 int getPrecedence(char c) {
-    static const std::unordered_map<char, int> precedence = {
-        {'+', 1}, {'-', 1},
-        {'*', 2}, {'/', 2}
+    static const std::unordered_map<char， int> precedence = {
+        {'+'， 1}， {'-'， 1}，
+        {'*'， 2}， {'/'， 2}
     };
 
     auto it = precedence.find(c);
@@ -409,7 +405,7 @@ int getPrecedence(char c) {
     return -1;
 }
 
-int performOperation(int operand1, int operand2, char op) {
+int performOperation(int operand1， int operand2， char op) {
     switch (op) {
         case '+':
             return operand1 + operand2;
@@ -453,7 +449,7 @@ int evaluateInfixExpression(const std::string& infixExpression) {
                 int operand1 = operandStack.top();
                 operandStack.pop();
 
-                int result = performOperation(operand1, operand2, op);
+                int result = performOperation(operand1， operand2， op);
                 operandStack.push(result);
             }
             operatorStack.pop();  // 将左括号出栈
@@ -472,7 +468,7 @@ int evaluateInfixExpression(const std::string& infixExpression) {
                 int operand1 = operandStack.top();
                 operandStack.pop();
 
-                int result = performOperation(operand1, operand2, op);
+                int result = performOperation(operand1， operand2， op);
                 operandStack.push(result);
             }
             operatorStack.push(c);
@@ -494,7 +490,7 @@ int evaluateInfixExpression(const std::string& infixExpression) {
         int operand1 = operandStack.top();
         operandStack.pop();
 
-        int result = performOperation(operand1, operand2, op);
+        int result = performOperation(operand1， operand2， op);
         operandStack.push(result);
     }
 
@@ -509,7 +505,7 @@ int main() {
     std::string infixExpression;
 
     std::cout << "Enter an infix expression: ";
-    std::getline(std::cin, infixExpression);
+    std::getline(std::cin， infixExpression);
 
     try {
         int result = evaluateInfixExpression(infixExpression);
@@ -600,7 +596,7 @@ int main() {
 #include <string>
 
 // 函数用于将十进制数转换为目标进制的字符串表示
-std::string decimalToTargetBase(int decimalNum, int targetBase) {
+std::string decimalToTargetBase(int decimalNum， int targetBase) {
     std::stack<int> remainderStack;
 
     // 处理特殊情况：十进制数为 0
@@ -636,7 +632,7 @@ int main() {
     std::cout << "Enter the target base: ";
     std::cin >> targetBase;
 
-    std::string targetBaseStr = decimalToTargetBase(decimalNum, targetBase);
+    std::string targetBaseStr = decimalToTargetBase(decimalNum， targetBase);
 
     std::cout << "The result in base " << targetBase << ": " << targetBaseStr << std::endl;
 
@@ -677,7 +673,7 @@ int main() {
 
 如果出队，则前面的空间会空闲，但是假如队尾指针会依照插入而不断加$1$，则我们的队尾指针最后会指向最后一个区域，计算机不知道前面是怎么样，所以就认为空间已经满了，实际上没有。这就是假溢出。
 
-为了防止假溢出,可以使用取模运算使队尾指针超过了范围也仍能回到最开始插入数据,详细见下循环队列
+为了防止假溢出，可以使用取模运算使队尾指针超过了范围也仍能回到最开始插入数据，详细见下循环队列
 
 ![20230712-2001-490196](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307122004139.bmp)
 
@@ -724,15 +720,15 @@ int main() {
 
 #### 链队的入队
 
-带头结点的队列,第一个元素入队和后来元素入队处理逻辑一致
+带头结点的队列，第一个元素入队和后来元素入队处理逻辑一致
 
-刚开始,`rear`尾指针和`front`头指针都指向头结点
+刚开始，`rear`尾指针和`front`头指针都指向头结点
 
 ![1689165105t-20230712-2045-594.229](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165105t-20230712-2045-594.229.png)
 
 不带头结点的队列，第一个元素入队时需要特别处理
 
-刚开始,`rear`尾指针和`front`头指针都指向`NULL`
+刚开始，`rear`尾指针和`front`头指针都指向`NULL`
 
 ![1689165377t-20230712-2017-617.366](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165377t-20230712-2017-617.366.png)
 
@@ -824,7 +820,7 @@ int main() {
 
 #### 对称矩阵
 
-若对一个$n$阶方阵$A[1,n][1,n]$中的任意一个元素$a_{ij}$都有$a_{ij}=a_{ji}$，即主对角线对称元素相等的矩阵，就是对称矩阵。
+若对一个$n$阶方阵$A[1，n][1，n]$中的任意一个元素$a_{ij}$都有$a_{ij}=a_{ji}$，即主对角线对称元素相等的矩阵，就是对称矩阵。
 
 其中元素可以分为上三角区域、主对角线和下三角区域，上下三角区域对应元素相等。
 
@@ -832,7 +828,7 @@ int main() {
 
 所以可以将$A$存放在一维数组$B[\dfrac{n(n+1)}{2}]$中，从而$a_{ij}=b_k$，比如只存放==下三角部分与主对角线部分==元素。
 
-+   对于$a_{ij}$而言，其在$i$行$j$列，第一行有$1$个元素，第二行有$2$个元素,$\cdots$,第$i-1$行有$i-1$个元素
++   对于$a_{ij}$而言，其在$i$行$j$列，第一行有$1$个元素，第二行有$2$个元素，$\cdots$，第$i-1$行有$i-1$个元素
     +   则$i$行$j$列的$a_{ij}$数组下标$k=1 + 2 +\cdots(i-1) + (j-1) = \dfrac{i \times (i-1)}{2} + (j - 1)$
         +   ==数组下标从$0$开始==
             +   ==下标从$0$开始时，某元素之前元素的个数等于该元素下标==
@@ -843,7 +839,7 @@ int main() {
 
 + 当$i\geqslant j$时，即==下三角区域与主对角线元素==对应在数组$B$中的下标$k = \dfrac{i \times (i-1)}{2} + (j - 1)$
 +   当$i<j$时，即==上三角区域==对应在数组$B$中的下标$k = \dfrac{j \times (j-1)}{2} + (i - 1)$
-    +   对称矩阵中上三角区域`(i,j)`的值与`(j,i)`相同
+    +   对称矩阵中上三角区域`(i，j)`的值与`(j，i)`相同
 
 
 #### 三角矩阵
@@ -865,7 +861,7 @@ int main() {
 
 上三角矩阵指下三角区域的元素均为同一常量，其存储思想与下三角矩阵一样，不过下标不同。
 
-位于元素$a_{ij}\,(i\leqslant j)$前的元素个数有
+位于元素$a_{ij}\;(i\leqslant j)$前的元素个数有
 
 +   第$1$行有$n$个元素
 +   第$2$行有$n-1$个元素
@@ -911,11 +907,11 @@ $$
 
 ##### 稀疏矩阵
 
-+   矩阵中非零元素的个数$t$,相对矩阵元素的个数$s$来说非常少，即$s\gg t$的矩阵称为**稀疏矩阵**。 
-    +   例如，一个矩阵的阶为$100x100$,该矩阵中只有少于$100$个非零元素。 
++   矩阵中非零元素的个数$t$，相对矩阵元素的个数$s$来说非常少，即$s\gg t$的矩阵称为**稀疏矩阵**。 
+    +   例如，一个矩阵的阶为$100x100$，该矩阵中只有少于$100$个非零元素。 
 +   三元组法:
     +   若使用普通一维数组存储则十分浪费空间，所以一般只存储非零元素。
-    +   三元组`(行标,列标,值)`来存储
+    +   三元组`(行标，列标，值)`来存储
 
 ![1689173209t-20230712-2249-777.397](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173209t-20230712-2249-777.397.png)
 
@@ -929,7 +925,7 @@ $$
 
 ## 归纳总结
 
-本章所讲的几种数据结构类型是线性表的应用和推广，在考试中主要以选择题形式进行考查，但栈和队列也仍然有可能出现在算法设计题中。很多读者看到课本上有好多个函数时很恐惧,若考到了栈或队列的大题，难道要把每个操作的函数都写出来吗？
+本章所讲的几种数据结构类型是线性表的应用和推广，在考试中主要以选择题形式进行考查，但栈和队列也仍然有可能出现在算法设计题中。很多读者看到课本上有好多个函数时很恐惧，若考到了栈或队列的大题，难道要把每个操作的函数都写出来吗？
 
 其实，在考试中，栈或队列都是作为工具来解决其他问题的，我们可以把栈或队列的声明和操作写得很简单，而不必分函数写出。
 
@@ -951,5 +947,5 @@ $$
      X=stack[top-]； //单目运算符在变量之前表示"先运算后使用”，之后则相反
      ```
 
-对于链式栈，同样只需定义一个结构体，然后从讲解中摘取必要的语句组合在自己的函数代码中即可。另外，在考研真题中，链式栈出现的概率要比顺序栈低得多，因此大家应该有所侧重,多训练与顺序栈相关的题目。
+对于链式栈，同样只需定义一个结构体，然后从讲解中摘取必要的语句组合在自己的函数代码中即可。另外，在考研真题中，链式栈出现的概率要比顺序栈低得多，因此大家应该有所侧重，多训练与顺序栈相关的题目。
 

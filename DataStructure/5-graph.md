@@ -206,8 +206,7 @@ $$
     + 若不存在路径，则记该路径为无穷$\infty$
     + 路径是**序列**，距离是路径的长度是个**数**
 
-
-若一个图有$n$个顶点，有大于$n-1$条边，则此图一定有环。
++   若一个图有$n$个顶点，有大于$n-1$条边，则此图一定有环。
 
 ### 图的连通
 
@@ -370,13 +369,13 @@ $$
 >     ```cpp
 >     #include <limits>
 >     #include <iostream>
->               
+>                   
 >     int main() {
 >         //获取整数类型的最大值
 >         std::cout << "Max value of int: " 		<< std::numeric_limits<int>::max() << std::endl;
 >         std::cout << "Max value of long long: " << std::numeric_limits<long long>::max() << std::endl;
 >         // 其他整数类型的获取方式类似
->                   
+>                       
 >         //获取整数类型的最大值
 >         std::cout << "Max value of float: "  << std::numeric_limits<float>::max() << std::endl;
 >         std::cout << "Max value of double: " << std::numeric_limits<double>::max() << std::endl;
@@ -1884,9 +1883,7 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
 
 + 事件$v_k$的==最早发生时间$ve(k)$==：指从源点$v_1$到顶点$v_k$处的最长路径长度
 
-    + $v_k$的最早发生时间决定了所有从$v_k$开始的活动能够开工的最早时间
-
-    + 与以该事件为始的弧的活动的最早开始时间相同
+    + $v_k$的最早发生时间决定了所有从$v_k$开始的活动能够开工的最早时间与以该事件为始的弧的活动的最早开始时间相同
 
     + 计算公式
 
@@ -1895,13 +1892,13 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
         $$
         ve(v_k)=0
         $$
-
+    
         + 当$v_k$是结点$v_j$任意后继时
             $$
             ve(k) = Max\{ve(j) + Weight(v_j,v_k)\}
             $$
-            ​	其中$Weight(v_j,v_k)$是弧$<v_j,v_k>$上的权值
-
+            其中$Weight(v_j,v_k)$是弧$<v_j,v_k>$上的权值
+    
 + 事件$v_k$的==最迟发生时间$vl(k)$==：在不推迟整个工程完成的前提下，该事件最迟必须发生的时间
 
     + 一个事件的最迟发生时间等于$\min${以该事件为尾的弧的活动的最迟开始时间，最迟结束时间与该活动的持续时间的差}。
@@ -1970,7 +1967,7 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
 
 ![23July19-214535-1689774335-994913f5-81be-404f-a777-7e34614418c6](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192145481.png)
 
-求关键路径的步骤
+关键活动
 
 + 关键活动时间增加，整个工程工期延长。
 + 关键活动时间减少，整个工程工期缩短。

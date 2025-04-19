@@ -1,8 +1,10 @@
 # CS408_Note
 
-本仓库是我备考408的一些笔记，有大量参考
+本仓库是我备考11408的一些笔记，有大量参考，参考来源见下
 
 准备更新一波，还在更新
+
+> TODO List：考研经验、各科建议、复试经验等
 
 附带我冲刺阶段做的一些做题笔记（带PDF版本，可直接打印；同时由于是我自己的做题笔记，风格化严重，看不懂的请勿深究，~~可以发邮件问我【？】~~）
 
@@ -29,8 +31,8 @@
   + **一定一定要多看几年的实际招生人数**！如果某校的某专业没有什么规律参考公布的拟招生人数取个相近的统计值（平均值和中位数均可）；但是如果某校的某专业一年多一年少很有规律就别用统计值了，按规律推算。
 + [王道24计算机考研初试成绩汇总](https://docs.qq.com/sheet/DVG1nZ1FMQ0NWcUF5?tab=000002)、[王道21考研成绩汇总](https://docs.qq.com/sheet/DQXdlSFhiVm1YdE5P?tab=BB08J2)、[王道22计算机考研成绩汇总](https://docs.qq.com/sheet/DR2J3RHVLdHNMUUFs?tab=7bnu1i)
 + [Desmos | 图形计算器](https://www.desmos.com/calculator?lang=zh-CN)、[Symbolab - 人工智能数学计算器和问题解决器](https://zs.symbolab.com/)：在线计算器。
-+ [ChatGPT](https://chatgpt.com/)、[DeepSeek](https://chat.deepseek.com/)：解题参考，除了图片以外公式也可以使用**LaTex**（不清楚的同学参考[在线LaTeX公式编辑器-编辑器](https://www.latexlive.com/##)，稍微学学对你的初始和研究生生涯都有帮助），408的专业课也可以多使用LLM一般都能讲得很清楚。
++ [ChatGPT](https://chatgpt.com/)、[DeepSeek](https://chat.deepseek.com/)：解题参考，除了图片以外公式也可以使用**LaTex**（不清楚的同学参考[在线LaTeX公式编辑器-编辑器](https://www.latexlive.com/##)，稍微学学对你的初试和研究生生涯都有帮助），408的专业课也可以多使用LLM一般都能讲得很清楚。
 
-## 考研复试和调剂
+## 开源许可证
 
-TODO
+MIT LICENSE

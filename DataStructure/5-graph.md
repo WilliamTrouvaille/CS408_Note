@@ -369,13 +369,13 @@ $$
 >     ```cpp
 >     #include <limits>
 >     #include <iostream>
->                   
+>                           
 >     int main() {
 >         //获取整数类型的最大值
 >         std::cout << "Max value of int: " 		<< std::numeric_limits<int>::max() << std::endl;
 >         std::cout << "Max value of long long: " << std::numeric_limits<long long>::max() << std::endl;
 >         // 其他整数类型的获取方式类似
->                       
+>                               
 >         //获取整数类型的最大值
 >         std::cout << "Max value of float: "  << std::numeric_limits<float>::max() << std::endl;
 >         std::cout << "Max value of double: " << std::numeric_limits<double>::max() << std::endl;
@@ -1038,8 +1038,6 @@ int main() {
 2. 依次从$v$的未被访问的邻接点出发，对图进行深度优先遍历。
 3. 直至图中和$v$有路径相通的顶点都被访问。
 4. 若此时图中尚有顶点未被访问，则从一个未被访问的顶点出发，重新进行深度优先遍历，直到图中所有顶点均被访问过为止。
-
-<video src="C:/Users/willi/OneDrive/%E5%9B%BE%E7%89%87/ShareX/2023-07/23July21-132826-1689917306-0e1f1d3d-fcc8-4ac0-bf40-648799f3b870.mp4"></video>
 
 ![1689603921t-20230717-2221-850.420-5](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689603921t-20230717-2221-850.420-5.png)
 

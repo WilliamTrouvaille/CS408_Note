@@ -50,7 +50,7 @@
 
 ![1689256016t-20230713-2156-525.201](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256016t-20230713-2156-525.201.png)
 
-顺序串的结构定义方案
+顺序串的结构	定义方案
 
 ![1689256143t-20230713-2103-881.483](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256143t-20230713-2103-881.483.png)
 
@@ -436,7 +436,7 @@ vector<int> kmpSearch(string text, string pattern) {
 
 可以通过一定关系不用计算最大公共前后缀得到$next$值：
 
-要计算当前位置的$next$值，就看前一位的$next$值所代表的索引指向的字符是否与前一位的字符相等，若相等，则是前一位的$next$值加一，若不等，则继续看前一位的$next$值指向的字符的$next$指向的字符与前一位字符是否相等，若相等则结果就是这个$next$值加一，否则继续按照$next$索引向前寻找。最后都不等则前一位$next$为$0$，当前位置的$next$为$1$。 -->
+要计算当前位置的$next$值，就看前一位的$n ext$值所代表的索引指向的字符是否与前一位的字符相等，若相等，则是前一位的$next$值加一，若不等，则继续看前一位的$next$值指向的字符的$next$指向的字符与前一位字符是否相等，若相等则结果就是这个$next$值加一，否则继续按照$next$索引向前寻找。最后都不等则前一位$next$为$0$，当前位置的$next$为$1$。 -->
 
 <video src="https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307181207903.mp4"/>
 

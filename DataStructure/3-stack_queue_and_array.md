@@ -13,7 +13,7 @@
 
 ### 【知识导图】
 
-![1689391630t-20230715-1110-391.223](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689391630t-20230715-1110-391.223.png)
+![1689391630t-20230715-1110-391.223](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689391630t-20230715-1110-391.223.png)
 
 ### 【复习提示】
 
@@ -24,7 +24,7 @@
 
 ## 栈
 
-![1689391379t-20230715-1159-817.210](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689391379t-20230715-1159-817.210.png)
+![1689391379t-20230715-1159-817.210](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689391379t-20230715-1159-817.210.png)
 
 +   栈结构与线性表类似，是只允许一端（表尾）进入或删除的==线性表==
     +   即后进先出$LIFO(Last \;In \;First\;Out)$。
@@ -44,7 +44,7 @@
 >
 >   我们将进栈表示为` +1`，出栈表示为` -1`，则` 1 3 2` 的出栈序列可以表示为`：+1 -1 +1 +1 -1 -1`。
 >
->   ![](https://pic2.zhimg.com/v2-fe28b25ed263230250d0a3c68344b0d5_b.jpg)
+>   ![](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/v2-fe28b25ed263230250d0a3c68344b0d5_b.jpg)
 >
 >   
 >
@@ -60,7 +60,7 @@
 >
 >   假设非法序列为$ A$，对应的序列为$ B$。每个$ A$ 只有一个"**第一个前缀和小于$ 0 $的前缀**"，所以每个$ A $只能产生一个$ B$。而每个$ B $想要还原到$ A$，就需要找到"**第一个前缀和大于$ 0$ 的前缀**"，显然$ B $也只能产生一个 A。
 >
->   ![](https://pic3.zhimg.com/v2-1224b08274913efa2cd7dbb31f8e6262_b.jpg)
+>   ![](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/v2-1224b08274913efa2cd7dbb31f8e6262_b.jpg)
 >
 >   每个$ B $都有$ n + 1 $个` +1 `以及$ n - 1 $个` -1`，因此 B 的数量为 $C_{2n}^{n+1}$ ，相当于在长度为$ 2n $的序列中找到$n + 1$个位置存放` +1`。相应的，非法序列的数量也就等于 $C_{2n}^{n+1}$ 。
 >
@@ -70,13 +70,13 @@
 
 ### 顺序栈
 
-![image-20230807211554564](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308072115817.png)
+![image-20230807211554564](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202308072115817.png)
 
 #### 顺序栈定义
 
 设置栈顶指针可以为$0$（代表栈顶元素的下一个存储单元）也可以为$-1$（代表栈顶元素当前未知）。
 
-![GeePlayer_JTIfebBiOd](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121928405.png)
+![GeePlayer_JTIfebBiOd](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121928405.png)
 
 +   栈顶指针初始化为$-1$，因为索引最小为$0$
     +   如果初始化为$0$也可以，不过其操作有所不同。
@@ -92,11 +92,11 @@
 
 #### 顺序栈操作
 
-![GeePlayer_A8AwrxyqwT](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121939921.png)
+![GeePlayer_A8AwrxyqwT](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121939921.png)
 
 ##### 进栈
 
-![GeePlayer_15dNuYc5cH](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121929248.png)
+![GeePlayer_15dNuYc5cH](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121929248.png)
 
 1.   首先要判满，然后才能进栈
 2.   若栈顶指针指的是当前元素，即初值为$-1$，需要先自加再进栈
@@ -106,7 +106,7 @@
 
 ##### 出栈
 
-![GeePlayer_QpxMvtMlNq](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121934134.png)
+![GeePlayer_QpxMvtMlNq](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121934134.png)
 
 1.   首先要判空，然后才能出栈
 2.   若栈顶指针指的是当前元素，即初值为$-1$，需要先出栈再自减
@@ -120,11 +120,11 @@
 
 即根据栈底不变，让两个顺序栈共享一个一维数组，将两个栈的栈底设在数组两端，栈顶向共享空间延伸。
 
-![1689394275t-20230715-1215-371.121](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689394275t-20230715-1215-371.121.png)
+![1689394275t-20230715-1215-371.121](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689394275t-20230715-1215-371.121.png)
 
 两个栈的栈顶指针都指向栈顶元素，`top0=-1`时$0$号栈为空，`top1=MaxSize`时$1$号栈为空；仅当两个栈顶指针相邻(`top1-top0=1`)时，判断为栈满。当$0$号栈进栈时`top0`先加$1$再赋值，$1$号栈进栈时`top1`先减$1$再赋值；出栈时则刚好相反。 
 
-![GeePlayer_jM1FgVc98Z](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121940931.png)
+![GeePlayer_jM1FgVc98Z](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121940931.png)
 
 共享栈是为了更有效地利用存储空间，两个栈的空间相互调节，只有在整个存储空间被占满时才发生上溢
 
@@ -143,7 +143,7 @@
 
 #### 链栈的定义
 
-![GeePlayer_UkWQihlnkg](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/2023/07/12%3A1689162412%3AWjQdKrziL0tv93cX0cW6.png)
+![GeePlayer_UkWQihlnkg](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/12%253A1689162412%253AWjQdKrziL0tv93cX0cW6.png)
 
 采用链式存储，便于结点的插入号删除。链栈的操作与链表类似，入栈和出栈的操作都在链表的表头进行。需要注意的是，对于带头结点和不带头结点的链栈，具体的实现会有所不同。
 
@@ -161,7 +161,7 @@
      2.   如果需要匹配但是栈空说明有单独的左或右括号，也匹配失败
      3.   如果结束，栈为空则正常结束，否则不匹配。
 
-![1689167667t-20230712-2127-944.462](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689167667t-20230712-2127-944.462.png)
+![1689167667t-20230712-2127-944.462](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689167667t-20230712-2127-944.462.png)
 
 >   考试中可直接使用基本操作，需要使用注释简要说明接口
 
@@ -222,7 +222,7 @@ int main() {
 
 常用的中缀表达式是将运算符如加减乘除放在两个操作数中间，而后缀表达式就是放在两个操作数之后，前缀表达式就是放在两个操作数之前。
 
-![1689557893t-20230717-0913-1103.432](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689557893t-20230717-0913-1103.432.png)
+![1689557893t-20230717-0913-1103.432](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689557893t-20230717-0913-1103.432.png)
 
 ##### 后缀表达式
 
@@ -238,7 +238,7 @@ int main() {
 
 可以发现**后缀表达式中运算符从左往右的先后顺序等于中缀表达式中的运算顺序**
 
-![1689169225t-20230712-2125-425.228](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689169225t-20230712-2125-425.228.png)
+![1689169225t-20230712-2125-425.228](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689169225t-20230712-2125-425.228.png)
 
 即使有不同的转换结果，但是如果我们要通过计算机实现这种转换算法，就必须保证算法的唯一性，所以规定后缀表达式中运算符的顺序就是中缀表达式中运算符生效的顺序，即结果是第一个而不是第二个。
 
@@ -246,7 +246,7 @@ int main() {
 
 ###### 后缀表达式的计算(手算)
 
-![1689557918t-20230717-0938-1210.396](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689557918t-20230717-0938-1210.396.png)
+![1689557918t-20230717-0938-1210.396](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689557918t-20230717-0938-1210.396.png)
 
 后缀表达式的手算方法：
 
@@ -573,13 +573,13 @@ int main() {
 
 十进制转二进制的手算计算过程如下
 
-![img](https://pic4.zhimg.com/80/v2-a50e16cbf9bac417b9bd52fe6b6dfb67_720w.webp)
+![img](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/v2-a50e16cbf9bac417b9bd52fe6b6dfb67_720w.webp)
 
 以 98 为例，用 2 除 98，取余数，然后再用 2 去除得到的商，取余数……如此循环往复，直到商为零，将余数逆序输出即可得到 98 的二进制表示
 
 与二进制类似，如果要将十进制转换成八进制，也是按照除以 8 取余的方式。以98为例，具体过程如下：
 
-![img](https://pic2.zhimg.com/80/v2-37abf99e64362ec68b9d9534937ae26d_720w.webp)
+![img](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/v2-37abf99e64362ec68b9d9534937ae26d_720w.webp)
 
 使用栈实现进制转换的算法可以简述如下：
 
@@ -655,11 +655,11 @@ int main() {
 
 ### 顺序队列
 
-![20230712-2055-732462](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/20230712-2055-732462.png)
+![20230712-2055-732462](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/20230712-2055-732462.png)
 
 分配一块连续的存储单元存放队列中的元素，并附设两个指针，队头指针和队尾指针，队头指针指向队头元素，队尾指针指向队尾元素的下一个位置。
 
-![GeePlayer_UTTN0GIOKl](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307121953368.png)
+![GeePlayer_UTTN0GIOKl](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307121953368.png)
 
 >   $rear$   		$n.$后面；后方部队；屁股$adj.$后方的，后面的；背面的
 >
@@ -669,13 +669,13 @@ int main() {
 
 ##### 顺序队列插入
 
-![20230712-2045-384196](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307122000378.bmp)
+![20230712-2045-384196](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307122000378.bmp)
 
 如果出队，则前面的空间会空闲，但是假如队尾指针会依照插入而不断加$1$，则我们的队尾指针最后会指向最后一个区域，计算机不知道前面是怎么样，所以就认为空间已经满了，实际上没有。这就是假溢出。
 
 为了防止假溢出，可以使用取模运算使队尾指针超过了范围也仍能回到最开始插入数据，详细见下循环队列
 
-![20230712-2001-490196](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307122004139.bmp)
+![20230712-2001-490196](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307122004139.bmp)
 
 ##### 顺序队列删除
 
@@ -700,15 +700,15 @@ int main() {
 
 #### 循环队列入队
 
-![20230712-2001-490196](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307122004139.bmp)
+![20230712-2001-490196](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307122004139.bmp)
 
 #### 循环队列出队
 
-![20230712-2003-465244](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/20230712-2003-465244.png)
+![20230712-2003-465244](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/20230712-2003-465244.png)
 
 ### 链队
 
-![20230712-2042-550237](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/20230712-2042-550237.png)
+![20230712-2042-550237](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/20230712-2042-550237.png)
 
 定义链队需要定义一个队头指针和一个队尾指针，队头指向队头结点，队尾指向队尾结点，即单链表最后一个结点，这跟顺序存储不同。
 
@@ -716,7 +716,7 @@ int main() {
 
 #### 链队的初始化
 
-![1689165033t-20230712-2033-593.162](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165033t-20230712-2033-593.162.png)
+![1689165033t-20230712-2033-593.162](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689165033t-20230712-2033-593.162.png)
 
 #### 链队的入队
 
@@ -724,23 +724,23 @@ int main() {
 
 刚开始，`rear`尾指针和`front`头指针都指向头结点
 
-![1689165105t-20230712-2045-594.229](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165105t-20230712-2045-594.229.png)
+![1689165105t-20230712-2045-594.229](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689165105t-20230712-2045-594.229.png)
 
 不带头结点的队列，第一个元素入队时需要特别处理
 
 刚开始，`rear`尾指针和`front`头指针都指向`NULL`
 
-![1689165377t-20230712-2017-617.366](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165377t-20230712-2017-617.366.png)
+![1689165377t-20230712-2017-617.366](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689165377t-20230712-2017-617.366.png)
 
 #### 链队的出队
 
 带头结点的队列
 
-![1689165867t-20230712-2027-524.284](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165867t-20230712-2027-524.284.png)
+![1689165867t-20230712-2027-524.284](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689165867t-20230712-2027-524.284.png)
 
 不带头结点的队列
 
-![1689165918t-20230712-2018-563.365](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689165918t-20230712-2018-563.365.png)
+![1689165918t-20230712-2018-563.365](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689165918t-20230712-2018-563.365.png)
 
 #### 链队的判满
 
@@ -754,7 +754,7 @@ int main() {
 
 输入受限的双端队列：只允许从一端删除，两端插入的线性表。
 
-![1689166158t-20230712-2018-661.429](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689166158t-20230712-2018-661.429.png)
+![1689166158t-20230712-2018-661.429](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689166158t-20230712-2018-661.429.png)
 
 ### 队列应用
 
@@ -803,10 +803,10 @@ int main() {
 
 + 行优先：一行一行存储。$b[i][j]$的存储地址$=LOC+(i\times N+j)\times sizeof(ElemType)$
 
-    ![1689566005t-20230717-1125-1161.201](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689566005t-20230717-1125-1161.201.png)
+    ![1689566005t-20230717-1125-1161.201](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689566005t-20230717-1125-1161.201.png)
 + 列优先：一列一列存储。$b[i][j]$的存储地址$=LOC+(j\times M+i)\times sizeof(ElemType)$
 
-    ![1689566016t-20230717-1136-1150.202](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689566016t-20230717-1136-1150.202.png)
+    ![1689566016t-20230717-1136-1150.202](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689566016t-20230717-1136-1150.202.png)
 
 #### 十字链表法
 
@@ -824,7 +824,7 @@ int main() {
 
 其中元素可以分为上三角区域、主对角线和下三角区域，上下三角区域对应元素相等。
 
-![1689171965t-20230712-2205-594.422](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689171965t-20230712-2205-594.422.png)
+![1689171965t-20230712-2205-594.422](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689171965t-20230712-2205-594.422.png)
 
 所以可以将$A$存放在一维数组$B[\dfrac{n(n+1)}{2}]$中，从而$a_{ij}=b_k$，比如只存放==下三角部分与主对角线部分==元素。
 
@@ -846,18 +846,18 @@ int main() {
 
 ##### 下三角矩阵
 
-![1689173090t-20230712-2250-469.385](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173090t-20230712-2250-469.385.png)
+![1689173090t-20230712-2250-469.385](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173090t-20230712-2250-469.385.png)
 
 下三角矩阵指上三角区域的元素均为同一常量，其存储思想与对称矩阵一样，但是需要最后多一个存储空间存储上三角的常量。所以可以将$A$存放在一维数组$B[\dfrac{n(n+1)}{2}+1]$中。
 
 + 当$i\geqslant j$时，即下三角区域与主对角线元素：$k=\dfrac{i(i+1)}{2}+j-1$。
 + 当$i<j$时，即上三角区域：$k=\dfrac{n(n+1)}{2}$（最后一位）。
 
-![1689566818t-20230717-1258-510.126](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689566818t-20230717-1258-510.126.png)
+![1689566818t-20230717-1258-510.126](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689566818t-20230717-1258-510.126.png)
 
 ##### 上三角矩阵
 
-![1689173110t-20230712-2210-489.381](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173110t-20230712-2210-489.381.png)
+![1689173110t-20230712-2210-489.381](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173110t-20230712-2210-489.381.png)
 
 上三角矩阵指下三角区域的元素均为同一常量，其存储思想与下三角矩阵一样，不过下标不同。
 
@@ -887,7 +887,7 @@ int main() {
 
 ##### 三对角矩阵
 
-![1689173078t-20230712-2238-476.416](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173078t-20230712-2238-476.416.png)
+![1689173078t-20230712-2238-476.416](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173078t-20230712-2238-476.416.png)
 
 对角矩阵也称为带状矩阵。对于$n$阶方阵$A$的任意元素$a_{ij}$，当$\vert i-j\vert>1$时，有$a_{ij}=0$，则是三对角矩阵。
 
@@ -895,7 +895,7 @@ int main() {
 
 所以可以将三条对角线上的元素行优先地存储在一维数组中。第$1$行是两个元素，而$2$到$i-1$行一共$i-1-2+1=i-2$行每行$3$个元素，所以前$i-1$行一共$2+(i-2)\times3$个元素，第$i$行一共$j-(i-1)$个元素。即$k=2+(i-2)\times3+j-i+1$，所以得到$k=2i+j-3$。
 
-![1689567652t-20230717-1252-1096.146](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689567652t-20230717-1252-1096.146.png)
+![1689567652t-20230717-1252-1096.146](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689567652t-20230717-1252-1096.146.png)
 
 反之，若已知三对角线矩阵中某元素$a_{ij}$存放于一维数组$B$的第$k$​个位置，则可得
 $$
@@ -913,13 +913,13 @@ $$
     +   若使用普通一维数组存储则十分浪费空间，所以一般只存储非零元素。
     +   三元组`(行标，列标，值)`来存储
 
-![1689173209t-20230712-2249-777.397](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173209t-20230712-2249-777.397.png)
+![1689173209t-20230712-2249-777.397](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173209t-20230712-2249-777.397.png)
 
 +   十字链表法
 
-![1689173245t-20230712-2225-905.454](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173245t-20230712-2225-905.454.png)
+![1689173245t-20230712-2225-905.454](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173245t-20230712-2225-905.454.png)
 
-![1689173260t-20230712-2240-276.104](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689173260t-20230712-2240-276.104.png)
+![1689173260t-20230712-2240-276.104](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689173260t-20230712-2240-276.104.png)
 
 **稀疏矩阵压缩后就失去了随机存取的特性**
 

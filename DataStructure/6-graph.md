@@ -21,7 +21,7 @@
 
 ### 【知识导图】
 
-![23July20-225936-1689865176-0f81b088-843d-4d83-a198-b9b012cb6d5e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202259594.png)
+![23July20-225936-1689865176-0f81b088-843d-4d83-a198-b9b012cb6d5e](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202259594.png)
 
 ### 【复习提示】
 
@@ -31,11 +31,11 @@
 
 ## 基本概念
 
-![image-20230720230423846](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202304066.png)
+![image-20230720230423846](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202304066.png)
 
 ---
 
-![1689597937t-20230717-2037-937.474](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597937t-20230717-2037-937.474.png)
+![1689597937t-20230717-2037-937.474](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597937t-20230717-2037-937.474.png)
 
 ### 常见考点
 
@@ -104,7 +104,7 @@
 
 + 对于邻接矩阵存储的图，顶点$i$的度（入度+出度）等于第$i$行第$i$列所有数字加起来的和
 
-    ![23July21-120535-1689912335-f2df6070-6a03-45b7-9343-cbd240e94685](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307211206116.png)
+    ![23July21-120535-1689912335-f2df6070-6a03-45b7-9343-cbd240e94685](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307211206116.png)
 
 #### 易错概念
 
@@ -132,7 +132,7 @@
 
 ### 图的类别
 
-![image-20230720230323647](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202303315.png)
+![image-20230720230323647](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202303315.png)
 
 + 无向图：若$E$是无向边（简称边）的有限集合时，则图$G$为无向图。
     + 边是顶点的无序对，记为$(v,w)$或$(w,v)$，因为$(v,w)=(w,v)$
@@ -227,7 +227,7 @@ $$
 
 + 子图：设有两个图$G=(V,E)$和$G'=(V',E')$，若$V'$是$V$的子集，$E'$是$E$的子集，则$G'$是$G$的子图。
 
-    ![1689597377t-20230717-2017-596.338](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597377t-20230717-2017-596.338.png)
+    ![1689597377t-20230717-2017-596.338](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597377t-20230717-2017-596.338.png)
 
     + 但是不是所有的子集都能构成子图，必须满足原图的==关系(即为边和对应的端点)==的子集才算
 
@@ -235,13 +235,13 @@ $$
 
     + 如原图中一条边的两个端点而子图的点集不包含两个端点 ，则这个图不是子图
 
-        ![1689597427t-20230717-2007-393.168](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597427t-20230717-2007-393.168.png)
+        ![1689597427t-20230717-2007-393.168](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597427t-20230717-2007-393.168.png)
 
 + 生成子图：若有满足$V(G')=V(G)$的子图$G'$，则$G'$是$G$的生成子图。
 
     + 即==子图包含所有顶点，但不一定包含所有的边==
 
-        ![1689597455t-20230717-2035-886.361](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597455t-20230717-2035-886.361.png)
+        ![1689597455t-20230717-2035-886.361](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597455t-20230717-2035-886.361.png)
 
 + 连通分量：无向图$G$中的极大连通子图称为$G$的连通分量
 
@@ -249,7 +249,7 @@ $$
 
     + 对非连通图而言，连通分量可能有多个
 
-        ![1689597577t-20230717-2037-890.372](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597577t-20230717-2037-890.372.png)
+        ![1689597577t-20230717-2037-890.372](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597577t-20230717-2037-890.372.png)
 
 + 强连通分量：有向图$G$中的极大连通子图称为$G$的强连通分量
 
@@ -257,7 +257,7 @@ $$
 
     + 对非强连通图而言，强连通分量可能有多个。
 
-        ![1689597549t-20230717-2009-883.357](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597549t-20230717-2009-883.357.png)
+        ![1689597549t-20230717-2009-883.357](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597549t-20230717-2009-883.357.png)
 
 + 生成树：包含==连通图==中全部顶点的一个极小连通子图
 
@@ -267,7 +267,7 @@ $$
 
     + 若去掉生成树的一条边则会变成非连通图，若加上一条边则会形成一个回路。
 
-        ![1689597632t-20230717-2032-603.349](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689597632t-20230717-2032-603.349.png)
+        ![1689597632t-20230717-2032-603.349](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689597632t-20230717-2032-603.349.png)
 
 + 生成森林：在非连通图中，连通分量的生成树构成了非连通图的生成森林。
 
@@ -332,11 +332,11 @@ $$
 
 ## 图的存储结构
 
-![image-20230720230734473](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202307362.png)
+![image-20230720230734473](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202307362.png)
 
 ---
 
-![1689600965t-20230717-2105-1524.761](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689600965t-20230717-2105-1524.761.png)
+![1689600965t-20230717-2105-1524.761](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689600965t-20230717-2105-1524.761.png)
 
 ### 邻接矩阵
 
@@ -352,7 +352,7 @@ $$
     +   对于无权图，矩阵$A[i][j]$存在就设为$1$，否则是$0$
     +   对于有权图，矩阵$A[i][j]$存在就设为其权重$w_{ij}$，否则是$0$或$\infty$
 
-![1689598210t-20230717-2010-640.204](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689598210t-20230717-2010-640.204.png)
+![1689598210t-20230717-2010-640.204](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689598210t-20230717-2010-640.204.png)
 
 >   注 这里的无穷大宏定义的还挺...照顾新手的`(¬д¬。)`
 >
@@ -426,13 +426,13 @@ $$
 
 + ==设图$G$的邻接矩阵为$A$，$A^n$的元素$A^n[i][j]$表示由顶点$i$到顶点$j$长度为$n$的路径数量。==
 
-    ![1689599354t-20230717-2114-884.159](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689599354t-20230717-2114-884.159.png)
+    ![1689599354t-20230717-2114-884.159](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689599354t-20230717-2114-884.159.png)
 
 设图$G$的邻接矩阵为$A$，矩阵元素为$0$或$1$，则$A^n$的元素$A^n[i][j]$表示由顶点$v_{i+1}$到顶点$v_{j+1}$的长度为$n$的路径的数目。
 
 ### 邻接表
 
-![1689600006t-20230717-2106-798.227](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689600006t-20230717-2106-798.227.png)
+![1689600006t-20230717-2106-798.227](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689600006t-20230717-2106-798.227.png)
 
 #### 表定义
 
@@ -440,11 +440,11 @@ $$
 +   使用一个数组顺序保存图的每一个顶点，称为顶点表
 +   使用链式存储让每一个顶点元素包含一个指向后一条边的指针，称为边表。
 
-![1689599463t-20230717-2103-725.270](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689599463t-20230717-2103-725.270.png)
+![1689599463t-20230717-2103-725.270](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689599463t-20230717-2103-725.270.png)
 
 #### 表性质
 
-![image-20230721124251467](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307211242612.png)
+![image-20230721124251467](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307211242612.png)
 
 度的性质：
 
@@ -468,7 +468,7 @@ $$
 
 十字链表定义了两种顶点：
 
-![1689600430t-20230717-2110-839.218](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689600430t-20230717-2110-839.218.png)
+![1689600430t-20230717-2110-839.218](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689600430t-20230717-2110-839.218.png)
 
 + 顶点顶点：用于表示顶点，被一个数组包裹。
     + 数据域。
@@ -487,13 +487,13 @@ $$
 
 ==十字链表图表示是不唯一的==
 
-![1689600529t-20230717-2149-894.269](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689600529t-20230717-2149-894.269.png)
+![1689600529t-20230717-2149-894.269](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689600529t-20230717-2149-894.269.png)
 
 ### 邻接多重表
 
 ==邻接多重表只能用于存储无向图==，可以解决邻接矩阵空间复杂度高和邻接表删除插入顶点不方便的问题。
 
-![1689600753t-20230717-2133-850.465](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689600753t-20230717-2133-850.465.png)
+![1689600753t-20230717-2133-850.465](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689600753t-20230717-2133-850.465.png)
 
 邻接多重表定义了两种顶点：
 
@@ -870,7 +870,7 @@ $$
 
 ### 图遍历
 
-![image-20230720230906345](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202309742.png)
+![image-20230720230906345](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202309742.png)
 
 指从图某一顶点出发按照某种搜索方法沿着图中的边==对图中所有顶点访问一次且仅访问一次==。
 
@@ -933,7 +933,7 @@ $$
     + 若邻接矩阵存储则唯一，若邻接表存储则不唯一。
 
 
-![1689603317t-20230717-2217-1524.876-1](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689603317t-20230717-2217-1524.876-1.png)
+![1689603317t-20230717-2217-1524.876-1](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689603317t-20230717-2217-1524.876-1.png)
 
 **代码实现：**
 
@@ -1039,7 +1039,7 @@ int main() {
 3. 直至图中和$v$有路径相通的顶点都被访问。
 4. 若此时图中尚有顶点未被访问，则从一个未被访问的顶点出发，重新进行深度优先遍历，直到图中所有顶点均被访问过为止。
 
-![1689603921t-20230717-2221-850.420-5](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689603921t-20230717-2221-850.420-5.png)
+![1689603921t-20230717-2221-850.420-5](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689603921t-20230717-2221-850.420-5.png)
 
 性质：
 
@@ -1136,7 +1136,7 @@ int main() {
 
 ## 图的应用
 
-![图的应用](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202311915.png)
+![图的应用](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307202311915.png)
 
 ### 最小生成树
 
@@ -1174,11 +1174,11 @@ int main() {
 
 获取最小生成树的$Prim$算法和$Kruskal$算法都是基于贪心算法的策略。每次都加入一条边逐渐生成一棵生成树：
 
-![image-20230722114541762](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307221145932.png)
+![image-20230722114541762](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307221145932.png)
 
 其中$Prim$算法和$Kruskal$算法的主要区别就是上述代码中获取最小代价边的策略：
 
-![1689604495t-20230717-2255-840.315-5](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689604495t-20230717-2255-840.315-5.png)
+![1689604495t-20230717-2255-840.315-5](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689604495t-20230717-2255-840.315-5.png)
 
 #### Prim算法
 
@@ -1190,7 +1190,7 @@ int main() {
 + 初始化：向空树$T=(U,E_T)$中添加图$G=(V,E)$的任一顶点$u_0$，使$U=\{u_0\}$，$E_T=\varnothing$。
 + 循环（重复下列操作直至$U=V$）：从图$G$中选择满足$\{(u,v)|u\in U,v\in V-U\}$且具有最小权值的边$(u,v)$，加入树$T$，置$U=U\cup\{v\}$，$E_T=E_T\cup\{(u,v)\}$。
 
-![prim算法](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/prim%E7%AE%97%E6%B3%95.png)
+![prim算法](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/prim%25E7%25AE%2597%25E6%25B3%2595.png)
 
 + 需要遍历$\vert V\vert$个顶点，每次要遍历其他所有顶点。
 + 时间复杂度为$O(\vert V\vert^2)$。
@@ -1271,7 +1271,7 @@ public:
 + 初始化：$U=V,E_T=\varnothing$。即每个顶点构成一棵独立的树，$T$此时是一个仅含$\vert V\vert$个顶点的森林。
 + 循环（重复下列操作直至$T$是一棵树）：按$G$的边的权值递增顺序依次从$E-E_T$中选择一条边，若这条边加入$T$后不构成回路，则将其加入$E_T$，否则舍弃，直到$E_T$中含有$n-1$条边。
 
-![kruskal算法](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/kruskal%E7%AE%97%E6%B3%95.png)
+![kruskal算法](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/kruskal%25E7%25AE%2597%25E6%25B3%2595.png)
 
 + 使用堆来存放边（所以可以二分查找），所以每次旋转最小权值的边只需要$O(\log\vert E\vert)$的时间。
 + 时间复杂度为$O(\vert E\vert\log_2\vert E\vert)$。
@@ -1369,7 +1369,7 @@ public:
 + 每对顶点间最短路径：每对顶点之间的最短路径。
     + $Floyd$弗洛伊德算法（带权图、无权图）。
 
-![23July19-204218-1689770538-d2cf8145-1828-4aa2-9adc-1dc38450fd66](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192042499.png)
+![23July19-204218-1689770538-d2cf8145-1828-4aa2-9adc-1dc38450fd66](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192042499.png)
 
 最短路径一定是简单路径（不存在环）。但是无论有没有环的有向图与是否存在最短路径无关。
 
@@ -1377,7 +1377,7 @@ public:
 
 广度优先遍历算法
 
-![1689602682t-20230717-2242-983.899-7](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689602682t-20230717-2242-983.899-7.png)
+![1689602682t-20230717-2242-983.899-7](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689602682t-20230717-2242-983.899-7.png)
 
 广度优先算法可以计算无权图的单源最短路径。
 
@@ -1385,7 +1385,7 @@ public:
 
 广度优先算法基本上就是对广度优先遍历的改进。定义两个数组，索引号就代表元素的序号，一个数组表示从起点开始到该点的最短路径长度，另一个数组表示从起点开始到该点的最短路径的上一个顶点的索引值。
 
-![23July19-194619-1689767179-c5666879-00e8-4018-8957-b5abe10788cd](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191946825.png)
+![23July19-194619-1689767179-c5666879-00e8-4018-8957-b5abe10788cd](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307191946825.png)
 
 ```cpp
 #include <iostream>
@@ -1509,11 +1509,11 @@ int main() {
 4. 检查所有邻接这个顶点的其他顶点，若其点还没有找到最短路径，则更新最短路径长度值与最短路径上前驱的值。
 5. 重复步骤二再次循环遍历所有顶点并找到没确定最短路径则最短路径长度最小的顶点。重复次数为$n-1$次。
 
-![dijkstra算法](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/dijkstra%E7%AE%97%E6%B3%95.png)
+![dijkstra算法](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/dijkstra%25E7%25AE%2597%25E6%25B3%2595.png)
 
 对应求解过程如下
 
-![image-20230722121938568](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307221219712.png)
+![image-20230722121938568](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307221219712.png)
 
 **算法分析**
 
@@ -1528,7 +1528,7 @@ int main() {
 
 **代码思路：**
 
-![23July19-200959-1689768599-4d807ff1-5865-4faa-b5f3-9f79f0908d27](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192010451.png)
+![23July19-200959-1689768599-4d807ff1-5865-4faa-b5f3-9f79f0908d27](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192010451.png)
 
 **代码实现：**
 
@@ -1627,7 +1627,7 @@ int main() {
 
 对于$n$个顶点的图$G$，求任意一对顶点$v_i$到$v_j$之间的最短路径可分为如下阶段：
 
-![23July19-201644-1689769004-2516e8c1-9670-41b7-aee2-06a6820f7bd5](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192016074.png)
+![23July19-201644-1689769004-2516e8c1-9670-41b7-aee2-06a6820f7bd5](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192016074.png)
 
 算法需要遍历$n$次，每次遍历都需要查看$n\times n$的矩阵中是否有更优的中转点。
 
@@ -1647,25 +1647,25 @@ int main() {
 
 $-1$代表是初始状态。
 
-![23July19-202439-1689769479-ad2dec7b-8546-4cc4-8f2c-2ce1ecbc45ff](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192024297.png)
+![23July19-202439-1689769479-ad2dec7b-8546-4cc4-8f2c-2ce1ecbc45ff](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192024297.png)
 
 ---
 
 $0$代表用$0$进行中转，以$0$行和$0$列的数据都不用变，因为$0$行的数据表示$v_0$到$v_1$、$v_2$的距离，$0$列的数据表示从$v_1$、$v_2$到$v_0$的距离，这些不会以$0$进行中转。可以优化的只有$12$和$21$两个位置。同理对角线的元素都不用优化，固定为$0$因为是简单路径。$12$位置从$v_0$中转是这个点对应行列的$v_1v_0+v_0v_2=10+13=23>4$，所以不用优化。$21$位置原来为正无穷，所以可以优化为$v_2v_0+v_0v_1=11$。
 
-![23July19-203314-1689769994-ec3f5df0-e92d-4af8-a6c4-5696750a605a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192033363.png)
+![23July19-203314-1689769994-ec3f5df0-e92d-4af8-a6c4-5696750a605a](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192033363.png)
 
 ---
 
 $1$代表用$1$进行中转，以$1$行和$1$列的数据都不用变，$02$位置若以$v_1$中转则$v_0v_1+v_1v_2=6+4=10<13$，所以优化为$10$。$20$位置若以$v_1$中转则$v_2v_0+v_0v_1=5+6=11>5$，不用优化。
 
-![23July19-203335-1689770015-94010b16-ce7f-4960-a873-47065a8b7614](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192033831.png)
+![23July19-203335-1689770015-94010b16-ce7f-4960-a873-47065a8b7614](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192033831.png)
 
 ---
 
 $2$可以优化的位置为$10$、$01$，$v_1v_2+v_2v_0=4+5=9>10$，所以优化为$10$，$v_0v_2+v_2v_1=10+11=21>6$，不用优化。
 
-![23July19-203356-1689770036-d7783ec6-0295-4c87-ac86-66bf6982b472](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192034192.png)
+![23July19-203356-1689770036-d7783ec6-0295-4c87-ac86-66bf6982b472](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192034192.png)
 
 得到$A^{(n-1)})$和$path^{(n-1)})$即可,算法结束
 
@@ -1741,7 +1741,7 @@ public:
 
 若一个有向图中不存在环，则是有向无环图，简称$DAG$图。
 
-![23July19-204341-1689770621-c554e6d1-2254-4c85-8716-c71f0748ad9e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192043121.png)
+![23July19-204341-1689770621-c554e6d1-2254-4c85-8716-c71f0748ad9e](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192043121.png)
 
 #### 表达式应用
 
@@ -1753,25 +1753,25 @@ public:
 
     +   表达式：$((a+b)*(b*(c+d))+(c+d)*e)*((c+d)*e)$
     +   首先从第六层层有$c+d$与第五层有$c+d$重合，将第六层的$c+d$删掉，将第五层的乘号指向右边的加号上。第五层都有一个$b$，所以将加号和乘号都指向同一个$b$。然后往上面看还有相同的$(c+d)*e$，将其中一个删掉，连接到一起。
-    +   ![表达式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/%E8%A1%A8%E8%BE%BE%E5%BC%8F.png)
+    +   ![表达式](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/%25E8%25A1%25A8%25E8%25BE%25BE%25E5%25BC%258F.png)
 
 +   做题思路
 
     1. 把各个单个的操作数不重复的排成一排。
 
-        ![23July19-205229-1689771149-954ed4b9-e277-4f00-b2ca-5fa3894fa04e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192052456.png)
+        ![23July19-205229-1689771149-954ed4b9-e277-4f00-b2ca-5fa3894fa04e](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192052456.png)
 
     2. 标出各个运算符的生效顺序。
 
-        ![23July19-205239-1689771159-c63d8a7e-8938-4929-ac8c-6492e5b900c6](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192052038.png)
+        ![23July19-205239-1689771159-c63d8a7e-8938-4929-ac8c-6492e5b900c6](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192052038.png)
 
     3. 按顺序加入运算符，并注意对运算符的优先级进行分层。
 
-        ![23July19-205255-1689771175-22436cc4-9875-4b1b-81cc-de1c9245eb79](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192053216.png)
+        ![23July19-205255-1689771175-22436cc4-9875-4b1b-81cc-de1c9245eb79](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192053216.png)
 
     4. 当构建完成后从底向上逐层检查同层的运算符是否可以合并
 
-        ![23July19-205315-1689771195-532ec75e-e9b2-4042-bce1-4564eed0c5a6](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192053791.png)
+        ![23July19-205315-1689771195-532ec75e-e9b2-4042-bce1-4564eed0c5a6](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192053791.png)
 
 
 >   最终结果中==不可能出现相同的操作数==
@@ -1800,7 +1800,7 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
 3. 重复步骤一和二直到当前的$AOV$网为空或当前网中不存在无前驱的顶点（存在环路所以不能拓扑排序）为止。
     +   即一件事情一件事情的做完
 
-![23July19-205952-1689771592-88250cb2-a438-4649-ba28-eb63d6951f71](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192100102.png)
+![23July19-205952-1689771592-88250cb2-a438-4649-ba28-eb63d6951f71](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192100102.png)
 
 +   其中，
     +   数组`indegree`用于存储当前所有结点的入度
@@ -1827,7 +1827,7 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
     +   拓扑排序也可以使用$DFS$
 +   使用$DFS$算法实现的逆拓扑排序如下
 
-![23July19-211126-1689772286-59d549fa-e73e-4256-b36b-517712551506](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192111987.png) 
+![23July19-211126-1689772286-59d549fa-e73e-4256-b36b-517712551506](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192111987.png) 
 
 +   其中可使用数组判断是否存在环路
 
@@ -1933,37 +1933,37 @@ $AOV$网：用$DAG$图表示一个工程，顶点表示活动，有向边$<v_i,v
 
     +   根据拓扑排序序列，从源点出发，令$ve($源点$)= 0$，依次按照所有路径的==最大值==求出各个顶点的最早发生时间。
 
-        ![23July19-213640-1689773800-0f890294-e02b-467c-a47f-11f1527df79e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192136548.png)
+        ![23July19-213640-1689773800-0f890294-e02b-467c-a47f-11f1527df79e](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192136548.png)
 
 2. 求所有**事件**的最迟发生时间$vl$
 
     +   根据逆拓扑排序序列，从汇点出发，令$ve($汇点$)= 0$，回退依次将每个顶点按第一步计算的整个工程的时间减去本顶点需要处理的时间，得到每个活动的最迟发生时间$vl$，==交叉的顶点取最小值==。
 
-    ![23July19-213835-1689773915-2a7153e5-10e7-4855-b6e5-479f0b5c5739](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192139101.png)
+    ![23July19-213835-1689773915-2a7153e5-10e7-4855-b6e5-479f0b5c5739](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192139101.png)
 
 3. 求所有**活动**的最早发生时间$e$
 
     +   根根据各顶点的$ve()$值求所有弧的最早开始时间$e()$
     +   ==弧的最早开始时间$e()$等于起点顶点的$ve()$值==
 
-    ![23July19-213945-1689773985-8000a579-a951-4d23-8920-c7d8745a4dd8](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192139311.png)
+    ![23July19-213945-1689773985-8000a579-a951-4d23-8920-c7d8745a4dd8](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192139311.png)
 
 4. 求所有**活动**的最迟发生时间$l$
 
     +   根根据各顶点的$vl()$值求所有弧的最迟发生时间$l$
     +   ==最迟发生时间$l$等于终点顶点的$vl()$值减去弧的权值==
 
-    ![23July19-214405-1689774245-cdc90eab-a561-49e5-814c-e21f1aa1d2a9](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192144932.png)
+    ![23July19-214405-1689774245-cdc90eab-a561-49e5-814c-e21f1aa1d2a9](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192144932.png)
 
 5. 求所有**活动**的时间余量$d$。将$l-e$得到余量$d$
 
     +   ==此时一定有$l>e$==
 
-    ![image-20230719214512037](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192145204.png)
+    ![image-20230719214512037](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192145204.png)
 
 6.   求关键活动和关键路径。余量为$0$的活动就是关键活动，表示如果该活动拖延就会影响整个工程的进度
 
-![23July19-214535-1689774335-994913f5-81be-404f-a777-7e34614418c6](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307192145481.png)
+![23July19-214535-1689774335-994913f5-81be-404f-a777-7e34614418c6](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307192145481.png)
 
 关键活动
 

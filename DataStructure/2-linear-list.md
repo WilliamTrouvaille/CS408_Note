@@ -12,7 +12,7 @@
 
 ### 【知识导图】
 
-![1689255705t-20230713-2145-333.175](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689255705t-20230713-2145-333.175.png)
+![1689255705t-20230713-2145-333.175](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689255705t-20230713-2145-333.175.png)
 
 ### 【复习提示】
 
@@ -26,18 +26,13 @@
 
 ### 逻辑结构
 
-是具有**相同**数据类型的$n$个数据元素的**有限序列**。$n$表示表长。
+是具有**相同**（所占空间一样大）数据类型的$n$个数据元素的**有限序列**（有次序）。$n$表示表长。
 
-$L=(a_1，a_2，\cdots，a_i，\cdots，a_n)$，其中$i$表示元素在线性表中的位序，从一开始。
+$L=(a_1，a_2，\cdots，a_i，\cdots，a_n)$，其中$i$表示元素在线性表中的位序。
 
 + 存在唯一的第一个元素，存在唯一的最后一个元素。
 + 除第一个元素（表头元素）无直接前驱之外，每个元素均有且仅有一个直接前驱。
 + 除最后一个元素（表尾元素）无直接后继之外，每个元素均有且仅有一个直接后继。
-
----
-
-> “相同”表示每个数据元素所占空间一样大，“有限序列”表示有次序
->
 
 ### 线性表的特点
 
@@ -71,17 +66,18 @@ $L=(a_1，a_2，\cdots，a_i，\cdots，a_n)$，其中$i$表示元素在线性�
 
 ## 顺序表
 
-==线性表的顺序存储又称顺序表==
++ **线性表的顺序存储又称顺序表**
 
-把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来实现。$i$是元素$a_i$在线性表中的位序。
++ 把逻辑上相邻的元素存储在物理位置上也相邻的存储单元中，元素之间的关系由存储单元的邻接关系来实现。$i$是元素$a_i$在线性表中的位序。
+
 
 ### 顺序表特点
 
-1. ==随机访问==，可以通过首元素和元素序号在$O(1)$时间内找到对应元素；
-2. 存储密度高，只用存储数据；
-3. 拓展容量不方便；
-4. ==要求大片连续存储空间==；
-5. ==插入删除操作不方便==；
+1. ==随机访问，可以通过首元素和元素序号在$O(1)$时间内找到对应元素==；
+2. ==插入删除操作不方便==；
+3. 存储密度高，只用存储数据；
+4. 拓展容量不方便；
+5. 要求大片连续存储空间；
 6. 表中元素的逻辑地址与物理地址顺序相同。
 
 ### 顺序表定义
@@ -101,11 +97,11 @@ typedef char element_type;
 
 可以使用**静态分配**空间：
 
-![image-20230704224205453](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042242503.png)
+![image-20230704224205453](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042242503.png)
 
 也可以使用动态分配空间，动态分配空间还是顺序的，只不过可以替换原来空间：
 
-![image-20230704225442071](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042254114.png)
+![image-20230704225442071](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042254114.png)
 
 其中长度是指有数据的长度，而最大容量是指已经分配给动态数组的长度，插入时要考虑这个长度，不能溢出。
 
@@ -139,11 +135,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* arr = new int[5];  // 在堆上分配内存并创建一个包含 5 个 int 对象的数组
->                                           
+>                                                
 >        for (int i = 0; i < 5; ++i) {
 >            arr[i] = i + 1;    // 对动态分配的对象数组进行操作
 >        }
->                                           
+>                                                
 >        delete[] arr;          // 释放内存空间（注意使用 delete[] 删除对象数组）
 >        ```
 >
@@ -153,11 +149,11 @@ typedef char element_type;
 >      - 示例：
 >        ```cpp
 >        int* data = new int[10];   // 在堆上分配内存来存储 10 个 int 值
->                                           
+>                                                
 >        for (int i = 0; i < 10; ++i) {
 >            data[i] = i;   // 对动态分配的内存进行操作
 >        }
->                                           
+>                                                
 >        delete[] data;            // 释放内存空间（注意使用 delete[] 删除内存数组）
 >        ```
 >
@@ -234,33 +230,33 @@ typedef char element_type;
 
 + 静态顺序表因为数组部分在创建时就已经设置好了，所以初始化就直接设置数据长度就可以了。
   
-  ![image-20230704224205453](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042242503.png)
+  ![image-20230704224205453](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042242503.png)
   
-    ![image-20230704224301457](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042243497.png)
+    ![image-20230704224301457](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042243497.png)
   
     + 顺序表的表长刚开始确定后就**无法更改**（存储空间是静态的）
   
 + 动态顺序表不仅需要设置数据长度与最大 长度，还得分配数组初始空间。
   
-    ![image-20230704225442071](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042254114.png)
+    ![image-20230704225442071](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042254114.png)
     
-    ![image-20230704231125072](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042311115.png)
+    ![image-20230704231125072](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042311115.png)
 
 #### 顺序表增长数据空间长度
 
 只有**动态顺序表**才能增加。
 
-![image-20230704231140027](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042311067.png)
+![image-20230704231140027](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042311067.png)
 
 #### 顺序表插入
 
 使用静态定义
 
-![image-20230704231922311](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042319351.png)
+![image-20230704231922311](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042319351.png)
 
 倒序移动元素，最后将数据插入对应索引并长度加一。（这是一个较好的方式，因为如果插入的话其他元素会被挤住，倒序移动元素可以正好空出位置）
 
-![image-20230704231956301](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042319344.png)
+![image-20230704231956301](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042319344.png)
 
 
 
@@ -302,11 +298,11 @@ typedef char element_type;
 
 使用静态定义
 
-![image-20230704231922311](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042319351.png)
+![image-20230704231922311](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042319351.png)
 
 正序移动元素并长度减一。
 
-![image-20230704232414045](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042324090.png)
+![image-20230704232414045](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042324090.png)
 
 + 空间复杂度为$S(n)=O(1)$
 
@@ -334,16 +330,16 @@ typedef char element_type;
 
 使用动态定义
 
-![image-20230704232842554](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042328601.png)
+![image-20230704232842554](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042328601.png)
 
 + 按位查找时间复杂度为$T(n)=O(1)$。
   
-    ![image-20230704232910427](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042329466.png)
+    ![image-20230704232910427](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042329466.png)
     
     + “随机存取”特性：由于顺序表的各个数据元素在内存中连续存放，因此可以根据起始地址和数据元素大小立即找到第$i$个元素
 + 按值查找时间复杂度为$T(n)=O(n)$
   
-    ![image-20230704233030094](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307042330135.png)
+    ![image-20230704233030094](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307042330135.png)
     
     + 一般都是找到第一个元素等于指定值的元素，返回其位序，如果没有找到就返回$-1$
     + 最好时间复杂度$O(1)$
@@ -399,9 +395,9 @@ typedef char element_type;
 
 如，以下两种写法等价
 
-![image-20230705094138531](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307050941593.png)
+![image-20230705094138531](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307050941593.png)
 
-![image-20230705094202690](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307050942735.png)
+![image-20230705094202690](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307050942735.png)
 
 要表示一个单链表时，只需声明一个**头指针**`L`，指向单链表的第一个结点
 
@@ -505,9 +501,9 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 + 有带头结点与不带头结点的初始化的区别，带头结点代表第一个结点不存放数据，只是用于标识单链表的开始，但是区别不大，带头结点更好使用。
     + 不带头结点的单链表 
-         ![image-20230705103454355](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051034408.png)
+         ![image-20230705103454355](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051034408.png)
     + 带头结点的单链表 
-         ![image-20230705103522915](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051035966.png)
+         ![image-20230705103522915](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051035966.png)
 
 + 由于第一个数据结点的位置被存放在头结点的指针域中，因此在链表的第一个位置上的操作和在表的其他位置上的操作一致，无须进行特殊处理。
 + 无论链表是否为空，其头指针都指向头结点的非空指针（空表中头结点的指针域为空)，因此空表和非空表的处理也就得到了统一。
@@ -556,21 +552,21 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 + 按位序插入：
     + 带头结点。
       
-        ![image-20230705103746397](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051037452.png)
+        ![image-20230705103746397](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051037452.png)
     + 不带头结点。
       
-        ![image-20230705105145070](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051051123.png)
+        ![image-20230705105145070](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051051123.png)
 + 指定结点插入：
     + 前插入。
       
-        ![image-20230705105707653](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051057704.png)
+        ![image-20230705105707653](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051057704.png)
         
-        ![image-20230705105812650](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051058706.png)
+        ![image-20230705105812650](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051058706.png)
     + 后插入。
       
-        ![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
+        ![image-20230705105327320](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051053372.png)
         
-        ![image-20230705105500842](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051055898.png)
+        ![image-20230705105500842](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051055898.png)
 
 假定从第一个结点开始就是第$0$索引的结点。
 
@@ -590,7 +586,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 按位序删除带头结点的也只能删除从$1$开始的结点，$0$的头结点不能删除。
 
-![image-20230705112030519](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051120578.png)
+![image-20230705112030519](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051120578.png)
 
 时间复杂度为$O(n)$。
 
@@ -598,7 +594,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 如果删除指定结点而不知道其前驱，也可以使用之前前插结点的方式，把该结点后继的结点的数据复制到本结点上，然后把后继结点删除，就相当于删除了本结点。时间复杂度为$O(1)$。
 
-![image-20230705112302568](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051123625.png)
+![image-20230705112302568](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051123625.png)
 
 所以单链表还是不算方便。
 
@@ -661,21 +657,21 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 + 按位查找
 
-     ![image-20230705114241679](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051142737.png)
+     ![image-20230705114241679](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051142737.png)
 
     + 王道书版本
 
-        ![image-20230705114405330](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051144384.png)
+        ![image-20230705114405330](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051144384.png)
 
 + 按值查找
 
-     ![image-20230705114603200](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051146255.png)
+     ![image-20230705114603200](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051146255.png)
 
 #### 求单链表长度
 
 求单链表长度时间复杂度为$O(n)$。
 
-![image-20230705114743547](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051147605.png)
+![image-20230705114743547](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051147605.png)
 
 #### 单链表建立
 
@@ -684,13 +680,13 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 + 基本思想：使用**后插操作**从后面(**尾结点**)不断插入元素
 
     + 具体实现见上单链表插入处或见下
-     ![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
+     ![image-20230705105327320](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051053372.png)
 
 + 实现思路
 
-    ![image-20240612190026733](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202406121900881.png)
+    ![image-20240612190026733](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202406121900881.png)
 
-    ![image-20240612190041635](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202406121900720.png)
+    ![image-20240612190041635](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202406121900720.png)
 
 + 注意事项
     + 需要定义一个尾指针`r`来记录最后一位
@@ -701,13 +697,13 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 + 基本思想:实际上也是使用**后插操作**，不过每一次后插的元素都是**头结点**，也不用使用尾指针
 
-![image-20230705105327320](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051053372.png)
+![image-20230705105327320](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051053372.png)
 
 + 实现思路
 
 
-![image-20230705121024656](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051210713.png)
-![image-20230705121211148](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307051212216.png)
+![image-20230705121024656](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051210713.png)
+![image-20230705121211148](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307051212216.png)
 
 + 注意事项
     + 头插法可以实现链表的**逆置**，实现了输入数据的就地逆置。
@@ -809,43 +805,43 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 为了解决单链表只能单一方向扫描而无法两项遍历的缺点，使用了两个指针，`prior`和`next`，分别指向前驱和后继。
 
-![1689312566t-20230714-1326-583.87](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312566t-20230714-1326-583.87.png)
+![1689312566t-20230714-1326-583.87](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312566t-20230714-1326-583.87.png)
 
 ### 双链表定义
 
 基本上与单链表的定义一致。
 
-![image-20230705225510118](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052255185.png)
+![image-20230705225510118](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052255185.png)
 
 ### 双链表操作
 
 #### 双链表初始化
 
-![image-20230705225549916](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052255029.png)
+![image-20230705225549916](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052255029.png)
 
 #### 双链表插入
 
-![1689312586t-20230714-1346-362.169](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312586t-20230714-1346-362.169.png)
+![1689312586t-20230714-1346-362.169](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312586t-20230714-1346-362.169.png)
 
 假如`p`的结点后要插入结点`s`，则基本代码如下：
 
-![image-20230705225716653](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052257711.png)
+![image-20230705225716653](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052257711.png)
 
-![image-20230705225821099](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052258161.png)
+![image-20230705225821099](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052258161.png)
 
 操作上都是成对的，其中第①条第②条指令必须在第④条指令之前，否则`p`的后继就会丢掉。
 
 #### 双链表删除
 
-![1689312593t-20230714-1353-425.154](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312593t-20230714-1353-425.154.png)
+![1689312593t-20230714-1353-425.154](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312593t-20230714-1353-425.154.png)
 
 若删除结点`p`的后继结点`q`：
 
-![image-20230705230117341](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052301401.png)
+![image-20230705230117341](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052301401.png)
 
 删除整个双链表(销毁双链表)
 
-![image-20230705230241731](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052302784.png)
+![image-20230705230241731](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052302784.png)
 
 
 
@@ -857,7 +853,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 时间复杂度$O(n)$
 
-![image-20230705230359003](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052303063.png)
+![image-20230705230359003](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052303063.png)
 
 ## 循环链表
 
@@ -865,7 +861,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 原来的单链表的尾部指向`NULL`，但是循环单链表的尾部是指向头部。
 
-![1689312608t-20230714-1308-553.107](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312608t-20230714-1308-553.107.png)
+![1689312608t-20230714-1308-553.107](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312608t-20230714-1308-553.107.png)
 
 循环单链表即使没有头结点的地址，也可以通过循环得到整个单链表的信息。
 
@@ -873,7 +869,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 ---
 
-![1689312621t-20230714-1321-613.141](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312621t-20230714-1321-613.141.png)
+![1689312621t-20230714-1321-613.141](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312621t-20230714-1321-613.141.png)
 
 循环双链表除此之外，头结点的`prior`指针还要指表尾结点（即某结点`*p`为尾结点时，`p->next==list`）。
 
@@ -883,36 +879,36 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 循环链表和链表的结点定义是一致的。
 
-![image-20230705230612315](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052306369.png)
+![image-20230705230612315](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052306369.png)
 
 
 
 #### 循环单链表初始化
 
-![image-20230705230634416](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052306507.png)
+![image-20230705230634416](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052306507.png)
 
 #### 循环双链表初始化
 
 + 双链表：
     + 表头结点的`prior`指向`nullptr`
     + 表尾结点的`next`指向`nullptr`
-     ![image-20230705230945021](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052309077.png)
+     ![image-20230705230945021](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052309077.png)
 + 循环双链表：
     + 表头结点的`prior`指向表尾结点；
     + 表尾结点的`next`指向头结点
-     ![image-20230705230950149](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052309211.png)
+     ![image-20230705230950149](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052309211.png)
 
 循环双链表初始化实现如下
 
-![image-20230705231012466](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052310524.png)
+![image-20230705231012466](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052310524.png)
 
 #### 循环双链表插入
 
-![image-20230705231048171](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052310227.png)
+![image-20230705231048171](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052310227.png)
 
 #### 循环双链表删除
 
-![image-20230705231236732](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052312818.png)
+![image-20230705231236732](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052312818.png)
 
 ## 静态链表
 
@@ -923,9 +919,9 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 +   如果一个结点是尾结点，其游标设置为$-1$。
     +   具体的实现方式有多种，也可以$0$号元素数据保存头结点下标。
 
-![image-20230705231707346](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052317412.png)
+![image-20230705231707346](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052317412.png)
 
-![1689312710t-20230714-1350-488.215](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689312710t-20230714-1350-488.215.png)
+![1689312710t-20230714-1350-488.215](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/1689312710t-20230714-1350-488.215.png)
 
 ### 静态链表特点
 
@@ -946,7 +942,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 >
 > 详见操作系统-文件管理-文件系统-文件物理结构-链接分配-显式分配
 >
-> ![image-20230626233424662](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306262334718.png)
+> ![image-20230626233424662](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202306262334718.png)
 >
 > + 操作系统把用于链接文件各物理块的指针显式地存放在一张表中.即文件分配表（$FAT$，$File\;Allocation\;Table$）
 >     + $FAT$包含物理块号和下一块指针两项.
@@ -966,7 +962,7 @@ LinkList L;//声明一个指向单链表第一个结点的指针，强调指向�
 
 ### 静态链表定义
 
-![image-20230705231813612](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307052318655.png)
+![image-20230705231813612](https://cdn.jsdelivr.net/gh/WilliamTrouvaille/image_hosting@main/CS408_NOTE/202307052318655.png)
 
 ### 静态链表操作
 

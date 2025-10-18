@@ -15,7 +15,7 @@
 
 ### 【知识导图】
 
-![abe28e4716b74e5baf087494dd0c769e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271126370.webp)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181313866.webp)
 
 ### 【复习提示】
 
@@ -27,9 +27,7 @@
 
 ## 计算机网络概述
 
-
-
-![image-20230929150633146](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291506788.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181314715.png)
 
 ### 计算机网络概念
 
@@ -123,7 +121,7 @@
 
 + 按拓扑结构分类：总线、星型、环型、网状。
 
-    + ![image-20230725115221513](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251152584.png)
+    ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181314855.png)
 
     1.   总线形网络
          +   优点是建网容易、增/减结点方便、节省线路
@@ -219,7 +217,7 @@
 >   2. 传输数据量大且传输时间远大于呼叫时间，就选择电路交换，其传输时延最小。
 >   3. 报文交换分组交换在信道利用率上优于电路交换。
 
-![数据交换](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251139568.png)
+![数据交换](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181314576.png)
 
 ### 分组交换传输方式
 
@@ -370,7 +368,7 @@ $RTT$越大，在收到确认前可以发送的数据越多。
 
 ## 计算机网络体系结构
 
-![image-20230725223450615](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252234409.png)
+![image-20230725223450615](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181314445.png)
 
 ### 分层原因
 
@@ -382,7 +380,7 @@ $RTT$越大，在收到确认前可以发送的数据越多。
 
 ### 分层结构概念
 
-![image-20230725202924377](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252029519.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181316729.png)
 
 + 实体：第$n$层中的活动元素称为$n$层实体
 
@@ -562,7 +560,7 @@ $RTT$越大，在收到确认前可以发送的数据越多。
 
 端系统一般都是七层，而中间系统如路由器等最多只有三层。上面四层是端到端的通信，而下面三层是点到点的通信。
 
-![image-20230725203957683](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252039802.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181315811.png)
 
 ### TCP/IP参考模型
 
@@ -577,7 +575,7 @@ $ARPA$在研究$ARPAnet$时提出了$ TCP/IP$模型
 
 先有协议栈才有参考模型。
 
-![image-20230725210551976](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252105052.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181315919.png)
 
 >   可以看出，IP协议是因特网中的核心协议；TCP/IP可以为各式各样的应用提供服务（所谓的everything over IP）,同时TCP/IP也允许IP协议在由各种网络构成的互联网上运行（所谓的IP over everything）
 >
@@ -626,7 +624,7 @@ $TCP/IP$模型与$OSI$参考模型有许多相似之处
 2.   二者都是基于独立的协议栈的概念
 3.   二者都可以解决异构网络的互连，实现世界上不同厂家生产的计算机之间的通信。 
 
-![image-20230725211906023](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252119108.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181315537.png)
 
 + 应用层-应用层+表示层+会话层：$HTTP$、$FTP$、$DNS$。
 + 传输层-传输层：$TCP$、$UDP$。
@@ -675,4 +673,4 @@ $TCP/IP$模型与$OSI$参考模型有许多相似之处
 
 应用层、传输层、网络层、数据链路层、物理层。
 
-![image-20230725223533132](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307252235294.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181315366.png)

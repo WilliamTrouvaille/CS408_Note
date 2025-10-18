@@ -39,7 +39,7 @@
 
 ### 【知识导图】
 
-![f2460bcd775b41009e3329934a4e761e~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271126256.webp)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181557068.webp)
 
 ### 【复习提示】
 
@@ -122,7 +122,7 @@
 
 +   软件定义网络$SDN$是近年流行的一种创新网络架构，它采用集中式的控制层面和分布式的数据层面，两个层面相互分离，控制层面利用控制-数据接口对数据层面上的路由器进行集中式控制，方便软件来控制网络。
 
-![23July31-125848-1690779528-71cf5022-d314-4c84-b8c3-2580832d1e79](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311259619.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181557932.png)
 
 +   $SDN$控制器的三个层次
     1.   对于网络控制应用程序的接口：
@@ -397,11 +397,11 @@ $RIP$协议存在问题：
 
 ## IP协议
 
-![PdfImage](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311105740.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181559696.png)
 
 网际协议是$TCP/IP$协议栈中两个最主要的协议。与之配套的还有地址解析协议$ARP$，网际控制报文协议$ICMP$、网际组管理协议$IGMP$，还有一个逆地址解析协议$RARP$已不被使用。
 
-![TCPIP协议栈](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311056423.jpg)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181603909.jpeg)
 
 $IP$协议使用$ARP$协议，而$ICMP$与$IGMP$使用$IP$协议。
 
@@ -409,13 +409,13 @@ $IP$协议使用$ARP$协议，而$ICMP$与$IGMP$使用$IP$协议。
 
 #### IP数据报格式
 
-![IP数据报格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311056823.png)
+![IP数据报格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181617022.png)
 
 当单个$IP$数据报太长，就会被划分不同的数据部分加上$IP$首部，就是分组。
 
 固定部分$20B=160bit$，按照五行来展示而不是真的这样排列，一行$32$比特。
 
-![IP数据报具体格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311056592.png)
+![IP数据报具体格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181615235.png)
 
 |              名称               |                             注释                             |            大小             |
 | :-----------------------------: | :----------------------------------------------------------: | :-------------------------: |
@@ -474,11 +474,11 @@ $IP$协议使用$ARP$协议，而$ICMP$与$IGMP$使用$IP$协议。
 
 $IP$地址一共分为五类。
 
-![IP地址类别](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311057153.png)
+![IP地址类别](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181615452.png)
 
 其中一些$IP$地址被予以保留做特殊用途：
 
-![特殊IP地址](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311057001.jpg)
+![特殊IP地址](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181615590.jpeg)
 
 +   全$1$的广播地址也称为受限广播地址。
     +   原本表示整个$TCP/IP$网络的广播地址
@@ -488,7 +488,7 @@ $IP$地址一共分为五类。
 
 由于网络号不能全$0$或全$1$，所以基本上可用的都要减二。
 
-![23July31-215755-1690811875-c3b497c5-e0d0-4798-8cd3-ffffaeed7b20](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307312157977.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181615117.png)
 
 为什么$A$类最大是$126.x.x.x$？
 
@@ -539,7 +539,7 @@ $IP$地址一共分为五类。
 
 私有$IP$地址（可重用$IP$地址）如下：
 
-![私有IP地址](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311057722.png)
+![私有IP地址](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181615350.png)
 
 +   在**因特网$Internet$**中的所有路由器，对目的地址是私有地址的数据报一律不进行转发
     +   这种采用私有$IP$地址的互联网络称为专用互联网或本地互联网
@@ -788,7 +788,7 @@ $ARP$由于“看到了” $IP$地址，所以它工作在网络层，而$NAT$�
 
 $ICMP$协议是网络层的协议，$ICMP$报文是作为$IP$报文的一部分而传输的。
 
-![ICMP帧格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311058979.png)
+![ICMP帧格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181616865.png)
 
 ##### ICMP报文类型
 
@@ -804,7 +804,7 @@ $ICMP$协议是网络层的协议，$ICMP$报文是作为$IP$报文的一部分�
 |     时间超过     |  11  | 当路由器收到生存时间==TTL=0==的数据报时，除丢弃该数据报外，还要向源点发送时间超过报文。当终点在预先规定的时间内不能收到一个数据报的全部数据报片时，就把已收到的数据报片都丢弃，并向源点发送时间超过报文 |
 |     参数问题     |  12  | 当路由器或目的主机收到的数据报的首部中有的==字段的值不正确==时，就丢弃该数据报，并向源点发送参数问题报文 |
 
-![ICMP差错报文数据字段](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311058638.png)
+![ICMP差错报文数据字段](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181616091.png)
 
 不应发送$ICMP$差错报文的情况：
 
@@ -849,7 +849,7 @@ $IPv6$帧包括$40$字节即$320$位的基本首部，再加上不超过$65535$�
 
 其中报头格式如下：
 
-![IPv6报头格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311058965.png)
+![IPv6报头格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181616650.png)
 
 |              名称              |                             作用                             | 位数  |
 | :----------------------------: | :----------------------------------------------------------: | :---: |
@@ -1143,7 +1143,7 @@ $BGP$发言人是$AS$与$AS$之间交流信息的路由器，往往是$BGP$边�
 
 5. 网络可达性信息是指到达某个网络所经过的路径（一整条），且这个路径不一定是最佳的，而是选择能到达且网络较好的。
 
-![image-20230801224134283](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012241499.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181616732.png)
 
 #### BGP协议特点
 
@@ -1222,7 +1222,7 @@ IP组播可以分为两种
 
 在因特网上进行组播的最后阶段，还是要把组播数据报在局域网上用硬件组播交付给组播组的所有成员
 
-![image-20230801230318985](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012303138.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181616811.png)
 
 ### IP组播地址
 
@@ -1243,7 +1243,7 @@ $IP$组播使用$D$类地址格式，范围是`244.0.0.0`到`239.255.255.255`，
 
 同单播地址一样，组播$IP$地址也需要对应的组播$MAC$地址在本地网络中实际传输帧。组播$MAC$地址以十六进制值$01-00-5E$开头，即范围为`01-00-5E-00-00-00` $\to$`01-00-53-7F-FF-FF`，余下的六个十六进制位根据$IP$组播组地址的最后$23$位转换而成，第$9$位为$0$。
 
-![硬件组播](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311058938.png)
+![硬件组播](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181617082.png)
 
 有时候可能会$IP$地址映射成同样的$MAC$地址，从而数据组播时可能会出错，所以在收到多播数据报的主机，还要在$IP$层利用软件进行过滤，将不是本主机要接受的数据丢弃。
 
@@ -1425,7 +1425,7 @@ $A$回到了归属网络:
 
 +   从结构上看，路由器由路由选择和分组转发两部分构成
 
-    ![image-20230801234812750](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012348886.png)
+    ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181617970.png)
 
     而从模型的角度看，路由器是网络层设备，它实现了网络模型的下三层，即物理层、数据链路层和网络层
 
@@ -1483,7 +1483,7 @@ $A$回到了归属网络:
 +   而“路由选择”则涉及很多路由器，路由表是许多路由器协同工作的结果
     +   这些路由器按照复杂的路由算法，根据从各相邻路由器得到的关于网络拓扑的变化情况，动态地改变所选择的路由，并由此构造出整个路由表。 
 
-![image-20230801235638958](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012356108.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181617476.png)
 
 >   注意，在讨论路由选择的原理时，往往不去区分转发表和路由表的区别，但要注意路由表不等于转发表。分组的实际转发是靠直接查找转发表，而不是直接查找路由表
 

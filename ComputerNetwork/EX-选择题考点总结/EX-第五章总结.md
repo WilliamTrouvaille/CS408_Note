@@ -183,7 +183,7 @@
           +   $MSS$是$TCP$报文段中的数据字段的最大长度，仅仅是指数据字段。
      10.   填充：当首部长度不为$4$的整数倍就由填充部分填充$0$，到$4$字节的整数倍。
 
-![image-20231026155557580](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310261555677.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181307495.png)
 
 3.   $TCP$数据报的六个控制位，值为1表示有效
      1.   紧急位$URG$：$URG=1$时， 表明此报文段中有紧急数据，是高优先级的数据，应尽快传送，不用在缓存里排队。
@@ -215,7 +215,7 @@
 
 ---
 
-![image-20231026161248037](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310261612117.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181308204.png)
 
 标志位与序号确认号的变化：若不指出则代表其值为$0$。
 
@@ -263,7 +263,7 @@
 
 ---
 
-![TCP释放连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349416.png)
+![TCP释放连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181308313.png)
 
 标志位与序号确认号的变化：若不指出则代表其值为$0$。
 
@@ -312,7 +312,7 @@ $TCP$使用滑动窗口机制来完成流量控制，与数据链路层的滑动
 
 $A$向$B$发送数据，连接建立时，$B$告诉$A$：$B$的$rwnd=400B$，设每一个报文段$100B$，报文段序号初始值为$1$。
 
-![TCP流量控制](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349374.png)
+![TCP流量控制](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181308885.png)
 
 $B$只有处理完接收窗口中的数据才能继续接收$A$的数据，发送$A$一个$rwnd$不为$0$的报文。
 
@@ -333,8 +333,8 @@ $cwnd$初始值是$1$，指一个最大报文段长度$MSS$。
      2.   当`cwnd > ssthresh时`，停止使用慢开始算法而改用拥塞避免算法。
      3.   当`cwnd = ssthresh`时，既可使用慢开始算法，又可使用拥塞避免算法（通常做法）。
 
-![慢开始与拥塞避免](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021350127.png)
+![慢开始与拥塞避免](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181308136.png)
 
 2.   快重传与快恢复：收到连续三个冗余的$ACK$确认之后，降到现在$cwnd$的一半，再重新线性增长。
 
-![快重传与快恢复](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021350372.png)
+![快重传与快恢复](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181309224.png)

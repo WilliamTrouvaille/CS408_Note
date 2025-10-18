@@ -17,10 +17,6 @@
      +   中继器
      +   集线器
 
-### 【知识导图】
-
-
-
 ### 【复习提示】
 
 +   物理层考虑的是怎样才能在连接各台计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体
@@ -77,7 +73,7 @@
     +   图`2.1`所示为一个单向通信系统的模型
         +   实际的通信系统大多为双向的，即往往包含一条发送信道和一条接收信道，此时信道可以进行双向通信
 
-![image-20230726122438001](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307261224064.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181316581.png)
 
 #### 通信方式
 
@@ -112,7 +108,7 @@
 
 ### 传输单位
 
-![image-20230929154924325](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291549662.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181318844.png)
 
 #### 码元
 
@@ -153,7 +149,7 @@
 
 ### 传输准则
 
-![image-20230929154939992](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291549608.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181322530.png)
 
 #### 奈式准则/奈奎斯特定理
 
@@ -293,7 +289,7 @@ $$
 
 ### 编码
 
-![image-20230929155410855](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291554363.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181323677.png)
 
 把数据变换为模拟信号的过程称为**调制**，把数据变换为数字信号的过程称为**编码**
 
@@ -303,7 +299,7 @@ $$
 
 编码方式：
 
-![image-20230726200226166](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262002268.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181323020.png)
 
 1. 归零编码$RZ$
 
@@ -389,7 +385,7 @@ $$
 
 数字数据通过调制器转换为模拟信号。
 
-![数字数据到模拟信号](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307261208852.png)
+![数字数据到模拟信号](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181323325.png)
 
 1. 幅移键控（调幅$ASK$）
 
@@ -429,7 +425,7 @@ $$
 
 ### 电路交换、报文交换与分组交换
 
-![image-20230929160503002](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291605584.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181323348.png)
 
 #### 电路交换
 
@@ -515,7 +511,7 @@ $$
 $$
 T=t_1+(n-1)t
 $$
-![image-20230726223025785](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262230867.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181323850.png)
 
 优点：
 
@@ -549,7 +545,7 @@ $$
 >   2. 传输数据量大且传输时间远大于呼叫时间，就选择电路交换，其传输时延最小。
 >   3. 报文交换分组交换在信道利用率上优于电路交换。
 
-![数据交换](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251139568.png)
+![数据交换](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181324534.png)
 
 ### 分组交换的两种方式
 
@@ -565,7 +561,7 @@ $$
 
 用图2.5的例子来说明数据报服务的原理。假定主机A要向主机B发送分组：
 
-![image-20230726202145781](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262021860.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181324293.png)
 
 1.   主机$A$先将分组逐个发往与它直接相连的交换结点$A$，交换结点$A$缓存收到的分组。
 2.   然后查找自己的转发表。由于不同时刻的网络状态不同，因此转发表的内容可能不完全相同,所以有的分组转发给交换结点$C$，有的分组转发给交换结点$D$。
@@ -610,7 +606,7 @@ $$
 3. 释放虚电路连接：源主机发送释放请求分组以拆除虚电路。
     +   传送结束后主机$A$通过发送“释放请求”分组来拆除虚电路，逐段断开整个连接
 
-![image-20230726203303775](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262033891.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181324242.png)
 
 >   图`2.6`所示的数据传输过程是有确认的传输（由高层实现），主机$B$收到分组后要发回相应分组的确认。网络中的传输是否有确认与网络层提供的两种服务没有任何关系
 
@@ -651,7 +647,7 @@ $$
 + 是两根采用规则并排校合并绝缘的铜导线组成。绞合是减少电磁干扰。
 + 根据有无屏蔽层分为屏蔽双绞线（$STP$）和无屏蔽双绞线（$UTP$）。$UTP$外加上金属网就是$STP$。
 
-![image-20230726223457490](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262234558.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181324491.png)
 
 + 通信距离为几到数十公里。
 + 距离太远需要使用放大器放大模拟信号，中继器整形数字信号。
@@ -666,7 +662,7 @@ $$
 
 同轴电缆由内导体、绝缘层、网状编织屏蔽层和塑料外层构成。
 
-![image-20230726223546092](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262235155.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181324712.png)
 
 + $50\Omega$：基带同轴电缆缆，主要用于传送基带数字信号。用于局域网。
 + $75\Omega$：宽带同轴电缆，主要用于传送宽带信号。用于有线电视系统。
@@ -677,22 +673,21 @@ $$
 
 + 传递光脉冲，带宽大于其他传输媒体。
 
-![image-20230726223753687](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262237757.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181325491.png)
 
 + 由实心纤芯与包层构成。
 
 + 分为多模光纤与单模光纤。
 
-    + 多模光纤的光源为发光二极管
+    + 多模光纤的光源为发光二极管：光脉冲在多模光纤中传输时会逐渐展宽，造成失真，因此多模光纤只适合于近距离传输
 
-        + 光脉冲在多模光纤中传输时会逐渐展宽，造成失真，因此多模光纤只适合于近距离传输
-
-            ![image-20230726223838334](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262238399.png)
-
+    
+    ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181325728.png)
+    
     + 光纤的直径减小到只有一个光的波长时，光纤就像一根波导那样，可使光线一直向前传播， 而不会产生多次反射，这样的光纤就是单模光纤
-
-        ![image-20230726223912152](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307262239214.png)
-
+    
+        ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181325078.png)
+    
         + 单模光纤的纤芯很细，直径只有几微米，制造成本较高
         + 同时，单模光纤的光源为定向性很好的半导体激光器，因此单模光纤的衰减较小，可传输数公里甚至数十千米而不必采用中继器，适合远距离传输。
 

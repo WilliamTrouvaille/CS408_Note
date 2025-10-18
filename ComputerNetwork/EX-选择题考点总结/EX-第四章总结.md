@@ -301,7 +301,7 @@
 
 #### ※※IP数据报
 
-![image-20231023165512235](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310231655319.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181306575.png)
 
 1.   版本（4位）：ipv4或者ipv6
 2.   ※首部长度（4位）：**单位为4字节**，同时因为IP数据报固定长度（最小值）为20字节，所以此处最小值为5，即二进制的0101
@@ -357,7 +357,7 @@
      5.   E类IP地址：前四位为`1111`。240到255，无全1。保留地址。
 2.   特殊$IP$地址
 
-![image-20231023165357805](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310231653948.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181306131.png)
 
 3.   IP地址特点
      1.   $IP$地址是标志一台主机（或路由器）和一条链路的接口，即当一台主机同时连接到两个网络时，该主机就必须同时具有两个相应的$IP$地址，每个$IP$地址的网络号必须与所在网络的网络号相同，且这两个$IP$地址的网络号是互相**不同**的
@@ -566,7 +566,7 @@
 
 ### IPV6
 
-![IPv6报头格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311058965.png)
+![IPv6报头格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181307525.png)
 
 1.   **IPv6帧格式**：
      1.   源地址和目标地址均为128位，16B

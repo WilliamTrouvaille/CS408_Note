@@ -19,7 +19,7 @@
 
 ### 【知识导图】
 
-![179b476cc0644174be2706d0be5520ab~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271126730.webp)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181619932.webp)
 
 ### 【复习提示】
 
@@ -41,7 +41,7 @@
     2.   但当传输层采用无连接的$UDP$时，这种逻辑通信信道仍然是一条不可靠信道，如果使用$UDP$进行数据传输，那么必须在应用层提供可靠性方面的全部工作
 
 
-![image-20230802140019654](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021400772.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181619565.png)
 
 ### 传输层的功能
 
@@ -173,7 +173,7 @@ $$
 
 ### UDP数据报格式
 
-![UDP数据报格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348723.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181619796.png)
 
 $UDP$数据报包含两部分：
 
@@ -197,7 +197,7 @@ $UDP$首部有$8B$，由$4$个字段组成，每个字段的长度都是$2B$，�
 
 具体的$UDP$数据报格式如下：
 
-![UDP具体格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348527.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181619506.png)
 
 + 伪首部只有在计算检验和时才出现，不向下传达也不向上提交，而只是为了计算校验和。
     + ==在计算校验和时，要在$UDP$数据报之前增加$12B$的伪首部，伪首部并不是$UDP$的真正首部。==
@@ -229,7 +229,7 @@ $UDP$首部有$8B$，由$4$个字段组成，每个字段的长度都是$2B$，�
 2. 采用二进制反码计算伪首部+首部+数据部分的总和。
 3. 如果结果全为$1$则无差错，否则出错，丢弃或交给上层并附上出错的警告。
 
-![UDP校验](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348766.png)
+![UDP校验](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181620152.png)
 
 >   这种简单的差错校验方法的校错能力并不强，但它的好处是简单、处理速度快
 
@@ -264,7 +264,7 @@ $UDP$首部有$8B$，由$4$个字段组成，每个字段的长度都是$2B$，�
 
 $TCP$传输的数据单位称为报文段。可以用来传输数据，也可以用来建立连接、释放连接、应答。首部长度为$4B$整数倍，默认最短为$20B$，报头最长为$60B$。
 
-![TCP报文段格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348020.jpg)
+![TCP报文段格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181620819.jpeg)
 
 $TCP$的全部功能体现在其首部的各个字段中，各字段意义如下
 
@@ -349,7 +349,7 @@ TCP是面向连接的协议，因此每个TCP连接都有三个阶段：连接�
 >
 >   本笔记参考王道教材，这里选用`三次握手`译名，下`四次挥手（四报文握手）`同
 
-![TCP建立连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349354.png)
+![TCP建立连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181620174.png)
 
 连接建立前，服务器进程处于`LISTEN `（收听）状态，等待客户的连接请求
 
@@ -373,7 +373,7 @@ TCP是面向连接的协议，因此每个TCP连接都有三个阶段：连接�
 >       +   此时若$ACK=0$代表这是一个**连接请求报文**
 >       +   若$ACK=1$代表这是一个**连接接收报文**。
 
-![TCP建立连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349354.png)
+![TCP建立连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181620532.png)
 
 若不指出为$1$，则代表其值为$0$。
 
@@ -424,7 +424,7 @@ $SYN$洪泛攻击（$SYN Flood Attack$）是一种常见的网络拒绝服务（
 
 每一条$TCP$连接的两个进程中的任何一个都能终止连接，连接结束后主机的资源将被释放。
 
-![TCP释放连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349416.png)
+![TCP释放连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181620074.png)
 
 参与TCP连接的两个进程中的任何一个都能终止该连接
 
@@ -488,7 +488,7 @@ $SYN$洪泛攻击（$SYN Flood Attack$）是一种常见的网络拒绝服务（
 
 #### 序号
 
-![image-20230802222526872](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308022225980.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181621939.png)
 
 $TCP$报文传输时每个字节都会编上序号，一个字节占用一个序号，并按报文段的形式一起发送，报文段长度不定，根据$MTU$来定。
 
@@ -546,7 +546,7 @@ $TCP$使用滑动窗口机制来完成流量控制，与数据链路层的滑动
 
 $A$向$B$发送数据，连接建立时，$B$告诉$A$：$B$的$rwnd=400B$，设每一个报文段$100B$，报文段序号初始值为$1$。
 
-![TCP流量控制](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021349374.png)
+![TCP流量控制](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181621684.png)
 
 $B$只有处理完接收窗口中的数据才能继续接收$A$的数据，发送$A$一个$rwnd$不为$0$的报文。
 
@@ -592,7 +592,7 @@ $TCP$为每一个连接设有一个持续计时器，只要$TCP$连接的一方�
 
 #### 慢开始与拥塞避免
 
-![慢开始与拥塞避免](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021350127.png)
+![慢开始与拥塞避免](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181621226.png)
 
 $cwnd$初始值是$1$，指一个最大报文段长度$MSS$。
 
@@ -618,7 +618,7 @@ $cwnd$初始值是$1$，指一个最大报文段长度$MSS$。
 
 快重传（冗余$ACK$）在$TCP$协议可靠传输中已经提到过。
 
-![快重传与快恢复](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021350372.png)
+![快重传与快恢复](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181621139.png)
 
 这里和上面的慢开始和拥塞避免的一开始步骤差不多，都是先指数增长再转变为线性增长。
 

@@ -23,7 +23,7 @@
 
 ### 【知识导图】
 
-![ca4b0743a9fc45638c6c826a90cf758a~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031102276.webp)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181622648.webp)
 
 ### 【复习提示】
 
@@ -37,7 +37,7 @@
 
 客户/服务器$C/S(Client/Server)$模型中服务器提供计算服务的设备，而客户指请求计算服务的主机。
 
-![image-20230803112448368](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031124423.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623938.png)
 
 $C/S$模型中，有一个总是打开的主机称为服务器，它服务于许多来自其他称为客户机的主机请求。其工作流程如下
 
@@ -94,7 +94,7 @@ $P2P$模型的思想是整个网络中的传输内容不再被保存在中心服
 
 当前比较流行的$P2P$应用有$PPlive，Bittorrent$和电驴等
 
-![image-20230803112457107](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031124153.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623668.png)
 
 对等模型的特点：
 
@@ -174,7 +174,7 @@ $P2P$模型的思想是整个网络中的传输内容不再被保存在中心服
 
 + 递归与迭代相结合的查询：本地域名服务器分别查找根域名服务器，顶级域名服务器，权限域名服务器。（靠自己）
 
-![域名解析过程](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031104317.png)
+![域名解析过程](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623924.png)
 
 一般使用递归与迭代相结合的查询：
 
@@ -240,7 +240,7 @@ FTP服务器必须在整个会话期间保留用户的状态信息。特别是�
 
 #### FTP协议连接流程
 
-![FTP协议工作原理](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031104785.png)
+![FTP协议工作原理](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623358.png)
 
 1.   客户端和服务器端先建立$TCP$连接，端口是熟知端口` 21 `，称为控制连接
      +   用来传输控制信息，以七位$ASCII$格式传输。
@@ -367,7 +367,7 @@ $URL$可以使用$HTTP$也可以使用$FTP$。
 
 #### HTTP协议工作流程
 
-![image-20230803220031793](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032200963.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623526.png)
 
 1. 浏览器分析$URL$。
 2. 浏览器向$DNS$请求解析$IP$地址。
@@ -401,7 +401,7 @@ $HTTP$连接包括：持久连接和非持久连接
     + 此外每次建立新的TCP连接都要分配缓存和变量，使万维网服务器的负担很重。 
 
 
-![HTTP非持久连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031104914.png)
+![HTTP非持久连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181623023.png)
 
 ##### 持久连接$Keep-alive$
 
@@ -413,7 +413,7 @@ $HTTP$连接包括：持久连接和非持久连接
 
     +   如下图为使用非流水线持久连接
 
-    ![HTTP持久连接](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031104288.png)
+    ![HTTP持久连接](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181624760.png)
 
 +   对于流水线方式，客户每遇到一个对象引用就立即发出一个请求，因而客户可以逐个地连续发出对各个引用对象的请求
 
@@ -425,7 +425,7 @@ $HTTP$连接包括：持久连接和非持久连接
 
 $HTTP$报文分为请求报文和响应报文，因为其面向文本$Text-Oriented$，所以报文中的每一个字段都是$ASCII$码串。
 
-![image-20230803220326089](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032203189.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181624090.png)
 
 HTTP请求报文和响应报文都由三个部分组成。从图6.14可以看出，这两种报文格式的区别就是开始行不同
 
@@ -435,7 +435,7 @@ HTTP请求报文和响应报文都由三个部分组成。从图6.14可以看出
     + 开始行的三个字段之间都以空格分隔，最后的`CR`和`LF`分别代表`回车`和`换行`。
     + 请求报文中的`方法`字段是指命令，就是对所请求的对象进行什么操作，如获取/删除等等。
     
-        ![image-20230803222313833](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032223905.png)
+        ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181624961.png)
     
         -   **GET**：GET方法请求指定资源的表示形式。使用GET的请求应仅检索数据。
         -   **HEAD**：HEAD方法要求与GET请求相同的响应，==但没有响应正文==。
@@ -488,7 +488,7 @@ $RFC 822$规定了邮件的首部格式，而邮件的主体部分则让用户�
 
 应该包括三个部分：用户代理、邮件服务器、电子邮件协议。
 
-![image-20230803225145291](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032251429.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181624062.png)
 
 用户代理$UA$：
 
@@ -589,7 +589,7 @@ $SMTP$的缺点：
 
 $MIME$并未改动$SMTP$或取代它。$MIME$的意图是继续使用目前的格式，但增加了邮件主体的结构，并定义了传送非$ASCII$码的编码规则。也就是说，==MIME邮件可在现有的电子邮件程序和协议下传送==
 
-![MIME协议](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308031105099.png)
+![MIME协议](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181624276.png)
 
 $MIME$协议已经逐渐开始应用到浏览器当中，通过对不同文件类型用不同的标识符标识，来让浏览器读取通过$MIME$的相关文件。
 

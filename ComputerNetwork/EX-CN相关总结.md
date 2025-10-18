@@ -4,11 +4,11 @@
 
 ### 考频
 
-![image-20230926220311520](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262203795.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262203795.png)
 
 大题主要考点
 
-![23September26-220943-1695737383-db2c2dfc-7533-464f-a211-b9ae04b94958](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262210682.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262210682.png)
 
 可见现在主要考查各层之间的混合
 
@@ -135,11 +135,11 @@
 
 ### 报文段
 
-![image-20230926221201259](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262212457.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262212457.png)
 
 1.   以太网的MAC帧：以太网帧附加信息$18B$，规定帧最短为$64B$，所以数据最短为$46B$，规定数据部分最长为$1500B$，所以以太网帧最长为$1518B$。
 
-     ![image-20230730121337884](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301213026.png)
+     ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202307301213026.png)
 
      + 物理层会插入前导码，用于接收端与发送端时钟同步
          + 包括==前同步码（用于快速实现$MAC$帧的比特同步）==与==帧开始定界符（表示后面的信息就是$MAC$帧）=两个部分。=
@@ -169,7 +169,7 @@
 
 2.   $IEEE802.11$的$MAC$帧格式
 
-     ![56226958-dc43-48e7-bda4-ae8d06c88ebb](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309291639618.jpg)
+     ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309291639618.jpg)
 
      只需要掌握$4$个地址字段，其他字段不是考试重点
 
@@ -177,7 +177,7 @@
 
 3.   IP数据报
 
-     ![IP数据报具体格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307311056592.png)
+     ![IP数据报具体格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202307311056592.png)
 
      |              名称               |                             注释                             |            大小             |
      | :-----------------------------: | :----------------------------------------------------------: | :-------------------------: |
@@ -202,7 +202,7 @@
 
 4.   UDP数据报
 
-     ![UDP数据报格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348723.png)
+     ![UDP数据报格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308021348723.png)
 
      $UDP$首部有$8B$，由$4$个字段组成，每个字段的长度都是$2B$，各字段意义如下：
 
@@ -219,13 +219,13 @@
 
      具体的$UDP$数据报格式如下：
 
-     ![UDP具体格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348527.png)
+     ![UDP具体格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308021348527.png)
 
 5.   TCP报文段
 
      $TCP$传输的数据单位称为报文段。可以用来传输数据，也可以用来建立连接、释放连接、应答。首部长度为$4B$整数倍，默认最短为$20B$，报头最长为$60B$。
 
-     ![TCP报文段格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308021348020.jpg)
+     ![TCP报文段格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308021348020.jpg)
 
      $TCP$的全部功能体现在其首部的各个字段中，各字段意义如下
 
@@ -296,7 +296,7 @@
 
      $HTTP$报文分为请求报文和响应报文，因为其面向文本$Text-Oriented$，所以报文中的每一个字段都是$ASCII$码串。
 
-     ![image-20230803220326089](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032203189.png)
+     ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308032203189.png)
 
      HTTP请求报文和响应报文都由三个部分组成。从图6.14可以看出，这两种报文格式的区别就是开始行不同
 
@@ -308,7 +308,7 @@
 
          + 请求报文中的`方法`字段是指命令，就是对所请求的对象进行什么操作，如获取/删除等等。
 
-             ![image-20230803222313833](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308032223905.png)
+             ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308032223905.png)
 
          + $URL$就是资源标识符。
 
@@ -334,11 +334,11 @@
 
 ### 特殊IP地址
 
-![image-20230926221218392](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262212564.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262212564.png)
 
 ### 重要协议
 
-![23July31-213458-1690810498-1ba23eeb-5227-4873-b012-efb0d89c90a9](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262218142.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262218142.png)
 
 1.   物理层：往往容易忽视
      1.  **EIA-232C（也称为RS-232C）**：
@@ -442,7 +442,7 @@
 
 ### 输入域名后的路由转发过程
 
-![23September26-221718-1695737838-74b3a424-1e43-4216-b11c-4b853bd26c1a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309262217922.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202309262217922.png)
 
 ### 三个表
 
@@ -590,7 +590,7 @@
 
 +   从结构上看，路由器由路由选择和分组转发两部分构成
 
-    ![image-20230801234812750](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012348886.png)
+    ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308012348886.png)
 
     而从模型的角度看,路由器是网络层设备，它实现了网络模型的下三层，即物理层、数据链路层和网络层
 
@@ -650,7 +650,7 @@
 +   而“路由选择”则涉及很多路由器，路由表是许多路由器协同工作的结果
     +   这些路由器按照复杂的路由算法，根据从各相邻路由器得到的关于网络拓扑的变化情况，动态地改变所选择的路由，并由此构造出整个路由表。 
 
-![image-20230801235638958](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308012356108.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202308012356108.png)
 
 >   注意，在讨论路由选择的原理时，往往不去区分转发表和路由表的区别，但要注意路由表不等于转发表。分组的实际转发是靠直接查找转发表，而不是直接查找路由表
 

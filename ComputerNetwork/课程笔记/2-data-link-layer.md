@@ -48,7 +48,7 @@
 
 ### 【知识导图】
 
-![2ef3927393a943d3a0957a984ebba15b~tplv-k3u1fbpfcp-zoom-in-crop-mark_4536_0_0_0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271129942.webp)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181326166.webp)
 
 ### 【复习提示】
 
@@ -113,7 +113,7 @@
 
     +   流量控制（见图3.2）并不是数据链路层特有的功能，许多高层协议中也提供此功能，只不过控制的对象不同而已
 
-        ![image-20230727120732472](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271207577.png)
+        ![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181333703.png)
 
     +   对于数据链路层来说，控制的是相邻两结点之间数据链路上的流量，而对于传输层来说，控制的则是从源端到目的端之间的流量。
 
@@ -142,7 +142,7 @@
 
 帧首部使用一个计数字段（第一个字节，八位）表明帧内字符数。题目计算时这个计数字段也要算成一个字符。
 
-![image-20230727122501508](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271225589.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181326669.png)
 
 缺点：如果在某一个帧内，标记位后面的某个字节的数据丢失，那么会影响后面所有的帧，收发双方扇失去同步，从而造成灾难性后果。
 
@@ -157,7 +157,7 @@
 
 +   控制字符$SOH$表示帧开始，控制字符$EOT$表示帧结束。
 
-![image-20230727123107454](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271231534.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181326670.png)
 
 ### 零比特填充法
 
@@ -170,7 +170,7 @@
 + 在发送端扫描整个信息字段（不包括首尾定界符），只要有==连续的五个$1$，就立即在第五个$1$后加上一个$0$==，无论后面是$1$还是$0$。
 + 在接收端收到一个帧时，先找到标志字段确定边界，再用硬件对比特流进行扫描，==发现连续五个$1$时就把后面的$0$删除==。
 
-![image-20230727123249189](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271232247.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181326078.png)
 
 ==零比特填充法很容易由硬件来实现，性能优于字符填充法。==
 
@@ -184,7 +184,7 @@
 
 违规编码法不需要采用任何填充技术，便能实现数据传输的透明性，但它==只适用于采用冗余编码的特殊编码环境==。
 
-![违规编码](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251100986.png)
+![违规编码](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181326692.png)
 
 ==由于字节计数法的脆弱性与字符填充实现的复杂性与不兼容性，所以基本上使用零比特填充与违规编码法==。
 
@@ -237,7 +237,7 @@
 
 分为三个部分：传输数据、生成多项式、$FCS$帧检验序列/冗余码。
 
-![23July27-125132-1690433492-b86fee07-c5a8-4a28-90ad-1a4ce41f2789](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307271251594.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181327973.png)
 
 其中正式的计算方法如下，并给出例题：
 
@@ -257,7 +257,7 @@
 
 模二除法就是异或，同$0$，异$1$，无需进位或借位或者不够减的问题。
 
-![模二除法](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251101660.png)
+![模二除法](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181327165.png)
 
 所以就得到了帧检验序列$FCS$为$1110$。
 
@@ -408,13 +408,13 @@ $ACK$表示确认$acknowledge$。
 
 每发送$1$个数据帧就停止并等待，因此用$1bit$来编号就够
 
-![无差错停止等待协议](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251101464.png)
+![无差错停止等待协议](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181327533.png)
 
 #### 有差错情况
 
 ##### 数据帧丢失或检测到帧出错：
 
-![有差错停止等待协议帧丢失出错情况](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251101634.png)
+![有差错停止等待协议帧丢失出错情况](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181327895.png)
 
 
 
@@ -428,11 +428,11 @@ $ACK$表示确认$acknowledge$。
 
 ##### ACK确认丢失：
 
-![有差错停止等待协议帧确认丢失情况](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251102842.png)
+![有差错停止等待协议帧确认丢失情况](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181327797.png)
 
 ##### ACK确认迟到
 
-![有差错停止等待协议帧确认迟到情况](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251102667.png)
+![有差错停止等待协议帧确认迟到情况](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181328160.png)
 
 #### 停止等待协议特点
 
@@ -440,7 +440,7 @@ $ACK$表示确认$acknowledge$。
 
 + 信道利用率低。
 
-    ![image-20230727221353816](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307272213948.png)
+    ![image-20230727221353816](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181328593.png)
 
     + 信道利用率：发送方在一个发送周期内，有效地发送数据所需要的时间占整个发送周期的比率。
 
@@ -479,8 +479,6 @@ $GBN$会一次性将在发送窗口内的$n$个帧一个个全部发送完，然
 
 假设发送窗口一次一共有$N$个帧，且帧开始的索引值为$0$，帧的类型分为：
 
-![23July27-210633-1690463193-d5ad7559-0358-4b7b-9fb8-c741f2da4d6a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307272106697.png)
-
 1. 发完被确认的帧$h$：发送窗口已经发送过的且已经被接收端发送确认消息且被接受的帧个数。此时从$0$到$h-1$都是已经发送且被确认的帧，发送窗口的开始索引为$h$。已经移动发送窗口$h$次。
 2. 已经发送但仍等待确认的帧$n$：在发送窗口中已经被发送但是因为确认信息在路上所以等待确认的，此时$h$到$h+n-1$都是已经发送但仍等待确认的帧。
 3. 还能发送的帧：即在发送窗口中还没有被发送的帧。还能发送的帧个数为$N-n$个。开始的索引为$h+n$，结束的索引为$h+N-1$。
@@ -514,7 +512,7 @@ $GBN$会一次性将在发送窗口内的$n$个帧一个个全部发送完，然
 
 假如发送窗口尺寸为$4$：
 
-![GBN](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251102535.png)
+![GBN](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181328272.png)
 
 #### GBN窗口长度
 
@@ -558,7 +556,7 @@ $$
 
 + ==若信道的传输质量很差导致误码率较大时， 后退$N$帧协议不一定优于停止-等待协议==
 
-![image-20230727222903473](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307272229594.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181328509.png)
 
 ### 选择重传协议SR
 
@@ -591,7 +589,7 @@ $$
 
 假如发送窗口、接收窗口尺寸为$4$：
 
-![SR](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251103088.png)
+![SR](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181329342.png)
 
 #### SR窗口长度
 
@@ -606,7 +604,7 @@ $$
 
 如下面以$0$到$3$编号，表示使用两位编号，而滑动窗口大小为$3$。
 
-![SR窗口长度](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251103121.png)
+![SR窗口长度](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181329769.png)
 
 所以接收方就不知道发送的$0$号帧是新帧还是旧帧。此时滑动窗口应该大小为$2$。
 
@@ -652,7 +650,7 @@ $$
 
 #### 频分多路复用$FDM$
 
-![23July29-105933-1690599573-278e611a-2bf6-4dc8-bd05-3732f1581a6d](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307291059851.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181329534.png)
 
 用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。频分复用的所有用户在同样时间占用不同的频率带宽资源。
 
@@ -663,7 +661,7 @@ $FDM$使用较少，而是使用$TDM$较多，这是因$TDM$==抗干扰能力强
 
 #### 时分多路复用$TDM$
 
-![23July29-110001-1690599601-6719cf9f-33e4-4919-9710-39388901020a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307291100438.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181329787.png)
 
 将时间划分为一段段等长的时分复用帧（$TDM$帧：在物理层传输的比特流所划分的帧，表明一个周期）。每一个时分复用的用户在每一个$TDM$帧中占用固定序号的时隙，所有用户轮流占用信道。
 
@@ -678,7 +676,7 @@ $FDM$使用较少，而是使用$TDM$较多，这是因$TDM$==抗干扰能力强
 
 统计时分复用$STDM$：
 
-![23July29-110234-1690599754-d9c07846-57df-480f-8b25-9e475702ce7f](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307291102467.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181329683.png)
 
 + 添加了一个集中器，将不同用户分散的数据集中在一起，单位时间的数据组成一个$STDM$帧，再一起发送出去。
 + 每一个$STDM$帧中的时隙数小于连接在集中器上的用户数。
@@ -689,7 +687,7 @@ $FDM$使用较少，而是使用$TDM$较多，这是因$TDM$==抗干扰能力强
 
 #### 波分多路复用$WDM$
 
-![image-20230729105855662](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307291058776.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181330691.png)
 
 就是光的频分多路复用，根据同一根光纤中传输多种不断波长（频率）的光信号，根据不同的波长做用波长分解复用器分解出来。
 
@@ -772,7 +770,7 @@ $FDM$使用较少，而是使用$TDM$较多，这是因$TDM$==抗干扰能力强
 
 假设每个站点发送数据帧的所需时间段都是相同的$T_0$，则：
 
-![ALOHA](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251103301.png)
+![ALOHA](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181330755.png)
 
 + 检测冲突：如果发送冲突，接收方就会检测到差错然后不予确认，发送方在一定时间内收不到确认就判断冲突。
 + 解决冲突：超时后等待随机时间重传。
@@ -787,7 +785,7 @@ $FDM$使用较少，而是使用$TDM$较多，这是因$TDM$==抗干扰能力强
 
 假设网络负载（$T_0$时间内所有站点发送成功的和未成功而重传的帧数）为$G$，则间隙$ALOHA$网络的吞吐量利用率（$T_0$时间内成功发送的平均帧数）为$S=Ge^{-G}$。当$G=1$时极大，$S=e^{-1}\approx0.368$。
 
-![时隙ALOHA](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251104189.png)
+![时隙ALOHA](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181330740.png)
 
 ###  $CSMA$协议
 
@@ -857,7 +855,7 @@ $$
 
 其中，$\tau $为**单程传播时延或争用期/冲突窗口/碰撞窗口**
 
-![image-20230729120811181](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307291208332.png)
+![image-20230729120811181](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181330760.png)
 
 #### 确定重传时机
 
@@ -957,7 +955,7 @@ $CSMA/CA$协议与$CSMA/CD$协议的不同点：
 
 轮询介质访问控制既不共享时间，也不共享空间
 
-![令牌传递协议](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251104256.png)
+![令牌传递协议](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181331996.png)
 
 $TCP$用于转发令牌。而令牌是一个特殊格式的$MAC$控制帧，不包含任何信息，在令牌环上循环，控制信道使用，只有有令牌才能发送数据，确保同一个时刻只有一个结点独占信道。
 
@@ -1059,7 +1057,7 @@ $LAN$使用广播信道。
 
 $802.3$局域网简称为以太网。
 
-![image-20230730114452347](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301144471.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181331807.png)
 
 #### $MAC$子层与$LLC$子层
 
@@ -1101,7 +1099,7 @@ $IEEE\; 802$标准定义的局域网参考模型只对应于$OSI$参考模型的
 +   $10Base5$：粗缆以太网，数据率为$10Mb/s$，每段电缆最大长度为$500m$；使用特殊的收发器连接到电缆上，收发器完成载波监听和冲突检测的功能。
 +   $10Base2$：细缆以太网，数据率为$10Mb/s$，每段电缆最大长度为$185m$；使用$BNC$连接器形成$T$形连接，无源部件。
 
-![image-20230730114816382](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301148499.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181331986.png)
 
 对于$10BASE-T$以太网
 
@@ -1157,7 +1155,7 @@ $IEEE\; 802$标准定义的局域网参考模型只对应于$OSI$参考模型的
 
 最常用的是$V2$的$MAC$格式：
 
-![image-20230730121337884](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301213026.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181331058.png)
 
 以太网帧附加信息$18B$，规定帧最短为$64B$，所以数据最短为$46B$，规定数据部分最长为$1500B$，所以以太网帧最长为$1518B$。
 
@@ -1210,7 +1208,7 @@ $IEEE\; 802$标准定义的局域网参考模型只对应于$OSI$参考模型的
 +   $ESS$还可以通过一种称为$Portal $(门户)的设备为无线用户提供到有线连接的以太网的接入
     +   门户的作用相当于一个网桥
 
-![image-20230730133622808](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301336997.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181331460.png)
 
 +   图`3.27`中，移动站A如果要和另一个基本服务集中的移动站$B$通信，就必须经过两个接入点$AP_1$和$AP_2$，即
 
@@ -1248,11 +1246,11 @@ $$
 
 #### $IEEE802.11$的$MAC$帧格式
 
-![image-20230730133711083](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307301337236.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181332653.png)
 
 $802.11$帧的$MAC$首部中最重要的是$4$个地址字段，其内容取决于帧控制字段中的`去往AP`和`来自AP`这两个字段的数值
 
-![image-20230730221255155](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307302212281.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181332526.png)
 
 对于$WDS$（无线分布式系统）：
 
@@ -1262,7 +1260,7 @@ $802.11$帧的$MAC$首部中最重要的是$4$个地址字段，其内容取决�
 + 地址4：$SA$源地址，发送端的$MAC$地址。
     + 用于自组网络
 
-![MAC帧头格式表格](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251105765.png)
+![MAC帧头格式表格](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181332054.png)
 
 >   $802.11$帧的$MAC$首部的其他字段不是考试重点
 
@@ -1292,7 +1290,7 @@ $VLAN$可以隔离冲突域也可以隔离广播域。
 
 通过$802.ac$标准定义。它在以太网帧中插入一个四字节的标识符（插入在源地址字段和类型字段之间)，称为$VLAN$标签，用来指明发送该帧的计算机属于哪个虚拟局域网。插入$VLAN$标签的帧称为$802.1Q$帧。由于首部增加了四字节，因此以太网的最大帧长从原来的$1518$字节变为$1522$字节。
 
-![image-20230730220127001](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307302201166.png)
+![image-20230730220127001](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181332049.png)
 
 $VLAN$标签的前两个字节置为$0x8100$，表示这是一个$802.1Q$帧。在$VLAN$标签的后两个字节中，前$4$位没有用，后$12$位是该$VLAN$的标识符$VID$，它唯一标识了该$802.1Q$帧属于哪个$VLAN$。$12$位的$VID$可识别$4096$个不同的$VLAN$：插入$VID$后，$802.1Q$帧的$FCS$必须重新计算。
 
@@ -1329,7 +1327,7 @@ $VLAN$标签的前两个字节置为$0x8100$，表示这是一个$802.1Q$帧。�
 
 广域网是单一的网络。$WAN$的通信子网主要使用分组交换技术，达到资源共享的目的。
 
-![image-20230730221536300](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307302215488.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181332190.png)
 
 广域网不等于互联网，因为互联网可以接入不同类型的网络，可以是局域网也可以是广域网。
 
@@ -1391,7 +1389,7 @@ $VLAN$标签的前两个字节置为$0x8100$，表示这是一个$802.1Q$帧。�
 
 $PPP$是面向字节的，因而所有$PPP$帧的长度都是整数个字节
 
-![PPP帧格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251105437.png)
+![PPP帧格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181333557.png)
 
 + 标志字段$F$：表示帧定界符，用二进制表示就是$0111\;1110$
     + 当数据内出现帧定界符就需要插入转义字符$7D$：$0111\;101$。
@@ -1420,7 +1418,7 @@ $PPP$是面向字节的，因而所有$PPP$帧的长度都是整数个字节
     +   这时，采用$NCP$配置网络层，配置成功后，进入打开状态，然后就可进行数据传输
 +   当数据传输完成后， 线路转为终止状态。载波停止后则回到静止状态。
 
-![PPP协议状态图](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251105290.png)
+![PPP协议状态图](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181333349.png)
 
 ### HDLC协议*
 
@@ -1451,7 +1449,7 @@ $PPP$是面向字节的，因而所有$PPP$帧的长度都是整数个字节
 
 #### HDLC协议的帧格式
 
-![HDLC协议的帧格式](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307251106911.png)
+![HDLC协议的帧格式](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202510181333424.png)
 
 + 标志字段$F$：表示帧定界符，用二进制表示就是$0111\;1110$
     + 当一串比特流数据中有$5$个连续的$1$时， 就立即在其后填入一个$0$

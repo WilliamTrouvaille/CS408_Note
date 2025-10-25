@@ -20,9 +20,9 @@
 
 ### 【知识导图】
 
-![image-20230722203235652](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222032713.png)
+![image-20230722203235652](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160445095.png)
 
-![image-20230724194611557](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241946664.png)
+![image-20230724194611557](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160447586.png)
 
 ### 【复习提示】
 
@@ -88,7 +88,7 @@
 
 ## 插入排序
 
-![image-20230724194805331](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241948112.png)
+![image-20230724194805331](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160450988.png)
 
 ### 插入排序共性
 
@@ -106,7 +106,7 @@
 
 假设在排序过程中，待排序表`L[1..n]`在某次排序过程中的某一时刻状态如下： 
 
-![image-20230724193746638](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241937705.png)
+![image-20230724193746638](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160453908.png)
 
 要将元素`L(i)`插入已有序的子序列`L` \;需要执行以下操作（为避免混淆，下面用`L[]`表示一个表，而用`L()`表示一个元素）：
 
@@ -116,7 +116,7 @@
 
 为了实现对`L[1..n]`的排序，可以将`L(2)~L(n)`依次插入前面已排好序的子序列，初始`L[1]`可以视为是一个已排好序的子序列。
 
-![23July22-201442-1690028082-128eeaeb-7847-4c93-a2e7-11b2fef2b785](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222014711.png)
+![23July22-201442-1690028082-128eeaeb-7847-4c93-a2e7-11b2fef2b785](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160455577.png)
 
 #### 直接插入排序性能
 
@@ -138,7 +138,7 @@
 
 #### 二分插入排序过程
 
-![image-20230724203108743](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242031983.png)
+![image-20230724203108743](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160457652.png)
 
 也称为折半插入排序，是对直接插入排序的优化，在寻找插入位置时使用二分查找的方式。
 
@@ -255,7 +255,7 @@ void insertion_sort(int arr[]\; int len) {
 
     +   每次对比只对比两个以上的个元素进行插入交换。
 
-        ![image-20230724203047818](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242030032.png)
+        ![image-20230724203047818](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160501201.png)
 
 +   增量序列的选择建议是第一趟选择元素个数的一半，后面不断缩小到原来的一半。
 
@@ -312,7 +312,7 @@ void shell_sort(T array[]\; int length) {
 
 ## 交换排序
 
-![image-20230724205202197](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242052086.png)
+![image-20230724205202197](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160504931.png)
 
 ### 交换排序共性
 
@@ -352,7 +352,7 @@ void shell_sort(T array[]\; int length) {
 
 对于每行冒泡进行优化：如果发现排序前几轮就已经实现了排序成功，那么后面的排序岂不是都浪费了时间进行比较？可以在第一轮循环中设置一个布尔值为$false$，如果在这一轮发生排序交换就设置为$true$，如果一轮结束后发现这个值还是$false$，说明这一轮没有进行交换，表示已经排序成功，就直接所有退出循环。
 
-![image-20230724202831299](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242028483.png)
+![image-20230724202831299](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160508808.png)
 
 对于每列冒泡进行优化：默认每一轮冒泡是从$[length-i]$结束，如一共$5$个元素排序，需要$4$轮排序，第二轮冒泡排序应该从$0$开始，到$3$结束，因为最后一个元素4已经在第一轮排序成功。但是如果在第二轮发现$2$，$3$已经排序成功了不需要交换，那么默认排序方法第三轮还是要从$0$到$2$进行排序，还要比较一次$1$和$2$位置的数据，这就造成了浪费，那么如何解决？记录每一轮发生比较的元素的最大索引值，下一轮比较到这个索引值直接结束，不需要继续比较后面的元素。如果最大索引值为$0$则直接退出。这就进一步优化了上面一种策略。
 
@@ -409,7 +409,7 @@ void Bubble(int[] a) {
 
 ![image](https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2018/12/1/16769b3220291f72~tplv-t2oaga2asx-zoom-in-crop-mark:4536:0:0:0.awebp)
 
-![image-20230724203532797](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242035015.png)
+![image-20230724203532797](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160512024.png)
 
 +   算法思路
 
@@ -427,7 +427,7 @@ void Bubble(int[] a) {
 
     +   这个`pivot`已经成功排序。然后分别对两个子序列继续进行快速排序，直至整个序列有序。
 
-        ![23July22-212632-1690032392-5d539351-03ed-4a13-81b0-e2d2a5050d8a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222126275.png)
+        ![23July22-212632-1690032392-5d539351-03ed-4a13-81b0-e2d2a5050d8a](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160514693.png)
 
 ---
 
@@ -561,7 +561,7 @@ int main() {
 
 >   证明时间复杂度是 $O(n\log_{\cdot}n)$
 >
->   ![image-20230722210308891](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222103009.png)
+>   ![image-20230722210308891](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160516825.png)
 >
 >   via [快速排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/quick-sort/)
 
@@ -693,7 +693,7 @@ void selection_sort(int* a\; int n) {
 
 如用堆排序对$(15\;9\;7\;8\;20\;-1\;7\;4)$建立小根堆堆。首先将这组数据按层序初始化为无序堆，然后从最后向前开始调整：
 
-![heapbuild](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222006644.png)
+![heapbuild](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160519081.png)
 
 1.   从$t<\lfloor\dfrac{n}{2}\rfloor$的结点开始往前遍历。
 
@@ -722,7 +722,7 @@ void selection_sort(int* a\; int n) {
 
 调整堆从右边即序列末尾开始。
 
-![23July22-223249-1690036369-8cd97f60-71e6-46ab-8e14-0c01a00c6c0d](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307222233251.png)
+![23July22-223249-1690036369-8cd97f60-71e6-46ab-8e14-0c01a00c6c0d](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160520793.png)
 
 ---
 
@@ -885,7 +885,7 @@ via [归并排序 - OI Wiki (oi-wiki.org)](https://oi-wiki.org/basic/merge-sort/
 
 有最高位优先$MSD$和最低位优先$LSD$两种方法。
 
-![23July23-195347-1690113227-b8a1632a-4bb2-4307-9d18-857d3f2b3418](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231953003.png)
+![23July23-195347-1690113227-b8a1632a-4bb2-4307-9d18-857d3f2b3418](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160523078.png)
 
 若是要得到递减序列：
 
@@ -1213,7 +1213,7 @@ $k$路平衡归并：
 
 用于通过过去归并的经历减少归并次数。败者树可以看作一棵多了一个单个的根的完全二叉树。$k$个叶结点分别是当前参加比较的元素，非叶子结点用来记忆左右子树中的失败者，而让胜者往上继续比较，一直到根结点。
 
-![image-20230724232326022](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242323152.png)
+![image-20230724232326022](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160525627.png)
 
 以下是败者树的基本概念和性质：
 
@@ -1232,7 +1232,7 @@ $k$路平衡归并：
 
 使用败者树可以有效地减少多路归并排序中的比较次数，从而提高排序效率。它在外部排序等需要大量的多路归并操作的场景中得到广泛应用，特别适用于内存有限的情况下。
 
-![23July23-202704-1690115224-58a9a3d0-4f97-4438-9869-ef606a82a6f5](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307232027185.png)
+![23July23-202704-1690115224-58a9a3d0-4f97-4438-9869-ef606a82a6f5](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160528541.png)
 
 +   传统方法从$k$个归并段选出一个最大或最小元素需要对比关键字$k-1$次，而使用$k$路归并的败者树只需要对比关键字$\lceil\log_2k\rceil$次（败者树层数，不包括成功结点）。
 
@@ -1279,7 +1279,7 @@ $k$路平衡归并：
 
 如$FI$：$17\;21\; 05\; 44\; 10\; 12\;56\;32\;29$，$WA$长度为$3$
 
-![image-20230724233238257](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307242332454.png)
+![image-20230724233238257](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160531024.png)
 
 >   $FI$和$FO$文件放在磁盘里面，读入/输出的序列都会先放到输入/输出缓冲区里面，输入/输出完毕后一次性传送
 
@@ -1297,7 +1297,7 @@ $k$路平衡归并：
 
 所以就需要一棵类似哈夫曼树来成为最佳的归并树，不断选择最小的$k$段进行归并。
 
-![23July23-204528-1690116328-fa8de2ad-761e-4e01-9720-3a3b0bf26d70](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307232045878.png)
+![23July23-204528-1690116328-fa8de2ad-761e-4e01-9720-3a3b0bf26d70](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160533723.png)
 
 #### 添加虚段
 
@@ -1307,7 +1307,7 @@ $k$路平衡归并：
 
 +   则需要补充几个长度为$0$的虚拟段从而能保证严格$k$叉归并，再进行$k$叉哈夫曼树的构造。
 
-    ![23July23-204740-1690116460-6b3a065e-06a0-404f-9da0-07eadef30908](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307232047540.png)
+    ![23July23-204740-1690116460-6b3a065e-06a0-404f-9da0-07eadef30908](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160535792.png)
 
     +   ==补充的虚段一定是在叶结点上==
 

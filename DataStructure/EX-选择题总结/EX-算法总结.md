@@ -1638,15 +1638,15 @@ int IsExistEL(MGraph G){
 
 #### 快速排序
 
-![image-20231007193737798](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310071937159.png)
+![image-20231007193737798](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160924529.png)
 
 #### 归并排序
 
-![image-20231007193752924](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310071937365.png)
+![image-20231007193752924](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160927015.png)
 
 ### 查找
 
 #### 折半查找
 
-![image-20231007193809273](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310071938561.png)
+![image-20231007193809273](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160929915.png)
 

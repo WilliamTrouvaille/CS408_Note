@@ -4,7 +4,7 @@
 
 ### 考频
 
-![image-20230920201900298](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309202019606.png)
+![image-20230920201900298](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161136862.png)
 
 | 考查内容                                   | 考查次数 |
 | ------------------------------------------ | -------- |
@@ -64,13 +64,13 @@
 
 #### 考频
 
-![image-20230917212629424](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309172126576.png)
+![image-20230917212629424](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161139987.png)
 
 大题一般结合C语言程序进行出题，故大题中可以不需要过于关注定点小数
 
 #### 数据的表示
 
-![image-20230917212956322](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309172129472.png)
+![image-20230917212956322](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161142811.png)
 
 1.   大小端
 
@@ -132,12 +132,12 @@
      1.   整数转☒浮点数：精度丢失问题
      2.   浮点数转整数：溢出问题、精度丢失（⼩数点后的部分）
 
-     ![image-20230917225916453](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309172259070.png)
+     ![image-20230917225916453](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161147243.png)
 
 
 #### 数据的运算
 
-![image-20230917222023989](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309172220303.png)
+![image-20230917222023989](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161150851.png)
 
 1.   无符号整数和带符号整数的加减法及溢出
 
@@ -225,7 +225,7 @@
 
 ##### 寻址过程
 
-![image-20230903225656536](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309032256714.png)
+![image-20230903225656536](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161154274.png)
 
 1.   将逻辑地址转换为物理地址：$CPU$给出逻辑地址，由**内存管理单元**$MMU$算得<虚拟页号，页内偏移量>，进行越界判断无异常后将页号与快表$TLB$中的所有页号进行比较.
 
@@ -363,7 +363,7 @@
 
 #### 大纲
 
-![image-20230919202908763](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192029137.png)
+![image-20230919202908763](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161157222.png)
 
 一般会结合机器级代码（汇编语言）和C语言的对应出题
 
@@ -371,7 +371,7 @@
 
 #### 机器级代码/汇编语言
 
-![image-20230602222704201](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230602222704201.png)
+![image-20230602222704201](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161200042.png)
 
 汇编语言程序的每行的基本格式为
 $$
@@ -379,7 +379,7 @@ $$
 $$
 #### 解题方法
 
-![9813c02b-f686-48cc-a41b-3dd2d22938df](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192213626.jpg)
+![9813c02b-f686-48cc-a41b-3dd2d22938df](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161203090.jpeg)
 
 解题方法：
 
@@ -392,7 +392,7 @@ $$
           +   $x86$的寄存器名为 $eax、ebx、ecx、edx$
           +   $MIPS$的寄存器名为$ R[0]、R[1]、R[2]$
 
-![image-20230919204937260](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192049559.png)
+![image-20230919204937260](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161206084.png)
 
 2.   $x86$：重点关注 intel 格式
      1.   首先先搞懂题上的C语言代码，分析该段代码中的代码结构，带着分析出来的代码结构看汇编代码做题
@@ -443,7 +443,7 @@ $$
 
 >   机器级语言的过程调用
 >
->   ![image-20230919214045952](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192140106.png)
+>   ![image-20230919214045952](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161208839.png)
 >
 >   从上往下是从高位（栈底）到低位（栈顶），局部变量存放在低位（栈顶）下（在栈帧中，通过`ebp-4k`取得数据），函数调⽤参数存放在低位（栈顶）下（在栈帧外，上一层函数中，通过`ebp+4k`取得数据）
 >
@@ -458,21 +458,21 @@ $$
 >   3. 循环主体
 >   4. 是否继续循环
 >
->   ![image-20230602230357105](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230602230357105.png)
+>   ![image-20230602230357105](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161211191.png)
 
 ### 第五章$CPU$大题(4)
 
 #### 考纲
 
-![image-20230920201303380](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309202013754.png)
+![image-20230920201303380](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161213683.png)
 
 #### 注释风格
 
-![image-20230920202541469](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309202025732.png)
+![image-20230920202541469](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161217777.png)
 
 #### 解题思路
 
-![image-20230920202757028](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309202027102.png)
+![image-20230920202757028](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161220714.png)
 
 1.   分析框架
 
@@ -610,7 +610,7 @@ $$
 >
 >        9.   $CU$发出控制信号，控制$PC$形成下一条指令地址，默认是加一，记做：$(PC)+1\rightarrow PC$。
 >
->   ![image-20230908222402565](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309082224660.png)
+>   ![image-20230908222402565](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161222999.png)
 >
 >   ---
 >
@@ -644,7 +644,7 @@ $$
 >
 >             + 这一步会将有效地址覆盖于原指令的间接地址
 >
->   ![image-20230908223618547](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309082236654.png)
+>   ![image-20230908223618547](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161225656.png)
 
 ### 第六章总线(0)
 
@@ -652,7 +652,7 @@ $$
 
 ### 第七章$I/O$大题(3)
 
-![image-20230914204341550](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309142043633.png)
+![image-20230914204341550](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161227960.png)
 
 +   ==若准备数据的时间小于取走数据的时间，则数据会被刷新，造成丢失==
     +   准备数据的时间：**①缓冲区大小**$\div $ **②I/O速率**=**③最大准备数据时间**，单位$n(10^{-9}) s，\mu(10^{-6}) s，m(10^{-3})s$等，每轮的查询时间必须小于等于这个时间，才能来得及把数据取走
@@ -867,7 +867,7 @@ $$
     + $PS$.
     + $MFQ$.
 
-![image-20230618222928003](http://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202306182229165.png)
+![image-20230618222928003](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161230254.png)
 
 |    &nbsp;    |  先来先服务  |           短作业优先           |    高响应比优先    |              时间片轮转              |               多级反馈队列               |
 | :----------: | :----------: | :----------------------------: | :----------------: | :----------------------------------: | :--------------------------------------: |
@@ -943,7 +943,7 @@ $CPU$繁忙型更接近于长作业，少$I/O$所以少中断.而$I/O$繁忙型�
     + 利于$CPU$繁忙型作业，不利于$I/O$繁忙型作业（即适用于长作业类型）.
 + 是否会导致饥饿：不会.
 
-![image-20230823144304672](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308231443782.png)
+![image-20230823144304672](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161233157.png)
 
 #### 短作业优先调度算法$SJF$
 
@@ -975,7 +975,7 @@ $CPU$繁忙型更接近于长作业，少$I/O$所以少中断.而$I/O$繁忙型�
 >   3. 虽然严格来说，$SJF$的平均等待时间、平均周转时间并不一定最少，但相比于其他算法（如$FCFS$），$SJF$依然可以获得较少的平均等待时间、平均周转时间.
 >   4. 如果选择题中遇到“$SJF$算法的平均等待时间、平均周转时间最少”的选项，那最好判断其他选项是不是有很明显的错误，如果没有更合适的选项，那也应该选择该选项.
 
-![image-20230823144544372](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308231445490.png)
+![image-20230823144544372](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161235591.png)
 
 #### 高响应比优先调度算法$HRRN$
 

@@ -18,7 +18,7 @@
 
 ### 【知识导图】
 
-![23July20-203847-1689856727-fe8c4525-932c-409e-b126-e6300a037bed](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202038250.png)
+![23July20-203847-1689856727-fe8c4525-932c-409e-b126-e6300a037bed](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160311951.png)
 
 ### 【复习提示】
 
@@ -32,7 +32,7 @@
 
 ## 基本概念
 
-![image-20230723104749498](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231047769.png)
+![image-20230723104749498](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160314402.png)
 
 + 查找：在数据集合中寻找满足某种条件的数据元素的过程。
 
@@ -66,7 +66,7 @@
 
 ## 线性表查找
 
-![image-20230723104833435](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231048285.png)
+![image-20230723104833435](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160320062.png)
 
 ### 顺序查找
 
@@ -82,7 +82,7 @@ $ASL_{失败}$为$n+1$
 
 时间复杂度为$O(n)$。
 
-![23July20-200034-1689854434-cafb4f95-3223-48b7-81b7-23f7c0659429](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202000659.png)
+![23July20-200034-1689854434-cafb4f95-3223-48b7-81b7-23f7c0659429](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160325309.png)
 
 #### 优化-有序数据
 
@@ -99,7 +99,7 @@ $ASL_{失败}$为$n+1$
     +   所有数据结点挂在右子树上
 
 
-![image-20230723110117127](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231101221.png)
+![image-20230723110117127](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160327675.png)
 
 +   ==对于顺序查找，无论顺序表还是乱序表，查找成功的时间和$ASL$都是相同的==
     +   一个成功结点的查找长度=自身所在层数
@@ -141,7 +141,7 @@ $ASL$查找成功为$\sum\limits_{i=1}^nP_ii$，$P_i$为第$i$个元素出现概
 
 #### 折半查找的过程
 
-![23July20-202218-1689855738-da92d858-76a7-4d6b-a6b3-52f07efaae5f](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202022708.png)
+![23July20-202218-1689855738-da92d858-76a7-4d6b-a6b3-52f07efaae5f](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160330022.png)
 
 1. 初始化
     1. 定义左边界$low$，默认为$0$
@@ -177,7 +177,7 @@ $ASL$查找成功为$\sum\limits_{i=1}^nP_ii$，$P_i$为第$i$个元素出现概
 
 折半查找的过程可用二叉树来描述，称为判定树。树中每个圆形结点表示一个记录，结点中的值为该记录的关键字值；树中最下面的叶结点都是方形的，它表示查找不成功的情况。从判定树可以看出，查找成功时的查找长度为从根结点到目的结点的路径上的结点数，而查找不成功时的查找长度为从根结点到对应失败结点的父结点的路径上的结点数。
 
-![23July23-122655-1690086415-2d035f74-f549-49aa-9617-24220912f27e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231227722.png)
+![23July23-122655-1690086415-2d035f74-f549-49aa-9617-24220912f27e](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160332224.png)
 
 构建判定树方式：
 
@@ -237,7 +237,7 @@ $ASL$查找成功为$\sum\limits_{i=1}^nP_ii$，$P_i$为第$i$个元素出现概
 
 除了数据，再建立一个索引表，索引表中的每个元素含有各块的最大关键字和各块中的第一个元素的地址，索引表按关键字有序排列
 
-![23July20-204239-1689856959-db15c085-0aea-4ab5-aafc-8b036597cefa](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202042338.png)
+![23July20-204239-1689856959-db15c085-0aea-4ab5-aafc-8b036597cefa](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160334606.png)
 
 +   很明显这种定义方式定义了两个顺序结构，并且如果插入删除时需要大量移动元素，==所以可以采用链表的形式。==
     +   对链表进行查找时，
@@ -252,7 +252,7 @@ $ASL$查找成功为$\sum\limits_{i=1}^nP_ii$，$P_i$为第$i$个元素出现概
 
 若使用折半查找查找索引表的分块，若索引表中不存在目标关键字，则折半查找索引表最终会停在$low>high$，要在$low$所指向分块中查找。
 
-![23July20-204805-1689857285-1a5a47c7-ad4b-4004-b5ca-3fd97a9d9ac0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202048564.png)
+![23July20-204805-1689857285-1a5a47c7-ad4b-4004-b5ca-3fd97a9d9ac0](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160336470.png)
 
 +   原因
     +   在分块查找中，索引表是由每个块的最大关键字构成的，也称为块首元素
@@ -290,7 +290,7 @@ $ASL$查找成功失败的情况都十分复杂，所以一般不会考。
 
 ## 二叉查找
 
-![image-20230723104935226](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231049393.png)
+![image-20230723104935226](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160340083.png)
 
 ### 二叉查找树
 
@@ -311,7 +311,7 @@ $ASL$查找成功失败的情况都十分复杂，所以一般不会考。
 
 #### 二叉查找树查找
 
-![23July20-211022-1689858622-ce258ee8-5c3e-422a-aa2b-9360487a5f14](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202110137.png)
+![23July20-211022-1689858622-ce258ee8-5c3e-422a-aa2b-9360487a5f14](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160346486.png)
 
 [实现思路]:
 
@@ -332,17 +332,17 @@ $ASL$查找成功失败的情况都十分复杂，所以一般不会考。
 
 #### 二叉查找树插入及其构造
 
-![23July23-132158-1690089718-d6e830fd-6583-454a-bead-bf1c7ba15cfb](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231322519.png)
+![23July23-132158-1690089718-d6e830fd-6583-454a-bead-bf1c7ba15cfb](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160348926.png)
 
 + 若原二叉查找树为空，就直接插入结点。
 + 否则，若关键字小于根结点值，插入左结点树。
 + 若关键字大于根结点值，插入右结点树。
 
-![23July20-211426-1689858866-17d56254-3cf9-4efa-bd58-d43bd25c7193](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202114758.png)
+![23July20-211426-1689858866-17d56254-3cf9-4efa-bd58-d43bd25c7193](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160350918.png)
 
 +   从一棵空树出发，依次输入元素，将它们插入二叉排序树中的合适位置，即可构造一颗二叉排序树
 
-![23July23-132321-1690089801-a6ca4fdc-623c-486e-877f-b5abba289a53](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231323155.png)
+![23July23-132321-1690089801-a6ca4fdc-623c-486e-877f-b5abba289a53](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160353241.png)
 
 #### 二叉查找树删除
 
@@ -360,7 +360,7 @@ $ASL$查找成功失败的情况都十分复杂，所以一般不会考。
          +   直接前驱：中序排序该结点前一个结点，其左子树的最右下角结点，不一定是叶子结点
      +   并从二叉查找树中删除该结点的直接后继、直接前驱，这就变成了第一种或第二种情况。
 
-![image-20230723132656538](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231326684.png)
+![image-20230723132656538](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160355757.png)
 
 二叉查找树删除或插入时得到的二叉查找树往往与原来的不同。
 
@@ -408,7 +408,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 +   此时我们假设$TL$比$TR$高度要高$1$，即$TL$高度为$h-1$，$TR$高度为$h-2$，则有$F1=F(h-1)$，$F2=F(h-2)$。
 +   ==因此得到结论：$F(h)=F(h-1)+F(h-2)+1$。==
 
-![23July20-220804-1689862084-66be1a46-9980-4048-ab19-ac2fc1460a8a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202208025.png)
+![23July20-220804-1689862084-66be1a46-9980-4048-ab19-ac2fc1460a8a](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160359541.png)
 
 >   图源《An algorithm for the organization of information》--- G. M. Adelson-Velsky 和 Evgenii Landis
 >
@@ -428,7 +428,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 +   在插入一个结点时，查找路径上的所有结点都可能收到影响。
 +   从插入点往回（从下往上）找到第一个不平衡的结点，调整以该结点为根的子树。
 
-![23July20-212713-1689859633-0e3c3919-6737-4ed9-b052-4b555aac3b35](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202127361.png)
+![23July20-212713-1689859633-0e3c3919-6737-4ed9-b052-4b555aac3b35](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160401550.png)
 
 +   ==每次调整的都是最小不平衡子树。==
 
@@ -479,7 +479,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 2.   将$A$结点向右下旋转为成$B$的右子树的根结点
 3.   而$B$的原右子树则作为$A$结点的左子树。
 
-![23July20-214911-1689860951-ac43862d-0a4e-4b65-ab33-13d6e33ba620](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202149154.png)
+![23July20-214911-1689860951-ac43862d-0a4e-4b65-ab33-13d6e33ba620](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160403693.png)
 
 [实现思路]:
 
@@ -496,7 +496,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 从结点的右孩子的右子树中插入导致不平衡：
 
-![23July20-214437-1689860677-1fbe7b7f-af8d-4ccb-9e4d-8a0dd348a379](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202144647.png)
+![23July20-214437-1689860677-1fbe7b7f-af8d-4ccb-9e4d-8a0dd348a379](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160405585.png)
 
 +   二叉排序树的特性：左子树结点值<根结点值<右子树结点值	
     +   $AL<A<BL<B<BR$
@@ -507,7 +507,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 2.   将$A$结点==向左下旋转==成为$B$的左子树的根结点
 3.   而$B$的原左子树则作为$A$结点的右子树。
 
-![23July20-214506-1689860706-7317c4a4-0bf2-448a-a73c-f344af96331d](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202145646.png)
+![23July20-214506-1689860706-7317c4a4-0bf2-448a-a73c-f344af96331d](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160407184.png)
 
 实现思路：
 
@@ -524,7 +524,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 从结点的左孩子的右子树中插入导致不平衡：
 
-![23July20-215611-1689861371-5986f2ef-41cd-4067-b0f2-f99a17df2039](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202156173.png)
+![23July20-215611-1689861371-5986f2ef-41cd-4067-b0f2-f99a17df2039](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160409888.png)
 
 将$BR$拆分为$C$和$CL$、$CR$，假设插入的是$CR$部分，插入$CL$也同理。
 
@@ -540,13 +540,13 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 2.   后右旋转
      +   然后再把该$C$结点向右上旋转提升到$A$结点的位置。
 
-![23July20-215707-1689861427-a8805737-b4a5-4d6b-9e3e-d6e1be2d2adb](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202157521.png)
+![23July20-215707-1689861427-a8805737-b4a5-4d6b-9e3e-d6e1be2d2adb](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160412189.png)
 
 #### $RL-$先右后左双旋转
 
 从结点的右孩子的左子树中插入导致不平衡：
 
-![23July20-215815-1689861495-c9e8a8da-4fed-4717-af3a-1cfc8dafa752](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202158603.png)
+![23July20-215815-1689861495-c9e8a8da-4fed-4717-af3a-1cfc8dafa752](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160414579.png)
 
 +   二叉排序树的特性：左子树结点值<根结点值<右子树结点值
     +   $AL<A<CL<C<CR<B<BR$
@@ -558,7 +558,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 2.   后左旋转
      +   然后再把该$C$结点向左上旋转提升到$A$结点的位置。
 
-![23July20-215913-1689861553-fbe692eb-9671-4f96-b7aa-04305086af82](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307202159513.png)
+![23July20-215913-1689861553-fbe692eb-9671-4f96-b7aa-04305086af82](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160416704.png)
 
 #### 平衡二叉树效率
 
@@ -575,7 +575,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 #### 红黑树定义
 
-![img](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212039332.png)
+![img](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160418673.png)
 
 平衡二叉树在每次插入或删除操作的时候很容易破坏“平衡”特性，通常需要频繁调整树的形态，时间开销大，所以引入为弱化版相对平衡的二叉查找树——红黑树($Red\;Black \; Tree$)
 
@@ -600,7 +600,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 所以定义某结点出发到达一个叶结点的任一简单路径上的黑结点总数（**不含**该目的结点）称为该结点的黑高（记为$bh$），根结点的黑高就是红黑树的黑高。
 
-![23July21-200356-1689941036-9be4bac3-c1f2-435e-8068-cc270c6e4018](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212004659.png)
+![23July21-200356-1689941036-9be4bac3-c1f2-435e-8068-cc270c6e4018](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160420953.png)
 
 #### 红黑树性质
 
@@ -644,7 +644,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
      +   当根结点黑高为$h$时，只有在满树形态时红黑树树高才会是$h$,否则树高$H>h$
 
-         ![23July21-212541-1689945941-44bff19b-6a0e-483b-9501-c127a0e09992](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212125681.png)
+         ![23July21-212541-1689945941-44bff19b-6a0e-483b-9501-c127a0e09992](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160422942.png)
 
 #### 红黑树插入概述
 
@@ -652,7 +652,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 假定当前结点为$x$，其父结点为$p$，叔父结点（父结点的兄弟结点）为$u$，祖父结点为$g$。
 
-![2392382-9ac3d6b69ef7ead3](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212051599.webp)
+![2392382-9ac3d6b69ef7ead3](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160425081.webp)
 
 红黑树的插入过程和二叉查找树的插入过程基本类似，从右至左，右上至下。不同之处在于，红黑树中插入新结点后需要进行调整（主要通过重新着色或旋转操作进行），以满足红黑树的性质。
 
@@ -681,7 +681,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 以$1\sim7$的序列构建红黑树：
 
-![红黑树插入](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307201951428.png)
+![红黑树插入](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160426596.png)
 
 #### 红黑树插入情景分析及处理
 
@@ -790,7 +790,7 @@ $x$为父亲的左儿子：
 
 ## 树表查找
 
-![image-20230723104959976](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307231050285.png)
+![image-20230723104959976](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160429089.png)
 
 ### B树
 
@@ -800,7 +800,7 @@ $x$为父亲的左儿子：
 
 #### B树定义
 
-![23July21-213739-1689946659-9d6ae516-3b52-4af4-a591-52b932c3bbaf](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212137200.png)
+![23July21-213739-1689946659-9d6ae516-3b52-4af4-a591-52b932c3bbaf](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160433544.png)
 
 $B$树，又称多路平衡查找树，$B$树中所被允许的孩子个数的最大值称$B$树的阶，通常用$m$表示。一棵$m$阶$B$树或为空树或为满足如下特性的$m$叉树：
 
@@ -996,7 +996,7 @@ $B+$树考的并不是很深。
 
 与分块查找的思想类似，是对$B$树的一种变型，多用于索引结构，例如数据库设计语言。
 
-![23July21-222323-1689949403-144a205f-4dc6-49a5-89b1-15ea5d66f3d7](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307212223973.png)
+![23July21-222323-1689949403-144a205f-4dc6-49a5-89b1-15ea5d66f3d7](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160436359.png)
 
 >   B+树在数据库语言中有广泛的应用，特别是用于实现索引结构和辅助数据存储。以下是B+树在数据库语言中的主要应用：
 >
@@ -1165,7 +1165,7 @@ $$
 
 #### 链地址法
 
-![23July24-122354-1690172634-e36c44d2-e9b2-4dbb-96e2-2df7adfcc1f4](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241224103.png)
+![23July24-122354-1690172634-e36c44d2-e9b2-4dbb-96e2-2df7adfcc1f4](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160438201.png)
 
 +   又称为拉链法或链接法，是把相互发生冲突的同义词用一个单链表链接起来，若干组同义词可以组成若干个单链表
 +   思想类似于邻接表的基本思想，且这种方法适合于冲突比较严重的情况。
@@ -1218,7 +1218,7 @@ $$
 
 首先构造散列表：
 
-![image-20230724122449439](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241224552.png)
+![image-20230724122449439](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160440644.png)
 
 查找失败的平均查找长度：
 
@@ -1247,4 +1247,4 @@ $$
     $$
     
 
-![image-20230724122513196](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241225309.png)
+![image-20230724122513196](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160442929.png)

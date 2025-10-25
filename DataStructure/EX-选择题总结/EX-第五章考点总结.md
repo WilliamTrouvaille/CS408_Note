@@ -371,7 +371,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
           +   寻找孩子方便，寻找双亲不方便。
 2.   森林与树的转换：树与森林的转换，树与二叉树的转换都可以使用孩子兄弟表示法来实现，左孩子右兄弟，如果是森林则认为其根结点为兄弟。
 
-![image-20231108223317925](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202311082233068.png)
+![image-20231108223317925](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160921781.png)
 
 ### 树的应用
 

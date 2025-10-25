@@ -461,7 +461,7 @@
 
      1.   资源冲突：上一条指令的$WB$写回的寄存器与本指令对应的寄存器相同。如图，原因如下
 
-          ![image-20230910213933096](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309102139314.png)
+          ![image-20230910213933096](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161351110.png)
 
           第三条指令$I_3$由于$I_1$与$I_2$和$I_3$都存在数据相关，需等到$I_1$和$I_2$将结果写回寄存器后，$I_3$才能读寄存器内容，所以阻塞了$ 3$个时钟周期
 

@@ -20,7 +20,7 @@
 
 ### 【知识导图】
 
-![23July19-102159-1689733319-48395b29-0c50-496e-aee8-2b887e16035c](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191022190.png)
+![23July19-102159-1689733319-48395b29-0c50-496e-aee8-2b887e16035c](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160119140.png)
 
 ### 【复习提示】
 
@@ -31,7 +31,7 @@
 
 ### 树的基本概念
 
-![23July19-103508-1689734108-6a3809c6-97f3-41be-b3d5-20244f205540](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191035870.png)
+![23July19-103508-1689734108-6a3809c6-97f3-41be-b3d5-20244f205540](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160121146.png)
 
 + 树：$n$个结点的有限集（树是一种递归的数据结构，适合于表示具有层次的数据结构）
     + 递归定义
@@ -86,7 +86,7 @@
 
 ### 树的性质
 
-![1689338040t-20230714-2000-1210.718](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338040t-20230714-2000-1210.718.png)
+![1689338040t-20230714-2000-1210.718](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160123416.png)
 
 + 结点数$=$总度数$+1$
 
@@ -107,7 +107,7 @@
 
 + 高度为$h$的$m$叉树至多有$\dfrac{m^h-1}{m-1}$个结点。
 
-    ![1689337606t-20230714-2046-702.266](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689337606t-20230714-2046-702.266.png)
+    ![1689337606t-20230714-2046-702.266](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160125952.png)
 
     +   等比数列求和公式:
 
@@ -132,7 +132,7 @@
 
 #### 二又树的定义
 
-![23July19-111155-1689736315-6e92459f-b12f-4a55-a3eb-aef23eb5a3d4](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191111371.png)
+![23July19-111155-1689736315-6e92459f-b12f-4a55-a3eb-aef23eb5a3d4](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160127925.png)
 
 + 二叉树是$n$个结点构成**每个结点至多只有两棵子树**的有限集合。
     + 即二叉树中不存在度大于$2$的结点
@@ -154,7 +154,7 @@
     + 只有最后一层有叶子结点，不存在度为$$1$$的结点
     + 按层序从$1$开始编号，存在相应结点的情况下，结点$i$的左孩子为$2i$，右孩子为$2i+1$，父结点为$\lfloor\dfrac{i}{2}\rfloor$。
 
-    ![1689338185t-20230714-2025-464.261](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338185t-20230714-2025-464.261.png)
+    ![1689338185t-20230714-2025-464.261](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160130055.png)
 
 + 完全二叉树：一棵高度为$h$，含有$n$个结点，当且仅当其每个结点都与高度$h$满二叉树编号$1$到$n$的结点一一对应时该二叉树就是完全二叉树
 
@@ -168,7 +168,7 @@
     + 按层序从$1$开始编号，结点$i$的左孩子为$2i$，右孩子为$2i+1$，父结点如果有为$\lfloor\dfrac{i}{2}\rfloor$。
     + 若$n$为奇数，则每个分支结点都有左孩子和右孩子；若$n$为偶数，则编号最大的分支结点（编号为$\dfrac{n}{2}$）只有左孩子，没有右孩子，其余分支结点左、右孩子都有。
     
-    ![1689338260t-20230714-2040-434.250](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338260t-20230714-2040-434.250.png)
+    ![1689338260t-20230714-2040-434.250](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160132194.png)
     
 + 二叉排序树：
 
@@ -176,13 +176,13 @@
     + 右子树上所有结点的关键字均大于根结点的关键字
     + 左右子树又各是一棵二叉排序树。
 
-    ![1689338466t-20230714-2006-533.301](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338466t-20230714-2006-533.301.png)
+    ![1689338466t-20230714-2006-533.301](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160134412.png)
 
 + 平衡二叉树：树上任一结点的左子树和右子树的深度之差不超过$1$。
 
     + 平衡二叉树能有更高的搜索效率
 
-    ![1689338574t-20230714-2054-383.323](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338574t-20230714-2054-383.323.png)
+    ![1689338574t-20230714-2054-383.323](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160136586.png)
 
 ### 二叉树的性质
 
@@ -226,13 +226,13 @@
 
 ### 二叉树存储结构
 
-![23July19-133343-1689744823-72a2916a-971c-40b0-80ca-989d58 ce7133](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191333372.png)
+![23July19-133343-1689744823-72a2916a-971c-40b0-80ca-989d58 ce7133](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160139061.png)
 
 #### 顺序存储
 
 依据二叉树的性质，完全二叉树和满二叉树采用顺序存储比较合适，树中结点的序号可以唯一地反映结点之间的逻辑关系，这样既能最大可能地节省存储空间，又能利用数组元素的下标值确定结点在二叉树中的位置，以及结点之间的关系
 
-![1689340059t-20230714-2139-386.178](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689340059t-20230714-2139-386.178.png)
+![1689340059t-20230714-2139-386.178](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160141478.png)
 
 +   **如果不是完全二叉树,则需要将包含节点的每一层都全部存储**
 
@@ -246,7 +246,7 @@
     3.   父节点为$\lfloor\dfrac{i}{2}\rfloor$
     4.   所在层次高度$h=\lceil\log_2(i+1)\rceil$或$h=\lfloor\log_2i\rfloor+1$
 
-    ![1689338260t-20230714-2040-434.250](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689338260t-20230714-2040-434.250.png)
+    ![1689338260t-20230714-2040-434.250](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160143463.png)
 
 如果不是完全二叉树，则**让一般二叉树的编号与完全二叉树一一对应再存入数组**，其他的结点为空，这种存储方法会浪费较多内存，最坏情况下==高度为$h$，且只有$h$个结点的单支树也需要$2^h-1$个存储单元==。
 
@@ -256,7 +256,7 @@
 
 由于顺序存储的空间利用率较低，因此一般二叉树通常都采用链式存储结构，用链表结点来存储一般二叉树中的每个结点
 
-![1689340577t-20230714-2117-891.434](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689340577t-20230714-2117-891.434.png)
+![1689340577t-20230714-2117-891.434](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160145404.png)
 
 链式树具有两个分别指向左右孩子的指针。
 
@@ -314,7 +314,7 @@
 
 **举个例子：**
 
-![23July19-123140-1689741100-9e67b060-7655-4d41-80f8-62ef5c772cf7](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191231496.png)
+![23July19-123140-1689741100-9e67b060-7655-4d41-80f8-62ef5c772cf7](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160148509.png)
 
 +   步骤`1.`时栈内元素依次为(栈底)$A\;B\;D$(栈顶)
 
@@ -365,7 +365,7 @@ vector<int> NInOrder(TreeNode* root){
 
 要进行层次遍历，需要借助**队列**
 
-![1689506321t-20230716-1941-861.359](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689506321t-20230716-1941-861.359.png)
+![1689506321t-20230716-1941-861.359](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160150933.png)
 
 1. 初始化一个辅助队列。
 2. 根结点入队。
@@ -381,7 +381,7 @@ vector<int> NInOrder(TreeNode* root){
 
 若只给出一棵二叉树的前/中/后/层序遍历序列中的一种不能唯一确定一棵二叉树。只有给出中序遍历序列才可能推出唯一二叉树，因为无法确定根结点相对于左右结点的位置：
 
-![1689506881t-20230716-1901-640.268](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689506881t-20230716-1901-640.268.png)
+![1689506881t-20230716-1901-640.268](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160153205.png)
 
 + 前序+中序：
 + 后序+中序。
@@ -389,7 +389,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 前序+中序
 
-![1689506822t-20230716-1902-519.233](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689506822t-20230716-1902-519.233.png)
+![1689506822t-20230716-1902-519.233](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160155367.png)
 
 前序：`根+左+右`；中序：`左+根+右`。所以根据三个部分对应相同可以推出。
 
@@ -399,19 +399,19 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 后序+中序
 
-![1689506831t-20230716-1911-509.215](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689506831t-20230716-1911-509.215.png)
+![1689506831t-20230716-1911-509.215](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160157889.png)
 
 后序：左+根+右；中序：左+根+右。所以根据三个部分对应相同可以推出。
 
 #### 层序+中序
 
-![1689506790t-20230716-1930-701.236](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689506790t-20230716-1930-701.236.png)
+![1689506790t-20230716-1930-701.236](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160200045.png)
 
 层序：根+左根+右根；中序：左+根+右。所以根据根结点和左右子树的根结点来确定。
 
 ### 线索二叉树
 
-![23July19-132239-1689744159-31e47bac-1588-43b3-bfbd-930ffc44c3c7](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191322198.png)
+![23July19-132239-1689744159-31e47bac-1588-43b3-bfbd-930ffc44c3c7](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160202557.png)
 
 +   对于二叉树的遍历，只能从根结点开始遍历，如果给任意一个结点是无法完成遍历的
 
@@ -426,13 +426,13 @@ vector<int> NInOrder(TreeNode* root){
     +   $n$由个结点共有链域指针 $2n$ 个，其中，除根结点外，每个结点都被一个指针指向。剩余的链域
         建立线索，共$2n-(n-1)=n+1$个线索。
         
-        ![1689507309t-20230716-1909-390.290](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689507309t-20230716-1909-390.290.png)
+        ![1689507309t-20230716-1909-390.290](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160205092.png)
         
     +   这些空闲的指针可以不代表左右子树的根结点，而是用来表示==当前遍历方法的前驱或后继==
     
     +   当这个指针表示的是前驱或后继就称为线索
     
-        ![1689507447t-20230716-1927-532.290](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689507447t-20230716-1927-532.290.png)
+        ![1689507447t-20230716-1927-532.290](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160207284.png)
     
     +   指向前驱的就是前驱线索，由左孩子指针担当
     
@@ -446,7 +446,7 @@ vector<int> NInOrder(TreeNode* root){
 
 为了区分其左右孩子指针是指向什么，要在结点中新建两个$tag$位，如当$ltag=0$表示$lchild$指向的是左孩子结点，而为$1$表示其指向前驱。
 
-![1689507538t-20230716-1958-684.139](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689507538t-20230716-1958-684.139.png)
+![1689507538t-20230716-1958-684.139](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160209731.png)
 
 + 确定线索二叉树类型——中序 、先序或后序。
     + 在先序线索化的时候要注意
@@ -469,7 +469,7 @@ vector<int> NInOrder(TreeNode* root){
 
 附设指针`pre`指向刚刚访问过的结点，指针`p`指向正在访问的结点，即`pre`指向`p`的前驱。在中序遍历的过程中，检查`p`的左指针是否为空，若为空就将它指向`pre`；检查`pre`的右指针是否为空，若为空就将它指向`p`
 
-![23July19-125407-1689742447-34c24596-684e-4b72-8076-c270351e044a](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307191254059.png)
+![23July19-125407-1689742447-34c24596-684e-4b72-8076-c270351e044a](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160211751.png)
 
 **代码实现：**
 
@@ -477,7 +477,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 查找前驱后继
 
-![1689513149t-20230716-2129-755.215](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689513149t-20230716-2129-755.215.png)
+![1689513149t-20230716-2129-755.215](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160214255.png)
 
 如果某结点的左右孩子指针有孩子而不是指向前驱后继，那么怎么找其前驱后继？
 
@@ -491,9 +491,9 @@ vector<int> NInOrder(TreeNode* root){
 
     + 所以可以利用线索对二叉树实现非递归的中序遍历
 
-        ![1689509269t-20230716-2049-365.114](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689509269t-20230716-2049-365.114.png)
+        ![1689509269t-20230716-2049-365.114](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160216157.png)
 
-        ![1689509348t-20230716-2008-561.444](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689509348t-20230716-2008-561.444.png)
+        ![1689509348t-20230716-2008-561.444](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160217900.png)
 
 + 中序线索二叉树中找到结点$*P$的中序前驱$pre$：
 
@@ -503,7 +503,7 @@ vector<int> NInOrder(TreeNode* root){
 
     + 所以可以利用线索对二叉树实现非递归的逆向中序遍历
 
-        ![1689509498t-20230716-2038-558.136](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689509498t-20230716-2038-558.136.png)
+        ![1689509498t-20230716-2038-558.136](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160220158.png)
 
 ##### 先序线索二叉树的前驱后继
 
@@ -517,7 +517,7 @@ vector<int> NInOrder(TreeNode* root){
 
         + 如果$p$没有左孩子，则肯定有右孩子，$p->next=p->rchild$
 
-            ![1689510670t-20230716-2010-515.187](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689510670t-20230716-2010-515.187.png)
+            ![1689510670t-20230716-2010-515.187](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160222367.png)
 
     + 所以可以利用线索对二叉树实现非递归的先序遍历。
 
@@ -539,7 +539,7 @@ vector<int> NInOrder(TreeNode* root){
 
         + 若$p$是根结点，则没有先序前驱
 
-            ![1689510874t-20230716-2034-917.377](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689510874t-20230716-2034-917.377.png)
+            ![1689510874t-20230716-2034-917.377](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160224327.png)
 
 ###### 后序线索二叉树的前驱后继
 
@@ -564,7 +564,7 @@ vector<int> NInOrder(TreeNode* root){
 
 + 双亲表示法：是一种顺序存储方式，一般采用一维数组，每个结点中保存指向双亲的伪指针
 
-    ![1689514125t-20230716-2145-802.497](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689514125t-20230716-2145-802.497.png)
+    ![1689514125t-20230716-2145-802.497](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160226533.png)
 
     + 查找双亲(父节点)方便
     + 查找孩子不方便,只能从头遍历
@@ -588,7 +588,7 @@ vector<int> NInOrder(TreeNode* root){
 
     + 适用于“找孩子”多，“找父亲”少的应用场景。如：服务流程树
 
-        ![1689514276t-20230716-2116-901.489](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689514276t-20230716-2116-901.489.png)
+        ![1689514276t-20230716-2116-901.489](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160229072.png)
 
 + 孩子兄弟表示法：是一种链式存储方式，定义了两个指针，分别指向第一个孩子与右兄弟，类似于二叉树，可以利用二叉树来实现对树的处理，也称为二叉树表示法
 
@@ -600,17 +600,17 @@ vector<int> NInOrder(TreeNode* root){
 
         + 不过可以为每个结点设置一个指向双亲的结点`parent`
 
-        ![23July20-110404-1689822244-bf4e20e7-045d-4b70-87dc-e4c05358d5d0](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307201104340.png)
+        ![23July20-110404-1689822244-bf4e20e7-045d-4b70-87dc-e4c05358d5d0](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160231526.png)
 
 ### 森林与树的转换
 
 树与森林的转换，树与二叉树的转换都可以使用==孩子兄弟表示法==来实现，左孩子右兄弟，如果是森林则认为其根结点为兄弟。
 
-![23July20-110623-1689822383-43916536-2881-44e6-a837-5e03301d9631](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307201106473.png)
+![23July20-110623-1689822383-43916536-2881-44e6-a837-5e03301d9631](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160233998.png)
 
 #### 树与二叉树互换
 
-![23July20-110917-1689822557-0b249743-6561-4338-ae9c-20111d556ff2](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307201109146.png)
+![23July20-110917-1689822557-0b249743-6561-4338-ae9c-20111d556ff2](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160236108.png)
 
 树转换为二叉树的规则：每个结点左指针指向它的第一个孩子，右指针指向它在树中的相邻右兄弟，这个规则又称“左孩子右兄弟”。由于根结点没有兄弟，所以对应的二叉树没有右子树。
 
@@ -624,7 +624,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 森林转换为二叉树
 
-![1689515190t-20230716-2130-909.385](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689515190t-20230716-2130-909.385.png)
+![1689515190t-20230716-2130-909.385](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160238072.png)
 
 将森林转换为二叉树的规则与树类似。先将森林中的每棵树转换为二叉树，由于任何一棵和树对应的二叉树的右子树必空，若把森林中第二棵树根视为第一棵树根的右兄弟，即将第二棵树对应的二叉树当作第一棵二叉树根的右子树，将第三棵树对应的二叉树当作第二棵二叉树根的右子树……以此类推，就可以将森林转换为二叉树。
 
@@ -636,7 +636,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 二叉树转换为森林
 
-![1689515362t-20230716-2122-914.393](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689515362t-20230716-2122-914.393.png)
+![1689515362t-20230716-2122-914.393](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160240357.png)
 
 二叉树转换为森林的规则：若二叉树非空，则二叉树的根及其左子树为第一棵树的二叉树形式，故将根的右链断开。二叉树根的右子树又可视为一个由除第一棵树外的森林转换后的二叉树，应用同样的方法，直到最后只剩一棵没有右子树的二叉树为止，最后再将每棵二叉树依次转换成树（左边是孩子右边是兄弟还原），就得到了原森林。
 
@@ -646,15 +646,15 @@ vector<int> NInOrder(TreeNode* root){
 
 + 先根遍历：若树非空，先访问根结点，再依次对每棵子树进行先根遍历。
 
-    ![1689516564t-20230716-2224-437.178](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516564t-20230716-2224-437.178.png)
+    ![1689516564t-20230716-2224-437.178](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160242737.png)
 
     + ==树的先根遍历序列与这棵树相应二叉树的先序序列相同==
 
-        ![1689516660t-20230716-2200-925.384](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516660t-20230716-2200-925.384.png)
+        ![1689516660t-20230716-2200-925.384](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160244742.png)
 
 + 后根遍历：若树非空，先依次对每棵子树进行后根遍历，最后访问根结点。
 
-    ![1689516725t-20230716-2205-413.178](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516725t-20230716-2205-413.178.png)
+    ![1689516725t-20230716-2205-413.178](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160246890.png)
 
     + ==树的后根遍历序列与这棵树相应二叉树的中序序列相同==
 
@@ -674,7 +674,7 @@ vector<int> NInOrder(TreeNode* root){
 
 >   因为存在两层的递归,人脑没有办法这样堆栈,建议先依次把每棵树先根遍历然后按顺序排列就行
 
-![1689517106t-20230716-2226-904.344](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689517106t-20230716-2226-904.344.png)
+![1689517106t-20230716-2226-904.344](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160249215.png)
 
 中序遍历森林：
 
@@ -684,11 +684,11 @@ vector<int> NInOrder(TreeNode* root){
 
 >    因为存在两层的递归,人脑没有办法这样堆栈,建议先依次把每棵树后根遍历然后按顺序排列就行
 
-![1689517160t-20230716-2220-911.344](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689517160t-20230716-2220-911.344.png)
+![1689517160t-20230716-2220-911.344](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160251602.png)
 
 如果通过转换，那么遍历的结果是等价的
 
-![1689517216t-20230716-2216-676.149](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689517216t-20230716-2216-676.149.png)
+![1689517216t-20230716-2216-676.149](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160253756.png)
 
 >   注:上图中
 >
@@ -780,7 +780,7 @@ vector<int> NInOrder(TreeNode* root){
 
 哈夫曼编码是可变长度编码，即允许对不同字符用不等长的二进制表示，也是一个前缀编码，没有一个编码是另一个编码的前缀。
 
-![1689514969t-20230716-2149-848.329](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689514969t-20230716-2149-848.329.png)
+![1689514969t-20230716-2149-848.329](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160255801.png)
 
 利用哈夫曼树可以设计出总长度最短的二进制前缀编码
 
@@ -788,7 +788,7 @@ vector<int> NInOrder(TreeNode* root){
 
 ### 并查集
 
-![1689517634t-20230716-2214-910.368](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689517634t-20230716-2214-910.368.png)
+![1689517634t-20230716-2214-910.368](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160258050.png)
 
 将一个集合划分为互不相交的子集。类似森林。
 
@@ -796,17 +796,17 @@ vector<int> NInOrder(TreeNode* root){
 
 用数组元素的下标表示元素名，用根结点的下标表示子合集名，根节点的双亲结点为负数。
 
-![1689516163t-20230716-2243-296.190](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516163t-20230716-2243-296.190.png)
+![1689516163t-20230716-2243-296.190](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160259761.png)
 
 #### 存储结构
 
-![1689516055t-20230716-2255-763.417](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516055t-20230716-2255-763.417.png)
+![1689516055t-20230716-2255-763.417](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160301721.png)
 
 其中为$-1$表示这个点有子结点，其绝对值为孩子数量，为正数表示其父结点的索引值。
 
 #### 查找
 
-![1689516253t-20230716-2213-319.122](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516253t-20230716-2213-319.122.png)
+![1689516253t-20230716-2213-319.122](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160303927.png)
 
 查找两个元素是否属于同一个集合。
 
@@ -816,7 +816,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 合并
 
-![1689516259t-20230716-2219-329.150](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516259t-20230716-2219-329.150.png)
+![1689516259t-20230716-2219-329.150](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160306136.png)
 
 如果两个元素不属于同一个集合，且所在的两个集合互不相交，则合并这两个集合。
 
@@ -826,7 +826,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 路径压缩
 
-![1689517291t-20230716-2231-430.255](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689517291t-20230716-2231-430.255.png)
+![1689517291t-20230716-2231-430.255](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160308031.png)
 
 用于提高并查集效率。
 
@@ -843,7 +843,7 @@ vector<int> NInOrder(TreeNode* root){
 
 #### 按秩合并
 
-![1689516378t-20230716-2218-364.232](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689516378t-20230716-2218-364.232.png)
+![1689516378t-20230716-2218-364.232](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160309785.png)
 
 并查集经过路径压缩优化之后，并查集并不是是只有两层的一颗树。因为路径压缩只在查找的时候进行，也==只压缩一条路径==，所有并查集的最终结构仍然可能是比较复杂的。
 

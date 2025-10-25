@@ -348,7 +348,7 @@ $h$为平衡二叉树高度，$n_h$为构造此高度的平衡二叉树所需的
 
 ### 排序算法总结
 
-![image-20230724194611557](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307241946664.png)
+![image-20230724194611557](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160538144.png)
 
 #### 稳定性
 

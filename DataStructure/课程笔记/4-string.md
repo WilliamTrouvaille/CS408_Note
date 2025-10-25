@@ -8,7 +8,7 @@
 
 ### 【知识导图】
 
-![1689255787t-20230713-2107-434.239](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689255787t-20230713-2107-434.239.png)
+![1689255787t-20230713-2107-434.239](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160055260.png)
 
 ### 【复习提示】
 
@@ -48,11 +48,11 @@
 
 类似于线性表的顺序存储结构，用一组地址连续的存储单元存储串值的字符序列。在串的定长顺序存储结构中，为每个串变量分配一个固定长度的存储区，即定长数组。
 
-![1689256016t-20230713-2156-525.201](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256016t-20230713-2156-525.201.png)
+![1689256016t-20230713-2156-525.201](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160057296.png)
 
 顺序串的结构	定义方案
 
-![1689256143t-20230713-2103-881.483](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256143t-20230713-2103-881.483.png)
+![1689256143t-20230713-2103-881.483](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160059640.png)
 
 1.   方案一：使用串末尾单独的变量$length$保存串长。
 2.   方案二：使用$data[0]$记录充当变量$length$串长
@@ -78,7 +78,7 @@ typedef struct{
 
 #### 链串
 
-![1689256321t-20230713-2101-487.194](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256321t-20230713-2101-487.194.png)
+![1689256321t-20230713-2101-487.194](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160102047.png)
 
 +   如一般的链式存储结构定义一样，定义一个数据与指向下一位的指针。
 
@@ -88,7 +88,7 @@ typedef struct{
 
     +   由于串的特殊性（每个元素只有一个字符），在具体实现时，每个结点既可以存放一个字符，也可以存放多个字符
 
-    ![1689256400t-20230713-2120-613.198](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256400t-20230713-2120-613.198.png)
+    ![1689256400t-20230713-2120-613.198](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160103940.png)
     
     +   如上图,每个结点存放$4$个字符,存储密度提高
     +   没存满的结点可以利用占位符
@@ -185,7 +185,7 @@ typedef struct{
 
 5.   `StrCompare (S,T)`：比较操作。若`S>T`,则返回值$>0$;若`S=T`,则返回值$=0$;若`S<T`,则返回值$<0$
 
-     +   ![1689256932t-20230713-2212-875.252](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256932t-20230713-2212-875.252.png)
+     +   ![1689256932t-20230713-2212-875.252](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160106064.png)
 
      +   `compare` 函数：
 
@@ -258,7 +258,7 @@ typedef struct{
 
 9.   `SubString(&Sub,S,pos,len)`：求子串。用`Sub`返回串`S`的第`pos`个字符起长度为`len`的子串。
 
-     ![1689256803t-20230713-2203-593.256](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689256803t-20230713-2203-593.256.png)
+     ![1689256803t-20230713-2203-593.256](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160108417.png)
 
      +   `substr` 函数：
 
@@ -294,15 +294,15 @@ typedef struct{
 
 从主串$T$、模式串$P$（子串）的第一个位置开始比较（$i=0,j=0$），若相等，则$i$，$j$各自$+1$，然后比较下一个字符。若不等，主串指针回溯到上一轮比较位置的下一个位置，子串回溯到$0$，再进行下一次比较。令子串长度为$m$，主串长度为$n$,则最多对比$n-m+1$次
 
-![1689257815t-20230713-2255-483.795](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689257815t-20230713-2255-483.795.png)
+![1689257815t-20230713-2255-483.795](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160110482.png)
 
 使用求子串函数的方法
 
-![1689257412t-20230713-2212-746.252](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689257412t-20230713-2212-746.252.png)
+![1689257412t-20230713-2212-746.252](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160112798.png)
 
 不使用求子串函数的方法
 
-![1689257483t-20230713-2223-410.362](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689257483t-20230713-2223-410.362.png)
+![1689257483t-20230713-2223-410.362](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160114927.png)
 
 + 匹配成功的最好时间复杂度：$O(m)$：刚好第一个就匹配上了，总对比次数为子串长度。
 + 匹配失败的最好时间复杂度：$O(n-m+1)=O(n-m)=O(n)$：匹配成功之前，每一个与第一个字符都匹配失败。
@@ -480,7 +480,7 @@ $KMP$算法的$next$数组存在一定问题，若当前索引的值匹配失败
 
 如主串$aaabaaaab$匹配模式串$aaaab$，其中$PMT$表格为：
 
-![23July18-135338-1689659618-f04d83d1-8691-4868-9242-5facdc7e0f3c](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202307181353227.png)
+![23July18-135338-1689659618-f04d83d1-8691-4868-9242-5facdc7e0f3c](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160116872.png)
 
 当$i=4、j=4$时，$s_4$跟$p_4(b\ne a)$失配，如果用之前的`next`数组还需要进行$s_4$与$p_3、s_4$与$ p_2、s_4 $与$ p_1 $这$ 3 $次比较。事实上，因为$ p_{next [4]=3}=p_4=a、p_{next [3]=2} =p_3=a、p_{next [2] =1}=p_2=a,$显然后面$3$次用一个和$p_4$相同的字符跟$s_4$比较毫无意义，必然失配。
 

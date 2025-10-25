@@ -310,7 +310,7 @@ $x86$：重点关注$Intel$格式
 
 3.   如图，从上往下是从高位（栈底）到低位（栈顶），局部变量存放在低位（栈顶）下（在栈帧中，通过`ebp-4k`取得数据），函数调⽤参数存放在低位（栈顶）下（在栈帧外，上一层函数中，通过`ebp+4k`取得数据）
 
-     ![image-20230919214045952](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309192140106.png)
+     ![image-20230919214045952](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161353377.png)
 
 4.   使用条件转移指令实现循环，一般有四个步骤
 

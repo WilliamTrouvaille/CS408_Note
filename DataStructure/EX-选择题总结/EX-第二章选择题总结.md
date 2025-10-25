@@ -10,7 +10,7 @@
 
 ### 【知识导图】
 
-![1689255705t-20230713-2145-333.175](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/1689255705t-20230713-2145-333.175.png)
+![1689255705t-20230713-2145-333.175](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023160920099.png)
 
 ### 【复习提示】
 

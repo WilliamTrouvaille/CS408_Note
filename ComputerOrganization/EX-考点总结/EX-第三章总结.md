@@ -73,7 +73,7 @@
 
 ### 主存储器
 
-![image-20231028180236086](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310281802172.png)
+![image-20231028180236086](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161340729.png)
 
 1.   静态随机存储器$SRAM$：使用双稳态触发器六晶体管$MOS$来记忆信息，因此即使信息被读出后，仍保持其原状态而不需要再生，即非破坏性读出。$SRAM$的存取速度快，但集成度低，功耗较大，价格昂贵，一般用于高速缓冲存储器。
 2.   动态随机存储器$DRAM$​：利用存储元电路中栅极电容上的电荷来存储信息的，$DRAM$的基本存储元通常只使用一个晶体管，所以它比$SRAM$的密度要高很多。$DRAM$容易集成、位价低、容量大和功耗低，但$DRAM$的存取速度较慢，一般用于大容量的主存系统。
@@ -120,7 +120,7 @@
      2.   若模块字长等于数据总线宽度，模块存取一个字的存取周期为$T$，**总线传送周期(存取时间)**为$r$，所以存储器交叉模块数应该大于等于**交叉存取度**$m=\frac{T}{r}$。启动该模块后能保证经过$m\times r$的时间后再次使用该模块时上次存取操作已经完成。
      3.   若连续取$n$个存储字，每次访问需要$T$的时间，启动间隔为$\tau$，则耗时$T+(n-1)\tau$。
 
-![image-20231028182548266](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310281825377.png)
+![image-20231028182548266](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161343540.png)
 
 ### 主存储器与$CPU$的连接
 
@@ -131,11 +131,11 @@
      4.   芯片地址分配时将每列并联的一组芯片视为同一个地址组
 2.   字扩展法：增加存储器中字的数量（数据的地址大小即能保存的数据的数量），而位数不变。将芯片的地址线、数据线、读写控制线相应并联，而由片选信号来区分各芯片的地址范围。 但是如果每个芯片同时输入输出输数据则$CPU$无法区分到底是哪个芯片存储的数据，所以不能再将片选线连在一起同时控制。
 
-![image-20230831215340072](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308312153187.png)
+![image-20230831215340072](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161346115.png)
 
 3.   字位同时扩展法：各芯片连接地址线的方式相同，但是连接数据线的方式不同，需要通过片选信号$\overline{CS}$或采用译码器设计连接到对应芯片。
 
-![image-20230531221233861](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/image-20230531221233861.png)
+![image-20230531221233861](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023161348522.png)
 
 4.   存储芯片片选：要实现对存储单元的访问，首先要选择存储芯片，即进行片选；然后为选中的芯片依地址码选择相应的存储单元，以进行数据的存取，即进行字选。
      1.   线选法：当某地址线信息为`0`时，就选中与之对应的存储芯片，只能一位有效。不需要地址译码器，线路简单。但地址空间不连续，选片的地址线必须分时为低电平（否则不能工作)，不能充分利用系统的存储器空间，造成地址资源浪费。

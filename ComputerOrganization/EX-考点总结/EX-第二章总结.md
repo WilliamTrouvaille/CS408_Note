@@ -207,7 +207,7 @@
 
 7.    单精度浮点数与真值之间的转换
 
-![image-20231028164400629](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202310281644098.png)
+![](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/202310281644098.png)
 
 #### 浮点数计算
 

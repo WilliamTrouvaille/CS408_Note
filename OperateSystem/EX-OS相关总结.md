@@ -4,7 +4,7 @@
 
 ### 考频
 
-![23September20-222342-1695219822-dadc9ce3-dd22-41f7-b079-d8315906aa14](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309202224469.png)
+![23September20-222342-1695219822-dadc9ce3-dd22-41f7-b079-d8315906aa14](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154046913.png)
 
 >   二级标题后面括号里面的数字表示09-22年的考频
 
@@ -47,7 +47,7 @@
 
 ##### 生产者 - 消费者类型(1)
 
-![image-20230828115006942](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308281150064.png)
+![image-20230828115006942](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154051438.png)
 
 1.   确定函数的个数：
      +   生产车间A和生产车间B虽然都是生产车间，但是它们俩执行的动作不一致，故不是同一个进程，即生产车间A和生产车间B需要对应不同的函数
@@ -81,11 +81,11 @@
 5.   检查是否发生死锁：连续进行多个`P`操作的地方是否会发生死锁（只有一个`P`操作不会发生死锁）
      +   先P同步信号量（`empty1、empty2、full1、full2`），再P互斥信号量(`mutex1、mutex2`）
 
-![image-20230828115303663](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308281153236.png)
+![image-20230828115303663](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154057032.png)
 
 ##### 生产者 - 消费者类型(2)
 
-![image-20230828121437525](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308281214633.png)
+![image-20230828121437525](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154109827.png)
 
 1.   确定函数的个数（2），确定函数的动作：
      +   老和尚`喝水`
@@ -110,11 +110,11 @@
           +   老和尚先判断水缸中有没有水，水缸有水的情况下才去取桶喝水，即先P（full）再P（tong）
           +   小和尚先判断水缸中有没有剩余容量，水缸中有剩余容量的情况下才去取桶打水，即先（empty）再P（tong）
 
-![23August28-203245-1693225965-07aadabe-9997-444f-8a22-52cf809430f8](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282033927.png)
+![23August28-203245-1693225965-07aadabe-9997-444f-8a22-52cf809430f8](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154113929.png)
 
 ##### 生产者 - 消费者类型(3)
 
-![image-20230828202814748](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282028901.png)
+![image-20230828202814748](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154117663.png)
 
 1.   确定函数的个数（2）：
      +   所有生产者动作一致，故所有生产者视为一类进程
@@ -137,7 +137,7 @@
      3.   P和C对缓冲区的访问是互斥的（`mutex`）
      4.   多个C之间P操作是互斥的：如果只是简单的使用for循环设置在取10个产品前，则可能发生多个C轮流的取产品
 
-![image-20230828214546119](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282145337.png)
+![image-20230828214546119](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154120365.png)
 
 #### 理发师问题
 
@@ -153,26 +153,26 @@
 
 ##### 理发师问题(1)
 
-![23August28-212531-1693229131-27b4137a-7c05-466f-86ca-c7807f6b4062](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282125663.png)
+![23August28-212531-1693229131-27b4137a-7c05-466f-86ca-c7807f6b4062](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154122897.png)
 
 特点：
 
 1.   顾客无上限
 2.   服务员在没有顾客的时候可以休息，通过`P(customer)`实现
 
-![image-20230828214945063](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282149256.png)
+![image-20230828214945063](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154125200.png)
 
 ##### 理发师问题(2)
 
-![23August28-213808-1693229888-3d5ee02f-d0c8-4c14-8e9a-7f31f51e6b02](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282138483.png)
+![23August28-213808-1693229888-3d5ee02f-d0c8-4c14-8e9a-7f31f51e6b02](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154127856.png)
 
 特点：顾客到店时，会检查`waiting`变量是否小于`m`，即等待数量有上限
 
-![image-20230828213927729](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282139878.png)
+![image-20230828213927729](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154130169.png)
 
 ##### 理发师问题(3)
 
-![23August28-214003-1693230003-c0f04c89-2818-4b34-b8ea-65e8e0db7295](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282140847.png)
+![23August28-214003-1693230003-c0f04c89-2818-4b34-b8ea-65e8e0db7295](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154132935.png)
 
 特点：
 
@@ -180,7 +180,7 @@
 2.   此情况下无需申明`customer`变量，即服务员无需阻塞
 3.   用`waiting`变量判断服务员当前是否需要为顾客提供服务
 
-![image-20230828214136567](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282141723.png)
+![image-20230828214136567](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154135691.png)
 
 #### 读者 - 写者问题
 
@@ -195,7 +195,7 @@
 
 ##### 读者 - 写者问题(1)
 
-![image-20230828215600872](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282156992.png)
+![image-20230828215600872](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154138156.png)
 
 特点
 
@@ -209,23 +209,23 @@
 
 5.   在每个进程结束时，通过`count`是否为0判断自己是不是最后一个进程，如果是，则对临界资源进行解锁
 
-![image-20230828220100097](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282201198.png)
+![image-20230828220100097](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154140454.png)
 
-![image-20230828220520797](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282205963.png)
+![image-20230828220520797](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154142552.png)
 
 ##### 读者 - 写者问题(2)
 
-![image-20230828220732681](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282207808.png)
+![image-20230828220732681](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154145633.png)
 
 1、2、3种不同的录像片对应不同的进程，不同进程互斥访问录像厅（临界资源），统一进程共享录像厅 
 
-![image-20230828221532455](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282215677.png)
+![image-20230828221532455](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154147896.png)
 
 ##### 读者 - 写者（写优先）
 
-![23August28-225328-1693234408-4a367299-7bfb-435e-a5a0-d38b2d62802e](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282253634.png)
+![23August28-225328-1693234408-4a367299-7bfb-435e-a5a0-d38b2d62802e](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154150418.png)
 
-![image-20230828225713745](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282257993.png)
+![image-20230828225713745](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154152527.png)
 
 #### 哲学家进餐
 
@@ -258,11 +258,11 @@
     +   最后完成动作归还资源时也要进行上锁，保证归还动作一气呵成的完成
     +   代码示例如下：
 
-    ![image-20231104165841213](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202311041658345.png)
+    ![image-20231104165841213](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154155389.png)
 
 ##### 哲学家进餐(1)
 
-![image-20230828223900539](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282239653.png)
+![image-20230828223900539](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154158479.png)
 
 1.   变量`bowl`表示剩余碗的数量
      +   数组a中`a[i] = 1`表示第i个哲学家的左手有筷子，`a[(i + 1) % n] = 1`表示第i个哲学家的右手有筷子
@@ -279,23 +279,23 @@
 6.   归还拥有的临界资源
      +   另一个哲学家进行上锁并判断
 
-![image-20230828224501610](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282245740.png)
+![image-20230828224501610](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154201352.png)
 
 ##### 哲学家进餐(2)
 
-![23August28-224746-1693234066-b51c0023-fb6b-4e1a-96a6-b4e4aa8d1051](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282247271.png)
+![23August28-224746-1693234066-b51c0023-fb6b-4e1a-96a6-b4e4aa8d1051](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154206574.png)
 
 检查当前是否有4个盆和1个座位，再去完成打饭和坐落（主体动作）
 
 解法一：信号量
 
-![image-20230828225100384](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282251540.png)
+![image-20230828225100384](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154210626.png)
 
 ~~这里的一口气拿四个盆我看一下笑一次~~
 
 解法二：`int`类型变量（此时每个干饭人只进行一次，不能使用`continue`）
 
-![image-20230828225228119](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202308282252288.png)
+![image-20230828225228119](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154213398.png)
 
 #### 单纯的同步问题
 
@@ -329,7 +329,7 @@
 
 #### 进程的内存映像
 
-![0e8dca02-58c7-49cf-baac-3e3dadee65fa](https://trouvaille-oss.oss-cn-beijing.aliyuncs.com/picList/202309242039770.jpg)
+![0e8dca02-58c7-49cf-baac-3e3dadee65fa](https://raw.githubusercontent.com/WilliamTrouvaille/image_hosting/main/CS408_NOTE/20251023154216475.jpeg)
 
 1.   进程虽然拥有很大的一块逻辑地址空间，但是有很大一部分空间可能是空着的，只有需要使用的时候才进行相应的分配
 
